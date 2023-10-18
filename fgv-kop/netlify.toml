@@ -3,5 +3,6 @@
   to = "/"
   status = 200
 
-  [build.environment]
-  NODE_OPTIONS = "--max_old_space_size=4096"
+[build]
+  command = "npm run build"  # Or the command you use to build your project
+  publish = "build"          # Or the directory where the built files are located
