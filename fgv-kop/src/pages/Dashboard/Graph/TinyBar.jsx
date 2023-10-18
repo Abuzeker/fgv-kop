@@ -11,7 +11,7 @@ const TinyBar = ({containername}) => {
     useEffect(() => {
         const tinyColumn = new TinyColumn(containername, {
             height: 100,
-            autoFit: false,
+            autoFit: true,
             data,
             tooltip: false,
             annotations: [

@@ -7,9 +7,9 @@ import { ArrowUpOutlined, InfoCircleOutlined } from '@ant-design/icons';
 const TopCard = () => {
     return (
         <div style={{ marginTop: '25px', marginBottom: '25px', padding: '0 50px' }}>
-            <Row gutter={10}>
+            <Row gutter={[10,10]}>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD CPO </span>
                         <div>
@@ -30,7 +30,7 @@ const TopCard = () => {
                     </Card>
                 </Col>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> CPO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>
@@ -52,7 +52,7 @@ const TopCard = () => {
                     </Card>
                 </Col>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD CPKO </span>
                         <div>
@@ -73,7 +73,7 @@ const TopCard = () => {
                     </Card>
                 </Col>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> CPKO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>
@@ -95,7 +95,7 @@ const TopCard = () => {
                     </Card>
                 </Col>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD RBDPO </span>
                         <div>
@@ -116,7 +116,7 @@ const TopCard = () => {
                     </Card>
                 </Col>
 
-                <Col span={4}>
+                <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
                     <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> RBDPO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>

@@ -110,19 +110,19 @@ const Utilitytable = () => {
         <Carousel className="custom-carousel-button" dotPosition='top' autoplay autoplaySpeed={10000}>
             <div>
                 <Divider >12/10/2023</Divider>
-                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='small'/>
+                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='middle' style={{ width: "100%" }}/>
             </div>
             <div>
                 <Divider>13/10/2023</Divider>
-                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='small'/>
+                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='middle' style={{ width: "100%" }}/>
             </div>
             <div>
                 <Divider>14/10/2023</Divider>
-                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='small'/>
+                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='middle' style={{ width: "100%" }}/>
             </div>
             <div>
                 <Divider>15/10/2023</Divider>
-                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='small'/>
+                <Table columns={columns} dataSource={data} pagination={false} className="custom-table" size='middle' style={{ width: "100%" }}/>
             </div>
         </Carousel>
 

@@ -234,6 +234,8 @@ const Barchart = ({containername}) => {
       xField: 'Date',
       yField: 'Unit',
       seriesField: 'type',
+      // height: 100,
+      autoFit: true,
 
       // isStack: true,
       isGroup:true,

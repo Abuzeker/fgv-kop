@@ -7,8 +7,8 @@ const TinyProgress = ({containername}) => {
     useEffect(() => {
         const ringProgress = new RingProgress(containername, {
             height: 100,
-            width: 100,
-            autoFit: false,
+            // width: 100,
+            autoFit: true,
             percent: 0.2,
             color: ['#5B8FF9', '#E8EDF3'],
         });

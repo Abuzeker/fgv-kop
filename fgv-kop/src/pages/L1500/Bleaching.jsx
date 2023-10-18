@@ -3,7 +3,7 @@ import BleachingHMI from '../../HMI/L1500/Bleaching_HMI';
 
 const Bleaching = () => {
     return (
-        <div>
+        <div >
             <BleachingHMI />
         </div>
     );

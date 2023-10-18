@@ -42,13 +42,13 @@ const Navbar = () => {
 
           <div style={{ marginBottom: '10px' }}>
             <Divider orientation='left'>Daily Operational Report</Divider>
-            <Row gutter={20}>
-              <Col span={14}>
+            <Row gutter={[20, 10]}>
+              <Col span={14} xs={24} sm={24} md={24} lg={14} xl={14}>
                 <Card>
                   <DailyReporttable />
                 </Card>
               </Col>
-              <Col span={10}>
+              <Col span={10} xs={24} sm={24} md={24} lg={10} xl={10}>
                 <Card>
                   <UtilizationGraph container={'dailyutiliztiongraph'} />
                 </Card>
@@ -66,12 +66,12 @@ const Navbar = () => {
         <div style={{ marginTop: '10px' }}>
 
           <Divider orientation='left'>Production Line Monitoring</Divider>
-          <Card>
+          <Card >
             <Carousel autoplay autoplaySpeed={5000}>
-              <div>
+              <div >
                 <Bleaching />
               </div>
-              <div>
+              <div  >
                 <Deodirising1 />
               </div>
             </Carousel>

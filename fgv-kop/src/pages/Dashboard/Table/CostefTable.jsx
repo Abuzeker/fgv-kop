@@ -83,7 +83,8 @@ const CostefTable = () => (
         pagination={false}
         columns={columns}
         dataSource={data}
-        size="small"
+        size="middle"
+        scroll={{ x: true, y: 400 }} 
     />
 );
 export default CostefTable;

@@ -1,77 +1,88 @@
 import React from 'react'
 import Utilitytable from '../Table/Utilitytable'
-import { Card, Carousel } from 'antd'
+import { Card, Carousel, Col, Row } from 'antd'
 import Barchart from '../Graph/Barchart'
 import CostefTable from '../Table/CostefTable'
 
 const UtilizationCarosel = () => {
   return (
-    <Carousel fade={true} autoplay autoplaySpeed={15000} >
-    <div>
-      <Card title={<div className="custom-card-title">L1000</div>}>
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <CostefTable />
-        </Card.Grid>
+    <Carousel fade={true} autoplay autoplaySpeed={10000} >
+      <div>
+        <Card title={<div className="custom-card-title">L1000</div>}>
+          <Row gutter={[30, 30]} align={'middle'} >
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Barchart containername={'L1000barcontainer'} />
-        </Card.Grid>
+            <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <CostefTable />
+            </Col>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Utilitytable />
-        </Card.Grid>
-      </Card>
-    </div>
+            <Col span={12} xs={24} sm={24} md={24} xl={12} lg={12}>
+              <Barchart containername={'L1000barcontainer'} />
+            </Col>
 
-    <div>
-      <Card title={<div className="custom-card-title">L1500</div>}>
+            <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <Utilitytable />
+            </Col>
+          </Row>
+        </Card>
+      </div>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <CostefTable />
-        </Card.Grid>
+      <div>
+        <Card title={<div className="custom-card-title">L1500</div>}>
+          <Row gutter={[30, 30]} align={'middle'} >
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Barchart containername={'L1500barcontainer'} />
-        </Card.Grid>
+          <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <CostefTable />
+            </Col>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Utilitytable />
-        </Card.Grid>
-      </Card>
-    </div>
+            <Col span={12} xs={24} sm={24} md={24} xl={12} lg={12}>
+              <Barchart containername={'L1500barcontainer'} />
+            </Col>
 
-    <div>
-      <Card title={<div className="custom-card-title">KOPFRA 3</div>}>
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <CostefTable />
-        </Card.Grid>
+            <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <Utilitytable />
+            </Col>
+          </Row>
+        </Card>
+      </div>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Barchart containername={'KOPFRA3L1000barcontainer'} />
-        </Card.Grid>
+      <div>
+        <Card title={<div className="custom-card-title">KOPFRA 3</div>}>
+          <Row gutter={[30, 30]} align={'middle'} >
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Utilitytable />
-        </Card.Grid>
-      </Card>
-    </div>
+          <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <CostefTable />
+            </Col>
 
-    <div>
-      <Card title={<div className="custom-card-title">KOPFRA 4</div>}>
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <CostefTable />
-        </Card.Grid>
+            <Col span={12} xs={24} sm={24} md={24} xl={12} lg={12}>
+              <Barchart containername={'KOPFRA3barcontainer'} />
+            </Col>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Barchart containername={'KOPFRA4barcontainer'} />
-        </Card.Grid>
+            <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <Utilitytable />
+            </Col>
+          </Row>
+        </Card>
+      </div>
 
-        <Card.Grid style={{ width: '33%', textAlign: 'center', }}>
-          <Utilitytable />
-        </Card.Grid>
-      </Card>
-    </div>
-  </Carousel>
+      <div>
+        <Card title={<div className="custom-card-title">KOPFRA 4</div>}>
+          <Row gutter={[30, 30]} align={'middle'} >
+
+          <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <CostefTable />
+            </Col>
+
+            <Col span={12} xs={24} sm={24} md={24} xl={12} lg={12}>
+              <Barchart containername={'KOPFRA4barcontainer'} />
+            </Col>
+
+            <Col span={6} xs={24} sm={24} md={24} xl={6} lg={6}>
+              <Utilitytable />
+            </Col>
+          </Row>
+        </Card>
+      </div>
+    </Carousel>
   )
 }
 

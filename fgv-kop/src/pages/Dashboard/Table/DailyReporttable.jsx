@@ -120,7 +120,7 @@ const DailyReporttable = () => (
         columns={columns}
         dataSource={data}
         size="small"
-    />
+        scroll={{ x: true, y: 400 }}    />
 );
 export default DailyReporttable;
 
