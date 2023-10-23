@@ -47,7 +47,7 @@ const Navbar = () => {
             <Divider orientation='left'>Daily Operational Report</Divider>
             <Row gutter={[20, 10]}>
               <Col span={14} xs={24} sm={24} md={24} lg={14} xl={14}>
-                <Card style={{height:'100%'}}>
+                <Card>
                   <DailyReporttable />
                 </Card>
               </Col>
@@ -59,7 +59,7 @@ const Navbar = () => {
                       <UtilizationGraph container={'dailyutiliztiongraph'} />
                     </div>
                     <div>
-                      <PerformanceCarosel />
+                      {/* <PerformanceCarosel /> */}
                     </div>
                   </Carousel>
                 </Card>
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* <PerformanceCarosel /> */}
+        <PerformanceCarosel />
 
 
 

@@ -14,37 +14,33 @@ export const data = [
 
 
 
-const UtilizationGraph = ({ container }) => {
+const UtilizationGraph = ({container}) => {
 
-  useEffect(() => {
-    const BidirectionalBarPlot = new BidirectionalBar(container, {
-      data,
-      xField: 'country',
-      xAxis: {
-        position: 'bottom',
-      },
-      interactions: [{ type: 'active-region' }],
-      yField: ['MSM Utilization Rate', 'CCNO Utilization Rate'],
-      tooltip: {
-        shared: true,
-        showMarkers: false,
-      },
-    });
-    BidirectionalBarPlot.render();
+    useEffect(() => {
+        const BidirectionalBarPlot = new BidirectionalBar(container, {
+            data,
+            xField: 'country',
+            xAxis: {
+              position: 'bottom',
+            },
+            interactions: [{ type: 'active-region' }],
+            yField: ['MSM Utilization Rate', 'CCNO Utilization Rate'],
+            tooltip: {
+              shared: true,
+              showMarkers: false,
+            },
+          });
+          BidirectionalBarPlot.render();
 
-
-    return () => {
-      BidirectionalBarPlot.destroy();
-    }
-  }, [])
-
+    
+      return () => {
+        BidirectionalBarPlot.destroy();
+      }
+    }, [])
+    
 
   return (
-    <div>
-      <div style={{fontSize:'28px', fontWeight:'bold', textAlign:'center' }}>L1000</div>
-      <div id={container}></div>
-
-    </div>
+    <div id={container}></div>
   )
 }
 

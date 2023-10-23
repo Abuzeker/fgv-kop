@@ -41,7 +41,7 @@ const UtilizationGraph = ({ container }) => {
 
   return (
     <div>
-      <div style={{fontSize:'28px', fontWeight:'bold', textAlign:'center' }}>L1000</div>
+      <div style={{fontSize:'28px'}}>L1000</div>
       <div id={container}></div>
 
     </div>

@@ -1,0 +1,8 @@
+#container {
+  display: flex;
+  flex-direction: column !important;
+  padding: 8px;
+}
+#container1, #container2 {
+  flex: 1;
+}

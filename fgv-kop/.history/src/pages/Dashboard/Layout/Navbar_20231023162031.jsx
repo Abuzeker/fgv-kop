@@ -13,7 +13,6 @@ import Bleaching from '../../L1500/Bleaching';
 import Duo1 from '../../L1500/Duo1';
 import Sdtest from '../../../HMI/L1500/Sdtest';
 import PerformanceRate from '../Graph/PerformanceRate';
-import PerformanceCarosel from './PerformanceCarosel';
 
 
 const { Header, Content, Footer } = Layout;
@@ -47,21 +46,13 @@ const Navbar = () => {
             <Divider orientation='left'>Daily Operational Report</Divider>
             <Row gutter={[20, 10]}>
               <Col span={14} xs={24} sm={24} md={24} lg={14} xl={14}>
-                <Card style={{height:'100%'}}>
+                <Card>
                   <DailyReporttable />
                 </Card>
               </Col>
               <Col span={10} xs={24} sm={24} md={24} lg={10} xl={10}>
                 <Card>
-
-                  <Carousel fade={true} autoplay autoplaySpeed={5000} >
-                    <div>
-                      <UtilizationGraph container={'dailyutiliztiongraph'} />
-                    </div>
-                    <div>
-                      <PerformanceCarosel />
-                    </div>
-                  </Carousel>
+                  <UtilizationGraph container={'dailyutiliztiongraph'} />
                 </Card>
               </Col>
             </Row>
@@ -74,9 +65,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* <PerformanceCarosel /> */}
-
-
+        <div>
+          <Card>
+              <PerformanceRate containername={'rate1'} Prate={3} Pstate={'Bad'}/>
+          </Card>
+        </div>
 
         {/* <div style={{ marginTop: '10px' }}>
 
