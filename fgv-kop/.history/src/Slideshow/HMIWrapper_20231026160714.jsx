@@ -38,10 +38,10 @@ const HMIWrapper = (props) => {
             {/* <Divider orientation="left">Schemetic View</Divider> */}
             <div style={{ paddingTop: '0px' }}>
                 <Card bordered={false}
-                    style={{ borderRadius: 0, width: '100%',height:'100%' }} hoverable={false}
+                    style={{ borderRadius: 15, width: '100%' }} hoverable={false}
                     tabList={TabLabel}
                     bodyStyle={{ padding: "0px" }}
-                    headStyle={{ backgroundColor: '#c7bcbb', borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
+                    headStyle={{ backgroundColor: '#c7bcbb', borderTopLeftRadius: 15, borderTopRightRadius: 15 }}
                     activeTabKey={tabkey}
                     onTabChange={key => {
                         onTabChange(key);
