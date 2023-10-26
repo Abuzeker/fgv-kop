@@ -61,7 +61,7 @@ const PerformanceRate = ({ containername, Prate, Pstate }) => {
                         fontSize: '20px',
                         color: '#4B535E',
                     },
-                    formatter: () => Pstate,
+                    formatter: {Pstate},
                 },
             },
         });

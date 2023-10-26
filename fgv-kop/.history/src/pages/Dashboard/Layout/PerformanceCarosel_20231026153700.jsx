@@ -5,7 +5,7 @@ import PerformanceRate from '../Graph/PerformanceRate';
 const PerformanceCarosel = () => {
     return (
         <div>
-            <div style={{ fontSize: '28px', fontWeight: 'bold', textAlign: 'center' }}>Production Rate</div>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', textAlign: 'center' }}>L1000</div>
 
             <Row gutter={[10, 10]}>
                 <Col span={6} xs={24} sm={24} md={24} lg={12} xl={12}>
@@ -25,7 +25,7 @@ const PerformanceCarosel = () => {
                 </Col>
                 <Col span={6} xs={24} sm={24} md={24} lg={12} xl={12}>
                     <Card>
-                        <PerformanceRate containername={'rate4'} Prate={0.3} Pstate={'KOPFRA 3'} />
+                        <PerformanceRate containername={'rate4'} Prate={0.3} Pstate={'Bad'} />
                     </Card>
                 </Col>
             </Row>
