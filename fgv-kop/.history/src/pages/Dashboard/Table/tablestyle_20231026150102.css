@@ -4,7 +4,7 @@
   }
 
 .report-table {
-    font-size: 5px; /* Set the desired font size */
+    font-size: 3px; /* Set the desired font size */
 }
 
   /* styles.css */
@@ -13,5 +13,5 @@
   }
 
 .report-table .ant-table-cell{
-    font-size: 12px; /* Set the desired font size */
+    font-size: 14px; /* Set the desired font size */
   }

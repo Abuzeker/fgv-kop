@@ -46,13 +46,13 @@ const Navbar = () => {
           <div style={{ marginBottom: '10px' }}>
             <Divider orientation='left'>Daily Operational Report</Divider>
             <Row gutter={[20, 10]}>
-              <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>
-                <Card style={{height:'100%'}}  
+              <Col span={14} xs={24} sm={24} md={24} lg={14} xl={14}>
+                <Card style={{height:'100%'}}  bodyStyle={{ padding: "5px" }}
 >
                   <DailyReporttable />
                 </Card>
               </Col>
-              <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
+              <Col span={10} xs={24} sm={24} md={24} lg={10} xl={10}>
                 <Card>
 
                   <Carousel fade={true} autoplay autoplaySpeed={5000} >

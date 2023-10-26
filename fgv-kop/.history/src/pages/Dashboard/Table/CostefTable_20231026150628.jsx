@@ -9,8 +9,6 @@ const columns = [
         dataIndex: 'Date',
         key: 'Date',
         fixed: 'left',
-        width: 70,
-
     },
     {
         title: () => (
@@ -20,23 +18,16 @@ const columns = [
         ),
         dataIndex: 'PCM',
         key: 'PCM',
-        width: 60,
-        
-
     },
     {
         title: 'Yield %',
         dataIndex: 'Yield',
         key: 'Yield',
-        width: 60,
-
     },
     {
         title: 'PR %',
         dataIndex: 'PR',
         key: 'PR',
-        width: 40,
-
     },
 
     {
@@ -46,15 +37,11 @@ const columns = [
                 title: 'FFA %',
                 dataIndex: 'FFA',
                 key: 'FFA',
-                width: 60,
-
             },
             {
                 title: 'Col',
                 dataIndex: 'Col',
                 key: 'Col',
-                width: 60,
-
             },
             {
                 title: () => (
@@ -64,8 +51,6 @@ const columns = [
                 ),
                 dataIndex: 'Purity',
                 key: 'Purity',
-                width: 60,
-
             },
         ],
     },

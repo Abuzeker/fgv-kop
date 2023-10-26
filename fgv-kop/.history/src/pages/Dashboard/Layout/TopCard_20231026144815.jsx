@@ -10,7 +10,7 @@ const TopCard = () => {
             <Row gutter={[10,10]}>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                    <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD CPO </span>
                         <div>
                             <Row gutter={16} align={'middle'}>
@@ -19,7 +19,7 @@ const TopCard = () => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> 20 Days Remaining</span>
+                                        <span> 20 Days Remain</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -31,7 +31,7 @@ const TopCard = () => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> CPO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>
                         <div>
@@ -53,7 +53,7 @@ const TopCard = () => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD CPKO </span>
                         <div>
                             <Row gutter={16} align={'middle'}>
@@ -62,7 +62,7 @@ const TopCard = () => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> 20 Days Remaining</span>
+                                        <span> 20 Days</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -74,7 +74,7 @@ const TopCard = () => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> CPKO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>
                         <div>
@@ -96,7 +96,7 @@ const TopCard = () => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}>MTD RBDPO </span>
                         <div>
                             <Row gutter={16} align={'middle'}>
@@ -105,7 +105,7 @@ const TopCard = () => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> 20 Days Remaining</span>
+                                        <span> 20 Days</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -117,7 +117,7 @@ const TopCard = () => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={8} lg={6} xl={4}>
-                <Card bordered={false} style={{height:'190px'}}>
+                    <Card bordered={false} >
                         <span style={{ fontSize: '20px' }}> RBDPO </span>
                         <span style={{ fontSize: '10px' }}>11/10/2023</span>
                         <div>

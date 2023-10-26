@@ -13,7 +13,7 @@ const columns = [
     },
 
     {
-        title:  (text) =><span style={{fontSize:'15px'}}>KOP</span>,
+        title: 'KOP',
         children: [
             {
                 title: 'MSM',
@@ -120,7 +120,6 @@ for (let i = 0; i < 7; i++) {
 
 const DailyReporttable = () => (
     <Table
-    bordered
         className="report-table"
         pagination={false}
         columns={columns}

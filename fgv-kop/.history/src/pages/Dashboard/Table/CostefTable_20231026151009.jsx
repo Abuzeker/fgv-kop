@@ -35,7 +35,7 @@ const columns = [
         title: 'PR %',
         dataIndex: 'PR',
         key: 'PR',
-        width: 40,
+        width: 60,
 
     },
 

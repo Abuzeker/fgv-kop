@@ -13,7 +13,7 @@ const columns = [
     },
 
     {
-        title:  (text) =><span style={{fontSize:'15px'}}>KOP</span>,
+        title: 'KOP',
         children: [
             {
                 title: 'MSM',
@@ -60,13 +60,12 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'CCNOL1500',
                         key: 'CCNOL1500',
-
+                        width: 60,
                     },
                     {
                         title: 'L1000',
                         dataIndex: 'CCNOL1000',
                         key: 'CCNOL1000',
-
                     },
                     {
                         title: '600TPD',
@@ -120,13 +119,13 @@ for (let i = 0; i < 7; i++) {
 
 const DailyReporttable = () => (
     <Table
-    bordered
+
         className="report-table"
         pagination={false}
         columns={columns}
         dataSource={data}
         size="small"
-        scroll={{ x: 970, y: 400 }}    />
+        scroll={{ x: 800, y: 400 }}    />
 );
 export default DailyReporttable;
 

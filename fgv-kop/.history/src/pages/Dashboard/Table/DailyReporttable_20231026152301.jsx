@@ -120,7 +120,6 @@ for (let i = 0; i < 7; i++) {
 
 const DailyReporttable = () => (
     <Table
-    bordered
         className="report-table"
         pagination={false}
         columns={columns}

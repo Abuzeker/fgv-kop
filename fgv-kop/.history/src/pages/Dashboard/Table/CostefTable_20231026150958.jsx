@@ -9,7 +9,7 @@ const columns = [
         dataIndex: 'Date',
         key: 'Date',
         fixed: 'left',
-        width: 70,
+        width: 60,
 
     },
     {
@@ -35,7 +35,7 @@ const columns = [
         title: 'PR %',
         dataIndex: 'PR',
         key: 'PR',
-        width: 40,
+        width: 60,
 
     },
 

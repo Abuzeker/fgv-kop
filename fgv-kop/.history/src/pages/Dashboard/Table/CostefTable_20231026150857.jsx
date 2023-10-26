@@ -9,7 +9,7 @@ const columns = [
         dataIndex: 'Date',
         key: 'Date',
         fixed: 'left',
-        width: 70,
+        width: 60,
 
     },
     {
@@ -35,7 +35,7 @@ const columns = [
         title: 'PR %',
         dataIndex: 'PR',
         key: 'PR',
-        width: 40,
+        width: 60,
 
     },
 
@@ -64,7 +64,7 @@ const columns = [
                 ),
                 dataIndex: 'Purity',
                 key: 'Purity',
-                width: 60,
+                width: 0,
 
             },
         ],
@@ -92,7 +92,7 @@ const CostefTable = () => (
         columns={columns}
         dataSource={data}
         size="middle"
-        scroll={{ x: 500, y: 400 }} 
+        scroll={{ x: true, y: 400 }} 
     />
 );
 export default CostefTable;
