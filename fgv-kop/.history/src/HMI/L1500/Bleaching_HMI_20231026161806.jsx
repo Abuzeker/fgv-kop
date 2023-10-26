@@ -3,7 +3,7 @@ const Bleaching_HMI = (props) => (
   //  <svg xmlns="http://www.w3.org/2000/svg" width={1854} height={1039}>
 
   <div>
-      <svg xmlns="http://www.w3.org/2000/svg" width='100%' height='100%' viewBox="0 0 1854 1020">
+      <svg xmlns="http://www.w3.org/2000/svg" width='100%' height='100%' viewBox="0 0 1854 1000">
       <defs>
         <linearGradient id="a" x1="0%" x2="100%" y1="0%" y2="0%">
           <stop offset={0.25} stopColor="#ebebeb" />
