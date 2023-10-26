@@ -40,7 +40,7 @@ const HMIWrapper = (props) => {
                 <Card bordered={false}
                     style={{ borderRadius: 0, width: '100%',height:'100%' }} hoverable={false}
                     tabList={TabLabel}
-                    bodyStyle={{ padding: "0px", height:'100%' }}
+                    bodyStyle={{ padding: "0px" }}
                     headStyle={{ backgroundColor: '#c7bcbb', borderTopLeftRadius: 0, borderTopRightRadius: 0 }}
                     activeTabKey={tabkey}
                     onTabChange={key => {
