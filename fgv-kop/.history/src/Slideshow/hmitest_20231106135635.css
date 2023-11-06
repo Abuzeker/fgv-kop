@@ -1,0 +1,9 @@
+/* In your CSS file or inside a style tag in your component */
+
+  
+  /* If you want to make a specific container unscrollable */
+  .containertesthmi{
+    overflow: hidden; /* Prevent scrolling for the specific container */
+    height: 100vh; /* Set the height to match the viewport height */
+  }
+  

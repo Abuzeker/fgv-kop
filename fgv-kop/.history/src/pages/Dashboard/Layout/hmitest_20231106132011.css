@@ -1,0 +1,11 @@
+/* In your CSS file or inside a style tag in your component */
+/* body {
+    overflow: hidden; /* Prevent scrolling for the entire body */
+  } */
+  
+  /* If you want to make a specific container unscrollable */
+  .container {
+    overflow: hidden; /* Prevent scrolling for the specific container */
+    height: 100vh; /* Set the height to match the viewport height */
+  }
+  
