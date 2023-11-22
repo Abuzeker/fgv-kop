@@ -35,16 +35,6 @@ const UtilizationGraph = ({ container }) => {
         shared: true,
         showMarkers: false,
       },
-
-      label:{
-        style: { fill: '#ffffff' }      
-      },
-
-      legend:{
-        style: { fill: '#ffffff' }      
-
-      }
-
     });
     BidirectionalBarPlot.render();
 

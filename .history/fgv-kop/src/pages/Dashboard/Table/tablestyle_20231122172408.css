@@ -16,12 +16,12 @@
 
 .report-table .ant-table-cell{
     font-size: 12px; /* Set the desired font size */
-    background-color:#6f6f70;
+    background-color:#706f6f;
     color: white;
   }
 
   .report-table .ant-table-thead .ant-table-cell {
     font-size: 12px; /* Set the desired font size */
-    background-color:rgb(48, 46, 54);
+    background-color:#6d6666;
     color: white;
   }

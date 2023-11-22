@@ -23,7 +23,7 @@ const PerformanceRate = ({ containername, Prate, Pstate }) => {
                 style:{
                     fill:'#ffffff'
                 }
-            },
+            }
             range: {
                 ticks: [0, 1],
                 color: ['l(0) 0:#F4664A 0.5:#FAAD14 1:#30BF78'],

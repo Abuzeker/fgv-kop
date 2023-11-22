@@ -37,8 +37,10 @@ const UtilizationGraph = ({ container }) => {
       },
 
       label:{
-        style: { fill: '#ffffff' }      
-      },
+        itemName: {
+          style: {
+              fill: '#ffffff',
+          },      },
 
       legend:{
         style: { fill: '#ffffff' }      

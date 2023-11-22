@@ -22,12 +22,9 @@ const UtilizationGraph = ({ container }) => {
       xField: 'country',
       xAxis: {
         position: 'bottom',
-        style: { fill: '#ffffff' }      
-
-      },
-      yAxis:{
-        style: { fill: '#ffffff' }      
-
+        style:{
+          fill:'white'
+        }
       },
       interactions: [{ type: 'active-region' }],
       yField: ['MSM Utilization Rate', 'CCNO Utilization Rate'],
@@ -35,16 +32,6 @@ const UtilizationGraph = ({ container }) => {
         shared: true,
         showMarkers: false,
       },
-
-      label:{
-        style: { fill: '#ffffff' }      
-      },
-
-      legend:{
-        style: { fill: '#ffffff' }      
-
-      }
-
     });
     BidirectionalBarPlot.render();
 

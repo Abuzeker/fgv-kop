@@ -80,10 +80,10 @@ const Navbar = () => {
               </Row>
             </div>
 
-            {/* <div style={{ marginTop: '5px' }}>
+            <div style={{ marginTop: '5px' }}>
               <Divider orientation='left'>Cost & Utilization</Divider>
               <UtilizationCarosel />
-            </div> */}
+            </div>
 
           </Carousel>
 

@@ -59,31 +59,31 @@ const Navbar = () => {
               <Row gutter={[20, 10]}>
 
                 <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>
-                  <Card style={{ height: '100%', background: '#706f6f' }}>
+                  <Card style={{ height: '100%', background:'#706f6f' }}>
                     <DailyReporttable />
                   </Card>
                 </Col>
 
                 <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
-                  <Card style={{ height: '100%', background: '#706f6f' }}>
+                <Card style={{ height: '100%', background:'#706f6f' }}>
                     <Carousel fade={true} autoplay autoplaySpeed={5000} >
-                      {/* <div>
+                      <div>
                         <UtilizationGraph container={'dailyutiliztiongraph'} />
-                      </div> */}
+                      </div>
                       <div>
                         <PerformanceCarosel />
                       </div>
                     </Carousel>
                   </Card>
                 </Col>
-
+                
               </Row>
             </div>
 
-            {/* <div style={{ marginTop: '5px' }}>
+            <div style={{ marginTop: '5px' }}>
               <Divider orientation='left'>Cost & Utilization</Divider>
               <UtilizationCarosel />
-            </div> */}
+            </div>
 
           </Carousel>
 
@@ -92,16 +92,16 @@ const Navbar = () => {
       </Content>
 
       <Footer
-        style={{
-          textAlign: 'center',
-          backgroundColor: '#141414'
-        }}
-      >
-        <span style={{ color: 'white' }}>
-          FGV KOP ©2023 Created by IOTCS
+                style={{
+                    textAlign: 'center',
+                    backgroundColor: '#141414'
+                }}
+            >
+                <span style={{color:'white'}}>
+                                    FGV KOP ©2023 Created by IOTCS
 
-        </span>
-      </Footer>
+                </span>
+            </Footer>
     </Layout>
   )
 }
