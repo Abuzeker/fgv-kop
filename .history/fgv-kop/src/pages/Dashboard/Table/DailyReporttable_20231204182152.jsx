@@ -22,6 +22,8 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'MSML1500',
                         key: 'MSML1500',
+                        width: 60,
+
                     },
                     {
                         title: 'L1000',
@@ -40,13 +42,13 @@ const columns = [
                     },
                     {
                         title: 'Total',
-                        dataIndex: 'MSM Total Value',
-                        key: 'MSM Total Value',
+                        dataIndex: 'MSMTotal',
+                        key: 'MSMTotal',
                     },
                     {
                         title: '(%)',
-                        dataIndex: 'MSM Percentage',
-                        key: 'MSM Percentage',
+                        dataIndex: 'MSMPercent',
+                        key: 'MSMPercent',
 
                     },
                 ]
@@ -54,6 +56,12 @@ const columns = [
             {
                 title: 'CCNO BLENDED/CPKO',
                 children: [
+                    {
+                        title: 'L1500',
+                        dataIndex: 'CCNO BLENDED/ CPKOL1500',
+                        key: 'CCNO BLENDED/ CPKOL1500',
+
+                    },
                     {
                         title: 'L1000',
                         dataIndex: 'CCNO BLENDED/ CPKOL1000',
@@ -72,13 +80,13 @@ const columns = [
                     },
                     {
                         title: 'Total',
-                        dataIndex: 'CCNO BLENDED/ CPKO TOTAL PROCESS',
-                        key: 'CCNO BLENDED/ CPKO TOTAL PROCESS',
+                        dataIndex: 'CCNO BLENDED/ CPKOTotal',
+                        key: 'CCNO BLENDED/ CPKOTotal',
                     },
                     {
                         title: '(%)',
-                        dataIndex: 'CCNO BLENDED/ CPKO Percentage',
-                        key: 'CCNO BLENDED/ CPKO Percentage',
+                        dataIndex: 'CCNO BLENDED/ CPKOPercent',
+                        key: 'CCNO BLENDED/ CPKOPercent',
                     },
                 ]
             },
@@ -90,6 +98,7 @@ const columns = [
 
 
 const DailyReporttable = ({data}) => {
+    console.log(data);
     return (
         < Table
             bordered
@@ -101,8 +110,8 @@ const DailyReporttable = ({data}) => {
             pagination={false}
             columns={columns}
             dataSource={data}
-            size="medium"
-            scroll={{ x: 970, y: 600 }} />
+            size="small"
+            scroll={{ x: 970, y: 400 }} />
     )
 }
 

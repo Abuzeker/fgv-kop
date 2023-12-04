@@ -19,7 +19,7 @@ const UtilizationCarosel = () => {
               <Barchart containername={'L1000barcontainer'} />
             </Col>
 
-            <Col span={12} xs={24} sm={24} md={24} xl={7} lg={6}>
+            <Col span={24} xs={24} sm={24} md={24} xl={7} lg={6}>
               <Utilitytable />
             </Col>
           </Row>

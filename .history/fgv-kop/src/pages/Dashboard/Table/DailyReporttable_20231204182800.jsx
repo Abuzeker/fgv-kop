@@ -22,6 +22,8 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'MSML1500',
                         key: 'MSML1500',
+                        width: 60,
+
                     },
                     {
                         title: 'L1000',
@@ -90,7 +92,6 @@ const columns = [
 
 
 const DailyReporttable = ({data}) => {
-    return (
         < Table
             bordered
             style={{
@@ -103,7 +104,7 @@ const DailyReporttable = ({data}) => {
             dataSource={data}
             size="medium"
             scroll={{ x: 970, y: 600 }} />
-    )
+    
 }
 
 export default DailyReporttable

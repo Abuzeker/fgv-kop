@@ -22,6 +22,8 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'MSML1500',
                         key: 'MSML1500',
+                        width: 60,
+
                     },
                     {
                         title: 'L1000',
@@ -54,6 +56,12 @@ const columns = [
             {
                 title: 'CCNO BLENDED/CPKO',
                 children: [
+                    {
+                        title: 'L1500',
+                        dataIndex: 'CCNO BLENDED/ CPKOL1500',
+                        key: 'CCNO BLENDED/ CPKOL1500',
+
+                    },
                     {
                         title: 'L1000',
                         dataIndex: 'CCNO BLENDED/ CPKOL1000',
@@ -90,6 +98,7 @@ const columns = [
 
 
 const DailyReporttable = ({data}) => {
+    console.log(data);
     return (
         < Table
             bordered
@@ -101,8 +110,8 @@ const DailyReporttable = ({data}) => {
             pagination={false}
             columns={columns}
             dataSource={data}
-            size="medium"
-            scroll={{ x: 970, y: 600 }} />
+            size="small"
+            scroll={{ x: 970, y: 400 }} />
     )
 }
 

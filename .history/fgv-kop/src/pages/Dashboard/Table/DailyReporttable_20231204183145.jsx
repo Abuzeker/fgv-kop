@@ -22,6 +22,8 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'MSML1500',
                         key: 'MSML1500',
+                        width: 80,
+
                     },
                     {
                         title: 'L1000',

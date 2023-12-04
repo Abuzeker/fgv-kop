@@ -11,15 +11,15 @@ const UtilizationCarosel = () => {
         <Card title={<div className="custom-card-title">L1000</div>}>
           <Row gutter={[30, 30]} align={'middle'} >
 
-            {/* <Col span={6} xs={24} sm={24} md={24} xl={7} lg={6}>
+            <Col span={6} xs={24} sm={24} md={24} xl={7} lg={6}>
               <CostefTable />
-            </Col> */}
+            </Col>
 
             <Col span={12} xs={24} sm={24} md={24} xl={10} lg={12}>
               <Barchart containername={'L1000barcontainer'} />
             </Col>
 
-            <Col span={12} xs={24} sm={24} md={24} xl={7} lg={6}>
+            <Col span={6} xs={24} sm={24} md={24} xl={7} lg={6}>
               <Utilitytable />
             </Col>
           </Row>

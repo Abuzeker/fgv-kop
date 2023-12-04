@@ -1,6 +1,6 @@
 import React from 'react'
 import { Badge, Descriptions } from 'antd';
-import Dashboard1 from '../Layout/Dashboard1';
+import Navbar from '../Layout/Navbar';
 // import Bar from '../Graph/Bar';
 
 const CPO = () => {
@@ -11,7 +11,7 @@ const CPO = () => {
     <div >
       {/* <Bar/> */}
       {/* {data[0].sales} */}
-       <Dashboard1/>
+       <Navbar/>
      {/* asdasdas
       <Descriptions title="User Info" bordered /> */}
     </div>

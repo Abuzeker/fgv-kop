@@ -22,6 +22,8 @@ const columns = [
                         title: 'L1500',
                         dataIndex: 'MSML1500',
                         key: 'MSML1500',
+                        width: 60,
+
                     },
                     {
                         title: 'L1000',
@@ -90,6 +92,7 @@ const columns = [
 
 
 const DailyReporttable = ({data}) => {
+    console.log(data);
     return (
         < Table
             bordered
@@ -101,8 +104,8 @@ const DailyReporttable = ({data}) => {
             pagination={false}
             columns={columns}
             dataSource={data}
-            size="medium"
-            scroll={{ x: 970, y: 600 }} />
+            size="small"
+            scroll={{ x: 970, y: 400 }} />
     )
 }
 

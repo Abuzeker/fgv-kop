@@ -1,5 +1,6 @@
 import React from 'react'
 import { Badge, Descriptions } from 'antd';
+import Navbar from '../Layout/Navbar';
 import Dashboard1 from '../Layout/Dashboard1';
 // import Bar from '../Graph/Bar';
 
