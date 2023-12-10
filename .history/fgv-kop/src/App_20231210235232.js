@@ -34,8 +34,9 @@ const App = () => {
     request_event()
 
     const interval = setInterval(() => {
-      request_event()
-    }, 300000)
+      console.log('jhh');
+      // request_event()
+    }, 3000)
 
     // console.log('render2');
     return () => {
