@@ -1,5 +1,4 @@
 export const Sort_Log_by_date = (RawData) => {
-  console.log(RawData);
 
   const Data = RawData.data
   const uniqueDates = getAllUniqueDates(Data);

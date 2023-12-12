@@ -29,23 +29,23 @@ const TopCard = (props) => {
 
     console.log(props.datatodate);
 
+    try {
+        data['Todate (CPO)'] = props.datatodate[0] ? props.datatodate[0]["Todate (CPO)"]: 0
+        data['Todate (CPKO)'] = props.datatodate[1] ? props.datatodate[1]["Todate (CPKO)"]: 0
+        data['Todate (RBD PO)'] = props.datatodate[2] ? props.datatodate[2]["Todate (RBD PO)"]: 0
 
-        try {data['Todate (CPO)'] = props.datatodate[0]["Todate (CPO)"] !== null ? props.datatodate[0]["Todate (CPO)"] : 0;}catch (error) {console.log(error);}
-        try {data['Todate (CPKO)'] = props.datatodate[1]["Todate (CPKO)"]!== null ? props.datatodate[1]["Todate (CPKO)"]: 0}catch (error) {console.log(error);}
-        try {data['Todate (RBD PO)'] = props.datatodate[2]["Todate (RBD PO)"]!== null ? props.datatodate[2]["Todate (RBD PO)"]: 0}catch (error) {console.log(error);}
+        data['date todate (CPO)'] = props.datatodate[0] ? props.datatodate[0]["date"]: 0
+        data['date todate (CPKO)'] = props.datatodate[1] ? props.datatodate[1]["date"]: 0
+        data['date todate (RBD PO)'] = props.datatodate[2] ? props.datatodate[2]["date"]: 0
 
-        try {data['date todate (CPO)'] = props.datatodate[0]["date"]!== null ? props.datatodate[0]["date"]: 0}catch (error) {console.log(error);}
-        try {data['date todate (CPKO)'] = props.datatodate[1]["date"] !== null? props.datatodate[1]["date"]: 0}catch (error) {console.log(error);}
-        try {data['date todate (RBD PO)'] = props.datatodate[2]["date"] !== null? props.datatodate[2]["date"]: 0}catch (error) {console.log(error);}
+        data['Today (CPO)'] = props.datatoday[0] ? props.datatoday[0]["Today (CPO)"]: 0
+        data['Today (CPKO)'] = props.datatoday[0] ? props.datatoday[0]["Today (CPKO)"] : 0
+        data['Today (RBD PO)'] = props.datatoday[0] ? props.datatoday[0]["Today (RBD PO)"] : 0
 
-        try {data['Today (CPO)'] = props.datatoday[0]["Today (CPO)"]!== null ? props.datatoday[0]["Today (CPO)"]: 0}catch (error) {console.log(error);}
-        try {data['Today (CPKO)'] = props.datatoday[0]["Today (CPKO)"]!== null ? props.datatoday[0]["Today (CPKO)"] : 0}catch (error) {console.log(error);}
-        try {data['Today (RBD PO)'] = props.datatoday[0]["Today (RBD PO)"]!== null ? props.datatoday[0]["Today (RBD PO)"] : 0}catch (error) {console.log(error);}
-
-        try {data['date Today (CPO)'] = props.datatoday[0]["date"]!== null ? props.datatoday[0]["date"]: 0}catch (error) {console.log(error);}
-        try {data['date Today (CPKO)'] = props.datatoday[0]["date"]!== null ? props.datatoday[0]["date"]: 0}catch (error) {console.log(error);}
-        try {data['date Today (RBD PO)'] = props.datatoday[0]["date"]!== null ? props.datatoday[0]["date"]: 0}catch (error) {console.log(error);}
-    
+        data['date Today (CPO)'] = props.datatoday[0] ? props.datatoday[0]["date"]: 0
+        data['date Today (CPKO)'] = props.datatoday[0] ? props.datatoday[0]["date"]: 0
+        data['date Today (RBD PO)'] = props.datatoday[0] ? props.datatoday[0]["date"]: 0
+    } catch (error) {console.log(error);}
 
 
     // console.log(props.cpolog);
