@@ -15,8 +15,8 @@ const OrderSummary = (props) => {
     return (
         <div>
             <Col span={6} xs={24} sm={12} md={12} lg={8} xl={4}>
-                <Card style={{ height: '450px', width: '260px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                    <Row gutter={[16, 25]} align={'middle'}>
+                <Card style={{ height: '450px', width: '260px', background: '#706f6f', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
+                    <Row gutter={[16, 10]} align={'middle'}>
                         <Col span={24} align={'middle'}>
                             <span style={{ fontSize: '25px', color: 'white', fontStyle: 'oblique' }}> {orderinfo.Vessel}</span>
                             <br />
@@ -26,7 +26,7 @@ const OrderSummary = (props) => {
                             </span>
                             <div style={{ marginBottom: '10px' }} />
                             {orderinfo.Products.map((element, index) => (
-                                <Tag key={index} color='red' style={{fontSize:'15px'}}>
+                                <Tag key={index} color='red' style={{fontSize:'10px'}}>
                                     {element}
                                 </Tag>
                             ))}
@@ -34,7 +34,7 @@ const OrderSummary = (props) => {
                         <Col span={24} align={'middle'}>
                             {/* <span style={{ fontSize: '15px', color: 'white' }}>Vessel: b2 </span> */}
                             <Progress type="circle" percent={orderpercent} strokeColor={twoColors}
-                                size={[200, 100]} strokeWidth={10}  trailColor="#706f6f"
+                                size={[150, 75]} strokeWidth={10}
                                 format={() => (
                                     <span style={{ color: 'white' }}>{orderpercent}%</span>
                                 )} />

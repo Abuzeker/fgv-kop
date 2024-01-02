@@ -66,7 +66,7 @@ const OrderProgress = (props) => {
 
     return (
         <div>
-            <Card style={{ background: '#292828', color: 'white' }}>
+            <Card style={{ background: '#706f6f', color: 'white' }}>
 
                 <Row gutter={16}>
 
@@ -125,11 +125,11 @@ const OrderProgress = (props) => {
                                     title={<span style={{ color: 'white', fontSize:'22px' }}>Today Efficiency</span>}
                                     value={today_eff}
                                     suffix={'%'}
-                                    prefix={<CheckCircleFilled style={{ color: 'white', fontSize:'20px' }} />}
+                                    prefix={<CheckCircleFilled style={{ color: 'white' }} />}
                                 />
                             </Space>
 
-                            <div style={{ fontWeight: 'bold', padding: ' 5px 0px 0px 0px' }}>
+                            <div style={{ paddingTop: '5px', fontWeight: 'bold', padding: ' 10px 0px 0px 0px' }}>
                                 <span style={{ fontSize: '22px', color: 'white' }}>Attainment Rate</span>
                                 <Progress percent={Orderdetails['Attainment Rate']} strokeColor={twoColors} size={'large'} strokeWidth={15} format={customFormat} />
                             </div>

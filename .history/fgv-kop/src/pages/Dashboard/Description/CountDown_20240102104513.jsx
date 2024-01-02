@@ -9,7 +9,7 @@ const CountDown = ({ Period }) => {
 
     return (
         <div>
-            <span style={{ fontSize: '22px',color: 'white' }}>
+            <span valueStyle={{ fontSize: '30px',color: 'white' }}>
                 Time Remaining
             </span>
             <Countdown value={deadline} format="D [Days] H[:] m[:] s " valueStyle={{ color: 'white' }} />

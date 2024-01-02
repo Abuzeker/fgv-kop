@@ -6,18 +6,16 @@ const Orderdetail = (props) => {
     // console.log(Orderdetails.Products);
     return (
         <div>
-            <Card style={{ background: '#292828', color: 'white', height: '420px' }}>
+            <Card style={{ background: '#706f6f', color: 'white', height: '363px' }}>
 
                 <Space direction="vertical" size={0} style={{ display: 'flex' }}>
-                    <span style={{fontSize: '18px', fontWeight: 'bold', color: '#FFFFFF' }}>Customer:</span> 
-                    <span style={{fontSize: '18px',}}>{Orderdetails.Buyer}</span> 
+                    <span style={{fontSize: '18px', fontWeight: 'bold', color: '#FFFFFF' }}>Customer:</span> {Orderdetails.Buyer}
                     <div style={{ fontSize: '18px',marginBottom: '5px' }}></div>
-                    <span style={{fontSize: '18px', fontWeight: 'bold' }}>Vessel:</span> 
-                    <span style={{fontSize: '18px',}}>{Orderdetails.Vessel}</span>
+                    <span style={{fontSize: '18px', fontWeight: 'bold' }}>Vessel:</span> {Orderdetails.Vessel}
                     <div style={{ fontSize: '18px',marginBottom: '5px' }}></div>
                     <span style={{ fontSize: '18px',fontWeight: 'bold' }}>Product:</span>
 
-                    <Space direction="horizontal" size={0} style={{fontSize: '18px', display: 'flex' }}>
+                    <Space direction="horizontal" size={0} style={{ display: 'flex' }}>
                             {Orderdetails.Products.map((element, index) => (
                                 <Tag key={index} color='red'>
                                     {element}
@@ -28,14 +26,13 @@ const Orderdetail = (props) => {
                     {/* {Orderdetails.Products} */}
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{ fontSize: '18px',fontWeight: 'bold' }}>Order Quantity: </span> 
-                    <div><span style={{fontSize: '18px',}}>{Orderdetails.Quantity} </span>MT</div>
+                    <span style={{ fontWeight: 'bold' }}>Order Quantity: </span> <div>{Orderdetails.Quantity} MT</div>
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{ fontSize: '18px',fontWeight: 'bold' }}>Order Date:</span> <span style={{fontSize: '18px',}}>{Orderdetails.Laycan[0]}</span>
+                    <span style={{ fontWeight: 'bold' }}>Order Date:</span> {Orderdetails.Laycan[0]}
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{fontSize: '18px', fontWeight: 'bold' }}>Delivery Date:</span> <span style={{fontSize: '18px',}}>{Orderdetails.Laycan[1]}</span>
+                    <span style={{ fontWeight: 'bold' }}>Delivery Date:</span> {Orderdetails.Laycan[1]}
                     <div style={{ marginBottom: '5px' }}></div>
 
                 </Space>

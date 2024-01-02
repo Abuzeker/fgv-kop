@@ -162,7 +162,7 @@ const PurchaseOrderProgress = () => {
             <Row gutter={[15, 10]} align={'top'}>
                 <Col xs={24} lg={12}>
                     {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Order Detail</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <div style={{paddingTop:'10px'}}></div>
                     <Carousel fade={true} autoplay autoplaySpeed={10000} >
                         {OrderArray.map((element, index) => (
                             <div key={index}>
@@ -175,8 +175,7 @@ const PurchaseOrderProgress = () => {
 
                 {/* seperation different carosoul*/}
                 <Col span={12} xs={24} lg={12}>
-                    {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider>
 
                     <Row gutter={[10, 10]}>
                         <Col span={24}>

@@ -207,7 +207,6 @@ const Dashboard1 = () => {
           </Carousel>
 
         </div>
-        <div style={{ marginBottom: '45px' }}/>
 
       </Content>
 

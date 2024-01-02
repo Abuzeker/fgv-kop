@@ -161,8 +161,7 @@ const PurchaseOrderProgress = () => {
             {/* {console.log('render1')} */}
             <Row gutter={[15, 10]} align={'top'}>
                 <Col xs={24} lg={12}>
-                    {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Order Detail</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Order Detail</Divider>
                     <Carousel fade={true} autoplay autoplaySpeed={10000} >
                         {OrderArray.map((element, index) => (
                             <div key={index}>
@@ -175,8 +174,7 @@ const PurchaseOrderProgress = () => {
 
                 {/* seperation different carosoul*/}
                 <Col span={12} xs={24} lg={12}>
-                    {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider>
 
                     <Row gutter={[10, 10]}>
                         <Col span={24}>
@@ -242,7 +240,7 @@ const Product_Progress_UI = (progress) => {
         <Row gutter={16}>
             <Col span={24}>
                 <div style={{ marginBottom: '0px' }}>
-                <Tag color='red' style={{fontSize:'18px'}}>
+                <Tag color='red' style={{fontSize:'16px'}}>
                         {progress.product}
                     </Tag>
                 </div>
@@ -252,7 +250,7 @@ const Product_Progress_UI = (progress) => {
                         <Col span={8}>
                             <Statistic
                                 valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Totol Order </span>}
+                                title={<span style={{ color: 'white', fontSize: '16px' }}>Totol Order </span>}
                                 value={progress.Target}
                                 suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
                             />
@@ -261,7 +259,7 @@ const Product_Progress_UI = (progress) => {
                         <Col span={8}>
                             <Statistic
                                 valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Produced </span>}
+                                title={<span style={{ color: 'white', fontSize: '16px' }}>Produced </span>}
                                 value={progress.produced}
                                 suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
                             />
@@ -270,7 +268,7 @@ const Product_Progress_UI = (progress) => {
                         <Col span={8}>
                             <Statistic
                                 valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Remaining </span>}
+                                title={<span style={{ color: 'white', fontSize: '16px' }}>Remaining </span>}
                                 value={progress.remaining}
                                 suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
                             />

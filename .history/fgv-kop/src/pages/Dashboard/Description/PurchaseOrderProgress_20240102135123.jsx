@@ -1,4 +1,4 @@
-import { Card, Col, Row, Badge, Descriptions, Typography, Space, Progress, Divider, Carousel, Statistic, Tag } from 'antd'
+import { Card, Col, Row, Badge, Descriptions, Typography, Space, Progress, Divider, Carousel, Statistic } from 'antd'
 import { React, useEffect, useState } from 'react';
 import BarchartWithColor from '../Graph/BarchartWithColor';
 import TimelineDetail from './TimelineDetail';
@@ -40,7 +40,7 @@ const orders = (OrderInfo) => {
 
                             <Carousel autoplay autoplaySpeed={8000}>
                                 {/* <div>
-                                    <Card style={{ fill: 'ActiveBorder', background: '#292828', color: 'white', height: '620px' }}>
+                                    <Card style={{ fill: 'ActiveBorder', background: '#706f6f', color: 'white', height: '620px' }}>
                                         <div style={{ marginBottom: '20px' }}>
                                             <span style={{ fontWeight: 'bold', fontSize: '20px' }}>
                                                 Order Timeline
@@ -52,7 +52,7 @@ const orders = (OrderInfo) => {
 
                                 <div>
 
-                                    <Card style={{ fill: 'ActiveBorder', background: '#292828', color: 'white', height: '620px' }}>
+                                    <Card style={{ fill: 'ActiveBorder', background: '#706f6f', color: 'white', height: '620px' }}>
                                         {/* <div style={{ marginBottom: '20px' }}>
                                             <span style={{ fontWeight: 'bold', fontSize: '20px' }}>
                                                 Order Product
@@ -76,7 +76,7 @@ const orders = (OrderInfo) => {
 
                         </Col>
                         <Col span={12} xs={24} lg={12}>
-                            <Card style={{ fill: 'ActiveBorder', background: '#292828', height: '620px' }}>
+                            <Card style={{ fill: 'ActiveBorder', background: '#706f6f', height: '620px' }}>
                                 <div style={{ marginBottom: '20px' }}>
                                     <span style={{ fontWeight: 'bold', fontSize: '20px', color: 'white' }}>
                                         Daily Production
@@ -161,8 +161,7 @@ const PurchaseOrderProgress = () => {
             {/* {console.log('render1')} */}
             <Row gutter={[15, 10]} align={'top'}>
                 <Col xs={24} lg={12}>
-                    {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Order Detail</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Order Detail</Divider>
                     <Carousel fade={true} autoplay autoplaySpeed={10000} >
                         {OrderArray.map((element, index) => (
                             <div key={index}>
@@ -175,16 +174,15 @@ const PurchaseOrderProgress = () => {
 
                 {/* seperation different carosoul*/}
                 <Col span={12} xs={24} lg={12}>
-                    {/* <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider> */}
-                    <div style={{paddingTop:'30px'}}></div>
+                    <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>PO Summary</Divider>
 
                     <Row gutter={[10, 10]}>
                         <Col span={24}>
-                            <Card style={{ fill: 'ActiveBorder', background: '#292828', height: '550px' }}>
+                            <Card style={{ fill: 'ActiveBorder', background: '#706f6f', height: '495px' }}>
                                 <span style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
                                     Ongoing Order
                                 </span>
-                                <div style={{ marginBottom: '20px' }} ></div>
+                                <div style={{ marginBottom: '60px' }} ></div>
 
                                 <Carousel autoplay autoplaySpeed={5000} >
                                     {
@@ -203,7 +201,7 @@ const PurchaseOrderProgress = () => {
                         </Col>
 
                         <Col span={24}>
-                            <Card style={{ fill: 'ActiveBorder', background: '#292828', }}>
+                            <Card style={{ fill: 'ActiveBorder', background: '#706f6f', }}>
                                 <Carousel fade>
 
                                     {/* <div>
@@ -236,48 +234,48 @@ const Product_Progress_UI = (progress) => {
     // console.log(progress);
 
     const twoColors = { '0%': '#108ee9', '100%': '#87d068' };
-    const customFormat = percent => (<span style={{ color: 'white', fontSize:'15px' }}>{percent}%</span>)
+    const customFormat = percent => (<span style={{ color: 'white' }}>{percent}%</span>)
 
     return (
         <Row gutter={16}>
             <Col span={24}>
                 <div style={{ marginBottom: '0px' }}>
-                <Tag color='red' style={{fontSize:'18px'}}>
+                    <span style={{ fontWeight: 'bold', fontSize: '15px' }}>
                         {progress.product}
-                    </Tag>
+                    </span>
                 </div>
                 <Space direction="vertical" size="small" style={{ display: 'flex', color: 'white' }}>
 
                     <Row gutter={[10, 0]}>
                         <Col span={8}>
                             <Statistic
-                                valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Totol Order </span>}
+                                valueStyle={{ color: 'white', fontSize: '18px' }}
+                                title={<span style={{ color: 'white' }}>Totol Order </span>}
                                 value={progress.Target}
-                                suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
+                                suffix={<span style={{ fontSize: '10px', color: 'white' }}>MT</span>}
                             />
                         </Col>
 
                         <Col span={8}>
                             <Statistic
-                                valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Produced </span>}
+                                valueStyle={{ color: 'white', fontSize: '18px' }}
+                                title={<span style={{ color: 'white', fontSize: '13px' }}>Produced </span>}
                                 value={progress.produced}
-                                suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
+                                suffix={<span style={{ fontSize: '10px', color: 'white' }}>MT</span>}
                             />
                         </Col>
 
                         <Col span={8}>
                             <Statistic
-                                valueStyle={{ color: 'white', fontSize: '20px' }}
-                                title={<span style={{ color: 'white', fontSize: '18px' }}>Remaining </span>}
+                                valueStyle={{ color: 'white', fontSize: '18px' }}
+                                title={<span style={{ color: 'white' }}>Remaining </span>}
                                 value={progress.remaining}
-                                suffix={<span style={{ fontSize: '13px', color: 'white' }}>MT</span>}
+                                suffix={<span style={{ fontSize: '10px', color: 'white' }}>MT</span>}
                             />
                         </Col>
                     </Row>
 
-                    <div style={{ paddingTop: '0px', fontWeight: 'bold' }}>
+                    <div style={{ paddingTop: '5px', fontWeight: 'bold', padding: ' 0px 0px 0px 0px' }}>
                         {/* <span style={{ fontSize: '12px', color: 'white' }}>Order Progress</span> */}
                         <Progress percent={parseFloat((progress.produced / progress.Target) * 100).toFixed(1)}
                             strokeColor={twoColors} size={'small'} strokeWidth={8} format={customFormat} />

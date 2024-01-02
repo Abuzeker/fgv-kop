@@ -171,6 +171,7 @@ const Dashboard1 = () => {
         }}
       >
         <TopCard datatodate={highestCPO} datatoday={DataArray} cpolog={cpolog} cpkolog={cpkolog} rbdpolog={rbdpolog}></TopCard>
+        <div style={{ marginBottom: '55px' }}/>
 
         <div className="site-layout-content">
 
@@ -207,7 +208,6 @@ const Dashboard1 = () => {
           </Carousel>
 
         </div>
-        <div style={{ marginBottom: '45px' }}/>
 
       </Content>
 

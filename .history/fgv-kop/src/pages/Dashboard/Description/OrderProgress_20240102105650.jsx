@@ -66,7 +66,7 @@ const OrderProgress = (props) => {
 
     return (
         <div>
-            <Card style={{ background: '#292828', color: 'white' }}>
+            <Card style={{ background: '#706f6f', color: 'white' }}>
 
                 <Row gutter={16}>
 

@@ -6,7 +6,7 @@ const Orderdetail = (props) => {
     // console.log(Orderdetails.Products);
     return (
         <div>
-            <Card style={{ background: '#292828', color: 'white', height: '420px' }}>
+            <Card style={{ background: '#706f6f', color: 'white', height: '370px' }}>
 
                 <Space direction="vertical" size={0} style={{ display: 'flex' }}>
                     <span style={{fontSize: '18px', fontWeight: 'bold', color: '#FFFFFF' }}>Customer:</span> 

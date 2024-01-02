@@ -66,7 +66,7 @@ const OrderProgress = (props) => {
 
     return (
         <div>
-            <Card style={{ background: '#292828', color: 'white' }}>
+            <Card style={{ background: '#706f6f', color: 'white' }}>
 
                 <Row gutter={16}>
 
@@ -87,7 +87,7 @@ const OrderProgress = (props) => {
 
                                 <Col span={8}>
                                     <Statistic
-                                        valueStyle={{ fontSize: '25px',color: 'white' }}
+                                        valueStyle={{ fontSize: '30px',color: 'white' }}
                                         title={<span style={{ color: 'white', fontSize:'22px' }}>Produced </span>}
                                         value={Orderdetails['Todate Quantity']}
                                         suffix={<span style={{ fontSize: '15px', color: 'white' }}>MT</span>}
@@ -96,7 +96,7 @@ const OrderProgress = (props) => {
 
                                 <Col span={8}>
                                     <Statistic
-                                        valueStyle={{fontSize: '25px', color: 'white' }}
+                                        valueStyle={{fontSize: '30px', color: 'white' }}
                                         title={<span style={{ color: 'white', fontSize:'22px' }}>Remaining </span>}
                                         value={Remaing}
                                         suffix={<span style={{ fontSize: '15px', color: 'white' }}>MT</span>}
@@ -105,7 +105,7 @@ const OrderProgress = (props) => {
 
                                 <Col span={8}>
                                     <Statistic
-                                        valueStyle={{ fontSize: '25px',color: 'white' }}
+                                        valueStyle={{ fontSize: '30px',color: 'white' }}
                                         title={<span style={{ color: 'white', fontSize:'22px' }}>Today Target </span>}
                                         value={Orderdetails['Today Targeted Quantity']}
                                         suffix={<span style={{ fontSize: '15px', color: 'white' }}>MT/Day</span>}
@@ -115,21 +115,21 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
                                 <Statistic
-                                    valueStyle={{ fontSize: '25px', fontWeight: 600, color: 'white' }}
+                                    valueStyle={{ fontSize: '18px', fontWeight: 600, color: 'white' }}
                                     title={<span style={{ color: 'white', fontSize:'22px' }}>Anticipated Fulfilment Date</span>}
                                     value={Orderdetails['Anticipated Fulfillment Date']}
                                 />
 
                                 <Statistic
-                                    valueStyle={{ fontSize: '25px', color: 'white' }}
+                                    valueStyle={{ fontSize: '18px', color: 'white' }}
                                     title={<span style={{ color: 'white', fontSize:'22px' }}>Today Efficiency</span>}
                                     value={today_eff}
                                     suffix={'%'}
-                                    prefix={<CheckCircleFilled style={{ color: 'white', fontSize:'20px' }} />}
+                                    prefix={<CheckCircleFilled style={{ color: 'white' }} />}
                                 />
                             </Space>
 
-                            <div style={{ fontWeight: 'bold', padding: ' 5px 0px 0px 0px' }}>
+                            <div style={{ paddingTop: '5px', fontWeight: 'bold', padding: ' 10px 0px 0px 0px' }}>
                                 <span style={{ fontSize: '22px', color: 'white' }}>Attainment Rate</span>
                                 <Progress percent={Orderdetails['Attainment Rate']} strokeColor={twoColors} size={'large'} strokeWidth={15} format={customFormat} />
                             </div>

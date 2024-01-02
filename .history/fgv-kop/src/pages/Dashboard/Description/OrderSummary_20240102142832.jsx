@@ -34,7 +34,7 @@ const OrderSummary = (props) => {
                         <Col span={24} align={'middle'}>
                             {/* <span style={{ fontSize: '15px', color: 'white' }}>Vessel: b2 </span> */}
                             <Progress type="circle" percent={orderpercent} strokeColor={twoColors}
-                                size={[200, 100]} strokeWidth={10}  trailColor="#706f6f"
+                                size={[200, 100]} strokeWidth={10}  trailColor="#ccc"
                                 format={() => (
                                     <span style={{ color: 'white' }}>{orderpercent}%</span>
                                 )} />
