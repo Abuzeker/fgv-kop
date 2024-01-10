@@ -1,0 +1,10 @@
+.ant-table-cell {
+    padding: 0 !important;
+    width: auto;
+  }
+  
+  .color-cell {
+    height: 50px;
+    overflow: hidden;
+  }
+  

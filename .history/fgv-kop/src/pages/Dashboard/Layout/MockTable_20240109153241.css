@@ -1,0 +1,9 @@
+.ant-table-cell {
+    padding: 0 !important;
+  }
+  
+  .color-cell {
+    height: 30px;
+    overflow: hidden;
+  }
+  

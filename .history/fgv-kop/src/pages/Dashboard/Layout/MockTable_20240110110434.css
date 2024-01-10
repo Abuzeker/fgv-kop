@@ -1,0 +1,30 @@
+.status-table .ant-table-cell {
+    padding-left: 0  !important;
+    padding-right: 0  !important;
+
+    width: 100px;
+    background-color: #292828;
+    color: white;
+    font-size: 20px;
+
+  }
+  
+  .status-table .color-cell {
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+
+  }
+
+  .status-table .ant-table-thead > tr > th {
+    height: 60px; /* Adjust the height as needed */
+    text-align: center;
+    padding-left: 5px;
+
+}
+
+.status-table .ant-table-thead .ant-table-cell {
+    font-size: 18px; /* Set the desired font size */
+    background-color:rgb(48, 46, 54);
+    color: white;
+  }
