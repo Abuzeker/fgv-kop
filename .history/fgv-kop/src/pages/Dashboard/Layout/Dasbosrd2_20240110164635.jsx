@@ -1,5 +1,5 @@
 import { Breadcrumb, Card, Col, Layout, Menu, Row, ConfigProvider, Statistic, Collapse, Button, Divider, Carousel } from 'antd';
-import TopCard from './TopCard';
+import TopCard from './TopCPOCard';
 import './style.css'; // Import your custom styles
 import UtilizationCarosel from './UtilizationCarosel';
 import MarqueeCard from './MarqueCard';
@@ -10,17 +10,17 @@ const { Header, Content, Footer } = Layout;
 const Dashboard2 = () => {
     return (
         <Layout className="layout">
-            {/* <Header
+            <Header
                 style={{
                     display: 'flex',
                     alignItems: 'center',
-                    backgroundColor: '#141414'
-
                 }}
             >
-                <MarqueeCard></MarqueeCard>
-            </Header> */}
-            {/* <TopCard></TopCard> */}
+
+                <span style={{ color: 'yellow', fontSize: '30px', fontWeight: 'bold' }}>Kuantan Oil Product (KOP)</span>
+
+                {/* <MarqueeCard data={DataArray}></MarqueeCard> */}
+            </Header>
             <Content
                 style={{
                     padding: '0px 50px 0px 50px',
@@ -29,15 +29,9 @@ const Dashboard2 = () => {
                 }}
             >
                 <div >
-                    {/* <TopCard></TopCard> */}
 
-                    {/* <Carousel fade={true} autoplay autoplaySpeed={10000} > */}
-                        <PurchaseOrderProgress />
-                        {/* <div>
-                            <Divider orientation='left'>Daily Operational Report</Divider>
-                            <UtilizationCarosel />
-                        </div> */}
-                    {/* </Carousel> */}
+                    <PurchaseOrderProgress />
+    
                 </div>
             </Content>
             <Footer
@@ -46,8 +40,8 @@ const Dashboard2 = () => {
                     backgroundColor: '#141414'
                 }}
             >
-                <span style={{color:'white'}}>
-                                    FGV KOP ©2023 Created by IOTCS
+                <span style={{ color: 'white' }}>
+                FGVR KOP ©2023 Created by IOTCS
                 </span>
             </Footer>
         </Layout>

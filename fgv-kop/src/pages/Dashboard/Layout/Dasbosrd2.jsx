@@ -29,15 +29,9 @@ const Dashboard2 = () => {
                 }}
             >
                 <div >
-                    {/* <TopCard></TopCard> */}
 
-                    {/* <Carousel fade={true} autoplay autoplaySpeed={10000} > */}
                     <PurchaseOrderProgress />
-                    {/* <div>
-                            <Divider orientation='left'>Daily Operational Report</Divider>
-                            <UtilizationCarosel />
-                        </div> */}
-                    {/* </Carousel> */}
+    
                 </div>
             </Content>
             <Footer
@@ -47,7 +41,7 @@ const Dashboard2 = () => {
                 }}
             >
                 <span style={{ color: 'white' }}>
-                    FGV KOP ©2023 Created by IOTCS
+                FGVR KOP ©2023 Created by IOTCS
                 </span>
             </Footer>
         </Layout>
