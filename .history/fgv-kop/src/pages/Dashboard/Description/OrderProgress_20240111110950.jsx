@@ -115,11 +115,11 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
 
-                                <Row gutter={[30, 10]}>
+                                <Row gutter={[130, 10]}>
                                     <Col span={12}>
 
                                         <Statistic
-                                            valueStyle={{ fontSize: '20px', fontWeight: 600, color: 'white' }}
+                                            valueStyle={{ fontSize: '19px', fontWeight: 600, color: 'white' }}
                                             title={<span style={{ color: 'white', fontSize: '16px' }}>Anticipated Fulfilment Date</span>}
                                             value={Orderdetails['Anticipated Fulfillment Date']}
                                         />
@@ -127,11 +127,11 @@ const OrderProgress = (props) => {
         
                                     <Col span={12}>
                                         <Statistic
-                                            valueStyle={{ fontSize: '25px', color: 'white' }}
-                                            title={<span style={{ color: 'white', fontSize: '18px' }}>Today Efficiency</span>}
+                                            valueStyle={{ fontSize: '19px', color: 'white' }}
+                                            title={<span style={{ color: 'white', fontSize: '16px' }}>Today Efficiency</span>}
                                             value={today_eff}
                                             suffix={'%'}
-                                            prefix={<CheckCircleFilled style={{ color: 'white', fontSize: '20px' }} />}
+                                            prefix={<CheckCircleFilled style={{ color: 'white', fontSize: '16px' }} />}
                                         />
                                     </Col>
                                 </Row>

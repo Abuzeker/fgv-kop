@@ -39,7 +39,7 @@ const Orderdetail = (props) => {
                     <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Order Quantity: </span>
 
                     <div>
-                        <span style={{ fontSize: '20px' }}>
+                        <span style={{ fontSize: '18px' }}>
                             {new Intl.NumberFormat().format(Orderdetails.Quantity)}
                         </span>
                         MT
@@ -47,7 +47,7 @@ const Orderdetail = (props) => {
 
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Laycan:</span> <span style={{ fontSize: '20px', }}>{Orderdetails.Laycan[0]} - {Orderdetails.Laycan[1]}</span>
+                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Laycan:</span> <span style={{ fontSize: '18px', }}>{Orderdetails.Laycan[0]} - {Orderdetails.Laycan[1]}</span>
                     <div style={{ marginBottom: '5px' }}></div>
 
                     <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Vassel ETA:</span> <span style={{ fontSize: '20px', }}>{VesselETA}</span>

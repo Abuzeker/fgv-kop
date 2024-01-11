@@ -39,7 +39,7 @@ const Orderdetail = (props) => {
                     <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Order Quantity: </span>
 
                     <div>
-                        <span style={{ fontSize: '20px' }}>
+                        <span style={{ fontSize: '18px' }}>
                             {new Intl.NumberFormat().format(Orderdetails.Quantity)}
                         </span>
                         MT

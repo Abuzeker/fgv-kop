@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge, Card, Col, Descriptions, Progress, Row, Space, Tag } from 'antd';
+import { Badge, Card, Descriptions, Progress, Space, Tag } from 'antd';
 import { convertToMalaysiaTimeAndFormat } from '../../../DataRequest/UtilityProcess';
 
 const Orderdetail = (props) => {
@@ -20,17 +20,11 @@ const Orderdetail = (props) => {
                     <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Product:</span>
 
                     <Space direction="horizontal" size={0} style={{ fontSize: '18px', display: 'flex' }}>
-                        <Row>
-                            {Orderdetails.Products.map((element, index) => (
-                                <Col span={8}>
-                                    <Tag key={index} color='red'>
-                                        {element}
-                                    </Tag>
-                                </Col>
-                            ))}
-
-                        </Row>
-
+                        {Orderdetails.Products.map((element, index) => (
+                            <Tag key={index} color='red'>
+                                {element}
+                            </Tag>
+                        ))}
                     </Space>
 
                     {/* {Orderdetails.Products} */}
@@ -39,7 +33,7 @@ const Orderdetail = (props) => {
                     <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Order Quantity: </span>
 
                     <div>
-                        <span style={{ fontSize: '20px' }}>
+                        <span style={{ fontSize: '18px' }}>
                             {new Intl.NumberFormat().format(Orderdetails.Quantity)}
                         </span>
                         MT
@@ -47,10 +41,10 @@ const Orderdetail = (props) => {
 
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Laycan:</span> <span style={{ fontSize: '20px', }}>{Orderdetails.Laycan[0]} - {Orderdetails.Laycan[1]}</span>
+                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Laycan:</span> <span style={{ fontSize: '18px', }}>{Orderdetails.Laycan[0]} - {Orderdetails.Laycan[1]}</span>
                     <div style={{ marginBottom: '5px' }}></div>
 
-                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Vassel ETA:</span> <span style={{ fontSize: '20px', }}>{VesselETA}</span>
+                    <span style={{ fontSize: '18px', fontWeight: 'bold' }}>Vassel ETA:</span> <span style={{ fontSize: '18px', }}>{VesselETA}</span>
                     <div style={{ marginBottom: '5px' }}></div>
 
                 </Space>

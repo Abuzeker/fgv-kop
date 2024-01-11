@@ -115,20 +115,29 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
 
-                                <Row gutter={[30, 10]}>
-                                    <Col span={12}>
+                                <Row gutter={[10, 10]}>
+                                    <Col span={8}>
 
                                         <Statistic
-                                            valueStyle={{ fontSize: '20px', fontWeight: 600, color: 'white' }}
-                                            title={<span style={{ color: 'white', fontSize: '16px' }}>Anticipated Fulfilment Date</span>}
+                                            valueStyle={{ fontSize: '25px', fontWeight: 600, color: 'white' }}
+                                            title={<span style={{ color: 'white', fontSize: '22px' }}>Anticipated Fulfilment Date</span>}
                                             value={Orderdetails['Anticipated Fulfillment Date']}
                                         />
                                     </Col>
-        
-                                    <Col span={12}>
+                                    <Col span={8}>
+
+                                        <Statistic
+                                            valueStyle={{ fontSize: '25px', color: 'white', marginRight: '20px' }}
+                                            title={<span style={{ color: 'white', fontSize: '22px' }}></span>}
+                                            value={'      '}
+                                            suffix={'    '}
+                                        />
+                                    </Col>
+                                    <Col span={8}>
+
                                         <Statistic
                                             valueStyle={{ fontSize: '25px', color: 'white' }}
-                                            title={<span style={{ color: 'white', fontSize: '18px' }}>Today Efficiency</span>}
+                                            title={<span style={{ color: 'white', fontSize: '22px' }}>Today Efficiency</span>}
                                             value={today_eff}
                                             suffix={'%'}
                                             prefix={<CheckCircleFilled style={{ color: 'white', fontSize: '20px' }} />}

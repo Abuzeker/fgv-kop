@@ -115,12 +115,12 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
 
-                                <Row gutter={[30, 10]}>
+                                <Row gutter={[130, 10]}>
                                     <Col span={12}>
 
                                         <Statistic
                                             valueStyle={{ fontSize: '20px', fontWeight: 600, color: 'white' }}
-                                            title={<span style={{ color: 'white', fontSize: '16px' }}>Anticipated Fulfilment Date</span>}
+                                            title={<span style={{ color: 'white', fontSize: '18px' }}>Anticipated Fulfilment Date</span>}
                                             value={Orderdetails['Anticipated Fulfillment Date']}
                                         />
                                     </Col>

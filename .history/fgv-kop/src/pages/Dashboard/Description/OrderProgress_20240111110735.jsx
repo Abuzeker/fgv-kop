@@ -115,17 +115,17 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
 
-                                <Row gutter={[30, 10]}>
-                                    <Col span={12}>
+                                <Row gutter={[150, 10]}>
+                                    <Col span={15}>
 
                                         <Statistic
-                                            valueStyle={{ fontSize: '20px', fontWeight: 600, color: 'white' }}
-                                            title={<span style={{ color: 'white', fontSize: '16px' }}>Anticipated Fulfilment Date</span>}
+                                            valueStyle={{ fontSize: '25px', fontWeight: 600, color: 'white' }}
+                                            title={<span style={{ color: 'white', fontSize: '18px' }}>Anticipated Fulfilment Date</span>}
                                             value={Orderdetails['Anticipated Fulfillment Date']}
                                         />
                                     </Col>
         
-                                    <Col span={12}>
+                                    <Col span={9}>
                                         <Statistic
                                             valueStyle={{ fontSize: '25px', color: 'white' }}
                                             title={<span style={{ color: 'white', fontSize: '18px' }}>Today Efficiency</span>}

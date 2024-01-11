@@ -115,7 +115,7 @@ const OrderProgress = (props) => {
 
                             <Space direction="horizontal" size={40} style={{ display: 'flex', color: 'white' }}>
 
-                                <Row gutter={[30, 10]}>
+                                <Row gutter={[20, 10]}>
                                     <Col span={12}>
 
                                         <Statistic

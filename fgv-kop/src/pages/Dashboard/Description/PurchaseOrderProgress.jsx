@@ -43,17 +43,6 @@ const orders = (OrderInfo) => {
                     <Row gutter={[10, 10]}>
                         <Col span={12} xs={24} lg={12}>
 
-                            {/* <div>
-                                    <Card style={{ fill: 'ActiveBorder', background: '#292828', color: 'white', height: '620px' }}>
-                                        <div style={{ marginBottom: '20px' }}>
-                                            <span style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                                                Order Timeline
-                                            </span>
-                                        </div>
-                                        <TimelineDetail />
-                                    </Card>
-                                </div> */}
-
                             <div>
 
                                 <Card style={{ fill: 'ActiveBorder', background: '#292828', color: 'white', height: '620px' }}>
@@ -185,7 +174,7 @@ const PurchaseOrderProgress = () => {
 
                     <Row gutter={[10, 10]}>
                         <Col span={24}>
-                            <Card style={{ fill: 'ActiveBorder', background: '#292828', height: '520px' }}>
+                            <Card style={{ fill: 'ActiveBorder', background: '#292828', height: '100%' }}>
 
                                 <span style={{ fontWeight: 'bold', fontSize: '25px', color: 'white' }}>
                                     Cargo Readiness
