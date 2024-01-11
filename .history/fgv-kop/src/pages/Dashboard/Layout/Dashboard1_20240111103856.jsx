@@ -64,18 +64,18 @@ let extractedDataRBDPO = []
 const utility_carosel_refining = (utilityData) => {
 
   return (
-    <Carousel fade={true} autoplay autoplaySpeed={10000} dots={false} dotPosition='top'>
+    <Carousel fade={true} autoplay autoplaySpeed={10000} dots={false}>
       <div>
         <Carousel fade={true} autoplay autoplaySpeed={3000} dotPosition='left'>
           <div>
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti'} type={'Bleaching Earth Usage (CPO)'} range={[6.01, 7.01]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti'} type={'Bleaching Earth Usage (CPO)'} range={[6.01, 7.01]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -83,11 +83,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti2'} type={'Electric Usage (CPO)'} range={[14.01, 15.01]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti2'} type={'Electric Usage (CPO)'} range={[14.01, 15.01]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -95,11 +95,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti3'} type={'Phosphoric Usage (CPO)'} range={[0.55, 0.65]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti3'} type={'Phosphoric Usage (CPO)'} range={[0.55, 0.65]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -107,11 +107,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti4'} type={'LNG Usage (CPO)'} range={[12.01, 12.99]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti4'} type={'LNG Usage (CPO)'} range={[12.01, 12.99]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -119,11 +119,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti5'} type={'Water Usage (CPO)'} range={[0.2, 0.3]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti5'} type={'Water Usage (CPO)'} range={[0.2, 0.3]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -136,11 +136,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti'} type={'Bleaching Earth Usage (CPKO)'} range={[6, 7]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti'} type={'Bleaching Earth Usage (CPKO)'} range={[6, 7]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -148,11 +148,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti2'} type={'Elektric Usage (CPKO)'} range={[14, 15]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti2'} type={'Elektric Usage (CPKO)'} range={[14, 15]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -160,11 +160,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti3'} type={'Phosphoric Usage (CPKO)'} range={[0.55, 0.65]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti3'} type={'Phosphoric Usage (CPKO)'} range={[0.55, 0.65]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -172,11 +172,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti4'} type={'LNG Usage (CPKO)'} range={[12.01, 12.99]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti4'} type={'LNG Usage (CPKO)'} range={[12.01, 12.99]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -184,11 +184,11 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti5'} type={'Water Usage (CPKO)'} range={[0.2, 0.3]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti5'} type={'Water Usage (CPKO)'} range={[0.2, 0.3]} height={300}/>
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} />
+                <RemarkTable height={390} plant={'Refining'}/>
               </Col>
             </Row>
           </div>
@@ -224,13 +224,11 @@ const utility_carosel_Fract = (utilityData) => {
         <Row gutter={[10, 10]}>
           <Col span={16}>
             <Card style={{ height: '100%', background: '#292828' }}>
-              <BarchartWithColor data={extractedDataRBDPO} containername={'crbdpouti'} type={'Bleaching Earth Usage (RBD PO)'} range={[6.01, 7.01]} height={500} />
+              <BarchartWithColor data={extractedDataRBDPO} containername={'crbdpouti'} type={'Bleaching Earth Usage (RBD PO)'} range={[6.01, 7.01]} height={600}/>
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} />
-            </Card>
+            <RemarkTable height={500} plant={'Fract'}/>
           </Col>
         </Row>
       </div>
@@ -238,52 +236,47 @@ const utility_carosel_Fract = (utilityData) => {
         <Row gutter={[10, 10]}>
           <Col span={16}>
             <Card style={{ height: '100%', background: '#292828' }}>
-              <BarchartWithColor data={extractedDataRBDPO} containername={'crbdpoti2'} type={'Electric Usage (RBD PO)'} range={[14.01, 15.01]} height={500} />
+              <BarchartWithColor data={extractedDataRBDPO} containername={'crbdpoti2'} type={'Electric Usage (RBD PO)'} range={[14.01, 15.01]} height={600}/>
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} />
-            </Card>          </Col>
+            <RemarkTable height={500} plant={'Fract'}/>
+          </Col>
         </Row>
       </div>
       <div>
         <Row gutter={[10, 10]}>
           <Col span={16}>
             <Card style={{ height: '100%', background: '#292828' }}>
-              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpoti3'} type={'Phosphoric Usage (RBD PO)'} range={[0.55, 0.65]} height={500} />
+              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpoti3'} type={'Phosphoric Usage (RBD PO)'} range={[0.55, 0.65]} height={600}/>
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} />
-            </Card>          </Col>
+            <RemarkTable height={500} plant={'Fract'}/>
+          </Col>
         </Row>
       </div>
       <div>
         <Row gutter={[10, 10]}>
           <Col span={16}>
             <Card style={{ height: '100%', background: '#292828' }}>
-              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpouti4'} type={'LNG Usage (RBD PO)'} range={[12.01, 12.99]} height={500} />
+              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpouti4'} type={'LNG Usage (RBD PO)'} range={[12.01, 12.99]} height={600}/>
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} />
-            </Card>          </Col>
+            <RemarkTable height={500} plant={'Fract'}/>
+          </Col>
         </Row>
       </div>
       <div>
         <Row gutter={[10, 10]}>
           <Col span={16}>
             <Card style={{ height: '100%', background: '#292828' }}>
-              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpoti5'} type={'Water Usage (RBD PO)'} range={[0.2, 0.3]} height={500} />
+              <BarchartWithColor data={extractedDataRBDPO} containername={'rbdpoti5'} type={'Water Usage (RBD PO)'} range={[0.2, 0.3]} height={600}/>
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} />
-            </Card>
+            <RemarkTable height={500} plant={'Fract'}/>
           </Col>
         </Row>
       </div>
@@ -457,7 +450,7 @@ const Dashboard1 = () => {
 
             <div className="site-layout-content">
 
-              <Carousel fade={true} autoplay autoplaySpeed={30000} dotPosition='top'>
+              <Carousel fade={true} autoplay autoplaySpeed={30000}>
                 <div style={{ marginBottom: '10px' }}>
                   <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Daily Report</Divider>
 
@@ -496,9 +489,9 @@ const Dashboard1 = () => {
               rbdpocs={rbdpocs} rbdpoMA={rbdpoMA} rbdpoInfo={RBDPOCardInfo} rbdposhipment={CPOShipmentCompletion}></TopRBDPOCard>
 
             <div style={{ marginBottom: '10px' }}>
-              <Carousel fade={true} autoplay autoplaySpeed={30000} dotPosition='top'>
+              <Carousel fade={true} autoplay autoplaySpeed={30000}>
                 <div>
-                  <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Daily Report</Divider>
+                <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Daily Report</Divider>
 
                   <Row gutter={[10, 10]}>
                     <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>

@@ -5,7 +5,7 @@ import { mockRemark } from '../../../MockData/LineMock';
 
 const RemarkTable = (props) => {
 
-    const cssstyle = props.plant === "Refining" ? "remark-table":"fract-table"
+    const cssstyle = props.plant === "Refining" ? "remark-table":"Fract-table"
 
 
     const columns = [

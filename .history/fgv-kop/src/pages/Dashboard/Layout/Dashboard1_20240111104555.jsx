@@ -457,7 +457,7 @@ const Dashboard1 = () => {
 
             <div className="site-layout-content">
 
-              <Carousel fade={true} autoplay autoplaySpeed={30000} dotPosition='top'>
+              <Carousel fade={true} autoplay autoplaySpeed={30000}>
                 <div style={{ marginBottom: '10px' }}>
                   <Divider orientation='left' style={{ color: 'white', borderColor: 'white' }}>Daily Report</Divider>
 
