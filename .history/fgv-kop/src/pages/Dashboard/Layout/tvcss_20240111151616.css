@@ -1,0 +1,25 @@
+/* tvcss.css */
+
+/* Style for both "next" and "prev" arrows */
+.arrow {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    outline: none;
+  }
+  
+  /* Style for the "next" arrow */
+  .next-arrow {
+    right: 70px; /* Adjust the right position as needed */
+  }
+  
+  /* Style for the "prev" arrow */
+  .prev-arrow {
+    left: 80px; /* Adjust the left position as needed */
+  }
+
+  
