@@ -1,0 +1,53 @@
+/* styles.css */
+.custom-table {
+    font-size: 5px; /* Set the desired font size */
+  }
+
+.report-table {
+    font-size: 5px; /* Set the desired font size */
+}
+
+  /* styles.css */
+.custom-table .ant-table-cell {
+    font-size: 12px; /* Set the desired font size */
+  }
+
+.report-table .ant-table-cell{
+    font-size: 12px; /* Set the desired font size */
+    background-color:#292828;
+    color: white;
+  }
+
+.report-table .ant-table-thead .ant-table-cell {
+    font-size: 12px; /* Set the desired font size */
+    background-color:rgb(48, 46, 54);
+    color: white;
+  }
+
+.remark-table .ant-table-cell{
+    font-size: 16px; /* Set the desired font size */
+    background-color:#292828;
+    color: white;
+  }
+
+  .remark-table .ant-table-thead .ant-table-cell {
+    font-size: 12px; /* Set the desired font size */
+    background-color:rgb(48, 46, 54);
+    color: white;
+  }
+
+  .fract-table {
+    font-size: 5px; /* Set the desired font size */
+}
+
+  .fract-table .ant-table-cell{
+    font-size: 16px; /* Set the desired font size */
+    background-color:#292828;
+    color: white;
+  }
+
+.fract-table .ant-table-thead .ant-table-cell {
+    font-size: 16px; /* Set the desired font size */
+    background-color:rgb(48, 46, 54);
+    color: white;
+  }
