@@ -43,8 +43,8 @@ const TopRBDPOCard = (props) => {
 
     try { data['Todate (RBDPO)'] = props.datatodate[2]["Todate (RBDPO)"] !== null ? props.datatodate[2]["Todate (RBDPO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (RBDPO)'] = props.datatoday[1]["Today (RBDPO)"] !== null ? props.datatoday[1]["Today (RBDPO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (RBDPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['Today (RBDPO)'] = props.datatoday[0]["Today (RBDPO)"] !== null ? props.datatoday[0]["Today (RBDPO)"] : 0 } catch (error) { console.log(error); }
+    try { data['date Today (RBDPO)'] = props.datatoday[0]["date"] !== null ? props.datatoday[0]["date"] : 0 } catch (error) { console.log(error); }
     try { data['UF (ANALISIS HARIAN FRACTIONATION)'] = props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] !== null ? props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
     try { data['Total Cost (RBDPO)'] = props.datatodate[2]["Total Cost (RBDPO)"] !== null ? props.datatodate[2]["Total Cost (RBDPO)"] : 0; } catch (error) { console.log(error); }

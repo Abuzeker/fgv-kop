@@ -30,7 +30,7 @@ const PlantProcessingStatus = ({ColorData, ProductData, header}) => {
         {
             title: 'Total', dataIndex: 'Total', key: 'Total', 
             render:(text,record) =>(
-                <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
+                <div>{ <span style={{ paddingLeft: '10px'}} >{text}</span> }</div>
             )
         }
     ];

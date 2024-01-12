@@ -7,13 +7,37 @@ const currentDate = new Date();
 const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
 
 
+const generateMockData = (plant) => {
+    const daysInMonth = moment().daysInMonth();
+    // Example line
+    const line = plant;
+    // Generate random colors for each day
+    const daysObject = {};
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayKey = `day${day}`;
+        daysObject[dayKey] = getRandomColor();
+    }
+
+    // Add line information to the data
+    const dataObject = { Line: line, ...daysObject };
+    dataObject.Total = '123'
+    // mockData.push(dataObject);
+    // console.log(dataObject);
+    return dataObject;
+};
+
+const getRandomColor = () => {
+    const colors = ["#ff0000", "#ffff00", "#00ff00", "#0000ff"]; // Red, Yellow, Green, Blue
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+};
+
+
 const PlantProcessingStatus = ({ColorData, ProductData, header}) => {
 
     const columns = [
         { 
-            title: 'Plant ', 
-            dataIndex: 'Plant', key: 'Plant', 
-            width:'130px',
+            title: 'Plant', dataIndex: 'Line', key: 'Line', 
             render:(text,record) =>(
                 <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
             )
@@ -35,6 +59,11 @@ const PlantProcessingStatus = ({ColorData, ProductData, header}) => {
         }
     ];
 
+    const data = []
+
+    ProductData.forEach(element => {
+        data.push(generateMockData(element));
+    });
 
     console.log(ProductData);
 

@@ -21,7 +21,7 @@ const TopCPOCard = (props) => {
         'CPO C/S Date': props.cpoInfo['CPO C/S Date'],
     }
 
-    console.log(props.datatoday);
+    // console.log(props.datatodate);
     // console.log(props.cposhipment);
 
     // const RBDPL_Total_Produced = parseFloat(props.cposhipment['RBDPL Total Produced']) || 0;
@@ -40,8 +40,8 @@ const TopCPOCard = (props) => {
 
     try { data['Todate (CPO)'] = props.datatodate[0]["Todate (CPO)"] !== null ? props.datatodate[0]["Todate (CPO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (CPO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (CPO)'] = props.datatoday[1]["Today (CPO)"] !== null ? props.datatoday[1]["Today (CPO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (CPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['Today (CPO)'] = props.datatoday[0]["Today (CPO)"] !== null ? props.datatoday[0]["Today (CPO)"] : 0 } catch (error) { console.log(error); }
+    try { data['date Today (CPO)'] = props.datatoday[0]["date"] !== null ? props.datatoday[0]["date"] : 0 } catch (error) { console.log(error); }
 
 
     // console.log(props.cpolog);

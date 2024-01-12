@@ -155,13 +155,13 @@ const Dashboard3 = () => {
 
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['L1000', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L1000_color} header={true} />
+            <PlantProcessingStatus ProductData={['L1000', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L1000_color} header={false} />
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['DT600', 'CPO', 'CPKO']} ColorData={DT600_color} header={true} />
+            <PlantProcessingStatus ProductData={['DT600', 'CPO', 'CPKO']} ColorData={DT600_color} header={false} />
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['L450', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L450_color} header={true} />
+            <PlantProcessingStatus ProductData={['L450', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L450_color} header={false} />
         </div>
 
 

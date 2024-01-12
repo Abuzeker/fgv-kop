@@ -602,49 +602,32 @@ export const Merge_parameter_name_and_value = (response) => {
 
 ///dashboard 3
 
-export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
+export const Dashboar3_DateMerge = (RawResponse) => {
     const data = RawResponse.data
     const Result = []
 
-    const lineL1500 = data.filter(item => item.fields.line === Line);
-    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === parameter);
+    const lineL1500 = data.filter(item => item.fields.line === 'L1500');
+    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === 'Line Status');
 
-  
-    const obj = {}
-    console.log(L1500_Line_Status);
-    L1500_Line_Status.forEach(element => {
-        // Convert UTC timestamp to Date object
-        // console.log(element.fields['date_created']);
-        const utcDate = new Date(element.fields['date_created']);
+    // Filter L1000 items
+    const lineL1000 = data.filter(item => item.fields.line === 'L1000');
 
-        // Create a date formatter for Malaysia time
-        const malaysiaDateFormatter = new Intl.DateTimeFormat('en-US', {
-            timeZone: 'Asia/Kuala_Lumpur',
-            day: 'numeric',
-        });
-        const day = malaysiaDateFormatter.format(utcDate);
+    const utcTimestamp = '2024-01-30T16:00:00Z';
 
-        if(element.fields['value'] === '#FFD32F2F'){
-            obj[`day${day}`] = '#d32f2f' //red
-        }
+    // Convert UTC timestamp to Date object
+    const utcDate = new Date(utcTimestamp);
 
-        if(element.fields['value'] === '#FFEEFF41'){
-            obj[`day${day}`] = '#eeff41'  //yellow
-        }
-
-        if(element.fields['value'] === '#FF00C853'){
-            obj[`day${day}`] = '#00c853' //green
-        }
-
-        if(element.fields['value'] === '#FFFFCC80'){
-            obj[`day${day}`] = '#ffcc80' //orange
-        }
+    // Create a date formatter for Malaysia time
+    const malaysiaDateFormatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Kuala_Lumpur',
+        weekday: 'long',
     });
-    obj['Plant'] = Linename
 
+    // Format the date in Malaysia time
+    const malaysiaTime = malaysiaDateFormatter.format(utcDate);
 
-    console.log(Result);
+    console.log('Malaysia Time:', malaysiaTime);
+
+    console.log(lineL1500);
     console.log(L1500_Line_Status);
-    
-    return obj
 }

@@ -121,7 +121,7 @@ const Dashboard3 = () => {
 
         const L450_Status = Dashboar3_DateMerge(response_quantity,'L450','Line Status','L450')
         const L450_CPO    = Dashboar3_DateMerge(response_quantity,'L450','CPKO Processed','CPKO')
-        const L450_CPKO    = Dashboar3_DateMerge(response_quantity,'L450','Recyc. PS','Recyc. PS')
+        const L450_CPKO    = Dashboar3_DateMerge(response_quantity,'L450','Recyc. PS','Ryc. PS')
         const L450_rcy   = Dashboar3_DateMerge(response_quantity,'L450','CPO Processed','CPO')
 
         L450_color = []
@@ -155,13 +155,13 @@ const Dashboard3 = () => {
 
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['L1000', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L1000_color} header={true} />
+            <PlantProcessingStatus ProductData={['L1000', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L1000_color} header={false} />
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['DT600', 'CPO', 'CPKO']} ColorData={DT600_color} header={true} />
+            <PlantProcessingStatus ProductData={['DT600', 'CPO', 'CPKO']} ColorData={DT600_color} header={false} />
             <div style={{ padding: '10px' }} ></div>
 
-            <PlantProcessingStatus ProductData={['L450', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L450_color} header={true} />
+            <PlantProcessingStatus ProductData={['L450', 'CPO', 'CPKO', 'Recyc.Ps']} ColorData={L450_color} header={false} />
         </div>
 
 

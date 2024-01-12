@@ -11,9 +11,7 @@ const PlantProcessingStatus = ({ColorData, ProductData, header}) => {
 
     const columns = [
         { 
-            title: 'Plant ', 
-            dataIndex: 'Plant', key: 'Plant', 
-            width:'130px',
+            title: 'Plant   d ', dataIndex: 'Plant', key: 'Plant', 
             render:(text,record) =>(
                 <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
             )

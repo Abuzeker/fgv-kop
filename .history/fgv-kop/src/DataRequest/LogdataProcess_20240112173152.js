@@ -602,7 +602,7 @@ export const Merge_parameter_name_and_value = (response) => {
 
 ///dashboard 3
 
-export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
+export const Dashboar3_DateMerge = (RawResponse, Line, parameter) => {
     const data = RawResponse.data
     const Result = []
 
@@ -640,11 +640,12 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
             obj[`day${day}`] = '#ffcc80' //orange
         }
     });
-    obj['Plant'] = Linename
+    obj['Plant'] = Line
+    Result.push(obj)
 
 
     console.log(Result);
     console.log(L1500_Line_Status);
     
-    return obj
+    return Result
 }

@@ -227,9 +227,9 @@ export const BarGraphDataProcess = (data) => {
         const dailydata = element["Daily Quantity"]
         dailydata.map((element2) => {
             element2["Asset"] = element["Asset"]
-            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] * 100
+            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] *100
             element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : element2["Efficiency"];
-            element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : element2["Efficiency"];
+            element2["Efficiency"] = !isFinite(element2["Efficiency"])  ? 100 : element2["Efficiency"];
             Graph_data.push(element2)
         })
     })
@@ -593,58 +593,25 @@ export const Merge_parameter_name_and_value = (response) => {
         const { parameter, value } = item.fields;
         acc[parameter] = value;
         return acc;
-    }, {});
-
+      }, {});
+      
     //   console.log(transformedData);
-    return transformedData
+      return transformedData
 }
 
 
 ///dashboard 3
 
-export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
+export const Dashboar3_DateMerge = (RawResponse) =>{
     const data = RawResponse.data
     const Result = []
 
-    const lineL1500 = data.filter(item => item.fields.line === Line);
-    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === parameter);
+    const lineL1500 = data.filter(item => item.fields.line === 'L1500');
+    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === 'Line Status');
 
-  
-    const obj = {}
+    // Filter L1000 items
+    const lineL1000 = data.filter(item => item.fields.line === 'L1000');
+
+    console.log(lineL1500);
     console.log(L1500_Line_Status);
-    L1500_Line_Status.forEach(element => {
-        // Convert UTC timestamp to Date object
-        // console.log(element.fields['date_created']);
-        const utcDate = new Date(element.fields['date_created']);
-
-        // Create a date formatter for Malaysia time
-        const malaysiaDateFormatter = new Intl.DateTimeFormat('en-US', {
-            timeZone: 'Asia/Kuala_Lumpur',
-            day: 'numeric',
-        });
-        const day = malaysiaDateFormatter.format(utcDate);
-
-        if(element.fields['value'] === '#FFD32F2F'){
-            obj[`day${day}`] = '#d32f2f' //red
-        }
-
-        if(element.fields['value'] === '#FFEEFF41'){
-            obj[`day${day}`] = '#eeff41'  //yellow
-        }
-
-        if(element.fields['value'] === '#FF00C853'){
-            obj[`day${day}`] = '#00c853' //green
-        }
-
-        if(element.fields['value'] === '#FFFFCC80'){
-            obj[`day${day}`] = '#ffcc80' //orange
-        }
-    });
-    obj['Plant'] = Linename
-
-
-    console.log(Result);
-    console.log(L1500_Line_Status);
-    
-    return obj
 }

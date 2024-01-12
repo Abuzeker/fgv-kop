@@ -602,14 +602,16 @@ export const Merge_parameter_name_and_value = (response) => {
 
 ///dashboard 3
 
-export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
+export const Dashboar3_DateMerge = (RawResponse) => {
     const data = RawResponse.data
     const Result = []
 
-    const lineL1500 = data.filter(item => item.fields.line === Line);
-    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === parameter);
+    const lineL1500 = data.filter(item => item.fields.line === 'L1500');
+    const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === 'Line Status');
 
-  
+    // Filter L1000 items
+    const lineL1000 = data.filter(item => item.fields.line === 'L1000');
+
     const obj = {}
     console.log(L1500_Line_Status);
     L1500_Line_Status.forEach(element => {
@@ -639,12 +641,15 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
         if(element.fields['value'] === '#FFFFCC80'){
             obj[`day${day}`] = '#ffcc80' //orange
         }
+        
+
     });
-    obj['Plant'] = Linename
+    obj['Plant'] = 'L1500'
+    Result.push(obj)
 
 
     console.log(Result);
     console.log(L1500_Line_Status);
     
-    return obj
+    return Result
 }

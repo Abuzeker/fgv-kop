@@ -21,7 +21,7 @@ const TopCPOCard = (props) => {
         'CPO C/S Date': props.cpoInfo['CPO C/S Date'],
     }
 
-    console.log(props.datatoday);
+    console.log(props.datatodate);
     // console.log(props.cposhipment);
 
     // const RBDPL_Total_Produced = parseFloat(props.cposhipment['RBDPL Total Produced']) || 0;
