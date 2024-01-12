@@ -35,7 +35,7 @@ const Barchart = (props) => {
           obj = {}
           obj['date'] = element.date
           obj['value'] = parseFloat(element['Today (RBDPO)'])
-          obj['type'] = 'RBDPO'
+          obj['type'] = 'RBD PO'
           data.push(obj)
         }
       });
