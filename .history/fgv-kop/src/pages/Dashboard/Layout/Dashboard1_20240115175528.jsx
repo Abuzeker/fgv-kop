@@ -17,7 +17,7 @@ import {
   getNext10DaysRange, merge_log_and_order
 } from '../../../DataRequest/LogdataProcess';
 
-import { Caculate_ShipmentCompletion, Find_Latest_data, Find_Latest_data_CPKO, Find_Latest_data_CPO, Find_Latest_data_RBDPO, Sort_Log_by_date, extractData, findHighestTodateCPO, getCurrentMonthDateRange } from '../../../DataRequest/UtilityProcess';
+import { Caculate_ShipmentCompletion, Find_Latest_data, Find_Latest_data_CPKO, Find_Latest_data_CPO, Find_Latest_data_RBDPO, Sort_Log_by_date, extractData, findHighestTodateCPO } from '../../../DataRequest/UtilityProcess';
 import Barchart from '../Graph/Barchart';
 import BarchartWithColor from '../Graph/BarchartWithColor';
 import Utilitytable from '../Table/Utilitytable';
@@ -28,7 +28,6 @@ import FractTable from '../Table/FractTable';
 
 
 const { Header, Content, Footer } = Layout;
-let cpo_rcv_all_value
 let Daily_data = []
 let DataArray = []
 let highestCPO = []
@@ -70,9 +69,9 @@ const utility_carosel_refining = (utilityData) => {
   // console.log(utilityData);
 
   return (
-    <Carousel fade={true} autoplay autoplaySpeed={30000} dots={false} dotPosition='top'>
+    <Carousel fade={true} autoplay autoplaySpeed={20000} dots={false} dotPosition='top'>
       <div>
-        <Carousel fade={true} autoplay autoplaySpeed={10000} dotPosition='left'>
+        <Carousel fade={true} autoplay autoplaySpeed={3000} dotPosition='left'>
           <div>
             <Row gutter={[10, 10]}>
               <Col span={16}>
@@ -346,6 +345,32 @@ const Dashboard1 = () => {
     const response_quantity = await Request_dailydata_log(request_range_10,
       ["MSM", "MSM Total Value", "MSM Percentage", "CCNO BLENDED/ CPKO", "CCNO BLENDED/ CPKO TOTAL PROCESS", "CCNO BLENDED/ CPKO Percentage"])
 
+
+    //   const cpo_remark = await Request_dailydata_log(request_range_10,[
+    //     'Bleaching Earth Usage (CPO) Remark',
+    //     'Bleaching Earth Cost (CPO) Remark', 'Phosphoric Usage (CPO) Remark', 'Phosphoric Cost (CPO) Remark',
+    //     'LNG Usage (CPO) Remark', 'LNG Cost (CPO) Remark', 'Electric Usage (CPO) Remark', 'Electric Cost (CPO) Remark',
+    //     'Water Usage (CPO) Remark', 'Water Cost (CPO) Remark',
+    //   ])
+
+    //   const cpko_remark = await Request_dailydata_log(request_range_10,[
+    //     'Bleaching Earth Usage (CPKO) Remark',
+    //     'Bleaching Earth Cost (CPKO) Remark', 'Phosphoric Usage (CPKO) Remark', 'Phosphoric Cost (CPKO) Remark',
+    //     'LNG Usage (CPKO) Remark', 'LNG Cost (CPKO) Remark', 'Electric Usage (CPKO) Remark', 'Electric Cost (CPKO) Remark',
+    //     'Water Usage (CPKO) Remark', 'Water Cost (CPKO) Remark',
+    //   ])
+
+    //   const rbdpo_remark = await Request_dailydata_log(request_range_10,[
+    //     'Bleaching Earth Usage (RBDPO) Remark',
+    //     'Bleaching Earth Cost (RBDPO) Remark', 'Phosphoric Usage (RBDPO) Remark', 'Phosphoric Cost (RBDPO) Remark',
+    //     'LNG Usage (RBDPO) Remark', 'LNG Cost (RBDPO) Remark', 'Electric Usage (RBDPO) Remark', 'Electric Cost (RBDPO) Remark',
+    //     'Water Usage (RBDPO) Remark', 'Water Cost (RBDPO) Remark',
+    //   ])
+
+
+    // const Dataasd = Sort_Log_by_date(cpo_remark)
+    // console.log(Dataasd);
+
     const cpo_product_wuantity = await Request_dailydata_log(request_range_10,
       ['Today (CPO)', 'Todate (CPO)', 'Bleaching Earth Usage (CPO)',
         'Bleaching Earth Cost (CPO)', 'Phosphoric Usage (CPO)', 'Phosphoric Cost (CPO)',
@@ -383,14 +408,6 @@ const Dashboard1 = () => {
         'LNG Usage (RBDPO) Remark', 'LNG Cost (RBDPO) Remark', 'Electric Usage (RBDPO) Remark', 'Electric Cost (RBDPO) Remark',
         'Water Usage (RBDPO) Remark', 'Water Cost (RBDPO) Remark',
       ])
-      const [startDate, endDate] = getCurrentMonthDateRange();
-
-    const cpo_rcv_all = await Request_dailydata_log([startDate, endDate],['Todate Vs Allocation (CPO RCV)'])
-    cpo_rcv_all_value = cpo_rcv_all.data[0].fields.value
-    // console.log(cpo_rcv_all);
-
-    // console.log(cpo_rcv_all_value);
-
 
     // console.log(cpo_product_wuantity);
 
@@ -490,7 +507,7 @@ const Dashboard1 = () => {
     <Carousel fade={true} autoplay autoplaySpeed={30000}>
       <div>
         <TopCPOCard datatodate={highestCPO} datatoday={DataArray} cpolog={cpolog} cporcvLog={cporcvLog}
-          cpocs={cpocs} cpoMA={cpoMA} cpoInfo={CPOCardInfo} cposhipment={CPOShipmentCompletion} rcvall={cpo_rcv_all_value}></TopCPOCard>
+          cpocs={cpocs} cpoMA={cpoMA} cpoInfo={CPOCardInfo} cposhipment={CPOShipmentCompletion}></TopCPOCard>
 
         <TopCPKOCard datatodate={highestCPO} datatoday={DataArray} cpkolog={cpkolog} cpkorcvLog={cpkorcvLog} rkocs={rkocs}
           cpkocs={cpkocs} cpkoMA={cpkoMA} cpkoInfo={CPKOCardInfo} cpkoshipment={CPOShipmentCompletion}></TopCPKOCard>

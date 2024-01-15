@@ -7,7 +7,6 @@ import PlantProcessingStatus from './PlantProcessingStatus';
 import './MockTable.css'; // Import a CSS file for styling
 import { Request_color_log, Request_dailydata_log } from '../../../api';
 import { Dashboar3_DateMerge } from '../../../DataRequest/LogdataProcess';
-import { getCurrentMonthDateRange } from '../../../DataRequest/UtilityProcess';
 
 
 const { Header, Content, Footer } = Layout;
@@ -68,9 +67,26 @@ const Dashboard3 = () => {
 
     const [state, setState] = useState({ count: 0 });
 
+    function getCurrentMonthDateRange() {
+        const today = new Date();
+        const currentYear = today.getFullYear();
+        const currentMonth = today.getMonth();
+      
+        // Set the date to the first day of the month
+        const startDate = new Date(currentYear, currentMonth, 1);
+      
+        // Set the date to the last day of the month at 11:59:59
+        const endDate = new Date(currentYear, currentMonth + 1, 0, 23, 59, 59);
+      
+        // Function to format a date as ISO string without milliseconds and with 'Z'
+        const isoDateString = (date) => date.toISOString().split('.')[0] + 'Z';
+      
+        return [isoDateString(startDate), isoDateString(endDate)];
+      }
+      
     
     const [startDate, endDate] = getCurrentMonthDateRange();
-    // console.log(startDate, endDate);
+    console.log(startDate, endDate);
     const request_log = async () => {
         const response_quantity = await Request_color_log(
             [startDate, endDate],
@@ -79,6 +95,7 @@ const Dashboard3 = () => {
             )
         // console.log(response_quantity);
         
+        console.log('L1500');
         const L1500_Status = Dashboar3_DateMerge(response_quantity,'L1500','Line Status','L1500')
         const L1500_CPO    = Dashboar3_DateMerge(response_quantity,'L1500','CPO Processed','CPO')
         
@@ -86,6 +103,7 @@ const Dashboard3 = () => {
         L1500_color.push(L1500_Status)
         L1500_color.push(L1500_CPO)
 
+        console.log('L1000');
         const L1000_Status = Dashboar3_DateMerge(response_quantity,'L1000','Line Status','L1000')
         const L1000_CPKO    = Dashboar3_DateMerge(response_quantity,'L1000','CPKO Processed','CPKO')
         const L1000_rcy    = Dashboar3_DateMerge(response_quantity,'L1000','Recyc. PS','Recyc. PS')
@@ -98,6 +116,7 @@ const Dashboard3 = () => {
         L1000_color.push(L1000_rcy)
 
 
+        console.log('DT600');
         const DT600_Status = Dashboar3_DateMerge(response_quantity,'DT600','Line Status','DT600')
         const DT600_CPO    = Dashboar3_DateMerge(response_quantity,'DT600','CPO Processed','CPO')
         const DT600_CPKO    = Dashboar3_DateMerge(response_quantity,'DT600','CPKO Processed','CPKO')
@@ -107,6 +126,7 @@ const Dashboard3 = () => {
         DT600_color.push(DT600_CPO)
         DT600_color.push(DT600_CPKO)
 
+        console.log('L450');
         const L450_Status = Dashboar3_DateMerge(response_quantity,'L450','Line Status','L450')
         const L450_CPO    = Dashboar3_DateMerge(response_quantity,'L450','CPKO Processed','CPKO')
         const L450_CPKO    = Dashboar3_DateMerge(response_quantity,'L450','Recyc. PS','Recyc. PS')
@@ -118,6 +138,7 @@ const Dashboard3 = () => {
         L450_color.push(L450_CPKO)
         L450_color.push(L450_rcy)
 
+        console.log(L1500_color);
 
         setState(({ count }) => ({ count: count + 1 }));
     }

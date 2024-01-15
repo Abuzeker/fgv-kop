@@ -267,7 +267,7 @@ export const extractData = (inputArray, keyword) => {
 };
 
 
-export function getCurrentMonthDateRange() {
+function getCurrentMonthDateRange() {
   const today = new Date();
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth();

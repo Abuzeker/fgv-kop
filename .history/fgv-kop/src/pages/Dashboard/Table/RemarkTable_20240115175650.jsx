@@ -35,14 +35,6 @@ const RemarkTable = (props) => {
         // console.error('Invalid data format. Expected an array.');
       }
 
-      if (Remark.length > 7) {
-        // Calculate the number of elements to remove
-        const elementsToRemove = Remark.length - 7;
-      
-        // Remove elements from the front of the array
-        Remark.splice(0, elementsToRemove);
-      }
-
 
     //   console.log(Remark);
 
@@ -51,7 +43,7 @@ const RemarkTable = (props) => {
             title: 'Date',
             dataIndex: 'date',
             key: 'Date',
-            width:'120px'
+            width:'100px'
             // render:(text,record) =>(
             //     <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
             // )

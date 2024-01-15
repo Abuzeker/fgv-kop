@@ -632,7 +632,7 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
         // Do other operations with obj if needed
     } else {
         // Handle the case where LineTotalArray is empty
-        // console.error('LineTotalArray is empty');
+        console.error('LineTotalArray is empty');
     }
     
     // console.log(L1500_Line_Status);

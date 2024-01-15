@@ -83,7 +83,7 @@ const TopCPOCard = (props) => {
                                 <div>
                                     <Row gutter={16} align={'middle'}>
                                         <Col span={12}>
-                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Today (CPO)'])}</span>
+                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cpolog[1])}</span>
                                             <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                             <br />

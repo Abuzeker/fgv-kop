@@ -623,16 +623,15 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
     const LineTotalArray = lineL1500.filter(item => item.fields.parameter === line_total);
     console.log(LineTotalArray);
 
-    let obj = {};
-
     if (LineTotalArray.length > 0) {
         const LineTotalValue = parseFloat(LineTotalArray[0].fields.value).toFixed(1);
         // Now you can safely use LineTotalValue or assign it to obj
+        const obj = {};
         obj['Total'] = LineTotalValue;
         // Do other operations with obj if needed
     } else {
         // Handle the case where LineTotalArray is empty
-        // console.error('LineTotalArray is empty');
+        console.error('LineTotalArray is empty');
     }
     
     // console.log(L1500_Line_Status);

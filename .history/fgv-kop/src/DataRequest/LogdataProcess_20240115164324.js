@@ -610,31 +610,26 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
     const lineL1500 = data.filter(item => item.fields.line === Line);
     const L1500_Line_Status = lineL1500.filter(item => item.fields.parameter === parameter);
 
-    if (Linename === "CPO") {
+    if(Linename === "CPO"){
         line_total = "CPO Total Processed"
     }
-    else if (Linename === "CPKO") {
+    else if(Linename === "CPKO"){
         line_total = "CPKO Total Processed"
     }
-    else if (Linename === "Recyc. PS") {
+    else if(Linename === "Recyc. PS"){
         line_total = "Recyc. PS Total"
     }
 
-    const LineTotalArray = lineL1500.filter(item => item.fields.parameter === line_total);
-    console.log(LineTotalArray);
+    // console.log(lineL1500);
 
-    let obj = {};
+    const LineTotalArray= lineL1500.filter(item => item.fields.parameter === line_total);
+    const LineTotalValue = parseFloat(LineTotalArray[0].fields.value).toFixed(1)
+    // console.log(LineTotalValue);
 
-    if (LineTotalArray.length > 0) {
-        const LineTotalValue = parseFloat(LineTotalArray[0].fields.value).toFixed(1);
-        // Now you can safely use LineTotalValue or assign it to obj
-        obj['Total'] = LineTotalValue;
-        // Do other operations with obj if needed
-    } else {
-        // Handle the case where LineTotalArray is empty
-        // console.error('LineTotalArray is empty');
-    }
-    
+    const obj = {}
+
+    obj['Total'] = LineTotalValue
+
     // console.log(L1500_Line_Status);
     L1500_Line_Status.forEach(element => {
         // Convert UTC timestamp to Date object
@@ -648,19 +643,19 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
         });
         const day = malaysiaDateFormatter.format(utcDate);
 
-        if (element.fields['value'] === '#FFD32F2F') {
+        if(element.fields['value'] === '#FFD32F2F'){
             obj[`day${day}`] = '#d32f2f' //red
         }
 
-        if (element.fields['value'] === '#FFEEFF41') {
+        if(element.fields['value'] === '#FFEEFF41'){
             obj[`day${day}`] = '#eeff41'  //yellow
         }
 
-        if (element.fields['value'] === '#FF00C853') {
+        if(element.fields['value'] === '#FF00C853'){
             obj[`day${day}`] = '#00c853' //green
         }
 
-        if (element.fields['value'] === '#FFFFCC80') {
+        if(element.fields['value'] === '#FFFFCC80'){
             obj[`day${day}`] = '#ffcc80' //orange
         }
     });
@@ -669,6 +664,6 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
 
     // console.log(Result);
     // console.log(L1500_Line_Status);
-
+    
     return obj
 }

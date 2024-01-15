@@ -9,49 +9,29 @@ const RemarkTable = (props) => {
 
     const cssstyle = props.plant === "Refining" ? "remark-table":"fract-table"
     const remarkname = `${props.type} Remark`
-    const Remark = []
+
 
     if (Array.isArray(props.data)) {
-        const DaysWithRemark = props.data.filter(item => item && item.hasOwnProperty(remarkname));
+        const DaysWithRemark = props.data.filter(item => item && item.hasOwnProperty("Bleaching Earth Usage (CPO) Remark"));
       
         if (DaysWithRemark.length > 0) {
-          console.log(props.type);
           console.log('Found:', DaysWithRemark);
-
-          DaysWithRemark.forEach(element => {
-            const obj ={}
-            obj['date'] = element['date']
-            obj['Remark'] = element[remarkname]
-            obj['value'] = element[props.type]
-            Remark.push(obj)
-          });
-
-        } 
-        
-        else {
+        } else {
           console.log('Not found');
         }
       } else {
         // console.error('Invalid data format. Expected an array.');
       }
-
-      if (Remark.length > 7) {
-        // Calculate the number of elements to remove
-        const elementsToRemove = Remark.length - 7;
       
-        // Remove elements from the front of the array
-        Remark.splice(0, elementsToRemove);
-      }
-
-
-    //   console.log(Remark);
+    
+    // console.log(remarkname);
 
     const columns = [
         {
             title: 'Date',
             dataIndex: 'date',
             key: 'Date',
-            width:'120px'
+            width:'80px'
             // render:(text,record) =>(
             //     <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
             // )
@@ -89,7 +69,7 @@ const RemarkTable = (props) => {
                 className={cssstyle}
                 scroll={{  y: props.height }}
                 pagination={false}
-                dataSource={Remark}
+                dataSource={mockRemark}
                 bordered
                 >
 

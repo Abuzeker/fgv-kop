@@ -15,7 +15,6 @@ const RemarkTable = (props) => {
         const DaysWithRemark = props.data.filter(item => item && item.hasOwnProperty(remarkname));
       
         if (DaysWithRemark.length > 0) {
-          console.log(props.type);
           console.log('Found:', DaysWithRemark);
 
           DaysWithRemark.forEach(element => {
@@ -35,23 +34,15 @@ const RemarkTable = (props) => {
         // console.error('Invalid data format. Expected an array.');
       }
 
-      if (Remark.length > 7) {
-        // Calculate the number of elements to remove
-        const elementsToRemove = Remark.length - 7;
-      
-        // Remove elements from the front of the array
-        Remark.splice(0, elementsToRemove);
-      }
 
-
-    //   console.log(Remark);
+      console.log(Remark);
 
     const columns = [
         {
             title: 'Date',
             dataIndex: 'date',
             key: 'Date',
-            width:'120px'
+            width:'80px'
             // render:(text,record) =>(
             //     <div>{ <span style={{ paddingLeft: '20px'}} >{text}</span> }</div>
             // )
@@ -89,7 +80,7 @@ const RemarkTable = (props) => {
                 className={cssstyle}
                 scroll={{  y: props.height }}
                 pagination={false}
-                dataSource={Remark}
+                dataSource={mockRemark}
                 bordered
                 >
 

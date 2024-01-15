@@ -111,13 +111,13 @@ const TopCPOCard = (props) => {
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cporcvLog[1])}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPO Receive'])}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (CPO)']}</span>
+                                        <span> {props.cporcvLog[0]}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -134,13 +134,13 @@ const TopCPOCard = (props) => {
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cpocs[1])}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPO C/S'])}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (CPO)']}</span>
+                                        <span> {data['CPO C/S Date']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>

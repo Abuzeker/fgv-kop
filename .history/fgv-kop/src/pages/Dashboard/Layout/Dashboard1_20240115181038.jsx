@@ -386,10 +386,8 @@ const Dashboard1 = () => {
       const [startDate, endDate] = getCurrentMonthDateRange();
 
     const cpo_rcv_all = await Request_dailydata_log([startDate, endDate],['Todate Vs Allocation (CPO RCV)'])
-    cpo_rcv_all_value = cpo_rcv_all.data[0].fields.value
-    // console.log(cpo_rcv_all);
-
-    // console.log(cpo_rcv_all_value);
+    cpo_rcv_all_value = cpo_rcv_all[0].fields.value
+    console.log(cpo_rcv_all_value);
 
 
     // console.log(cpo_product_wuantity);
@@ -490,7 +488,7 @@ const Dashboard1 = () => {
     <Carousel fade={true} autoplay autoplaySpeed={30000}>
       <div>
         <TopCPOCard datatodate={highestCPO} datatoday={DataArray} cpolog={cpolog} cporcvLog={cporcvLog}
-          cpocs={cpocs} cpoMA={cpoMA} cpoInfo={CPOCardInfo} cposhipment={CPOShipmentCompletion} rcvall={cpo_rcv_all_value}></TopCPOCard>
+          cpocs={cpocs} cpoMA={cpoMA} cpoInfo={CPOCardInfo} cposhipment={CPOShipmentCompletion}></TopCPOCard>
 
         <TopCPKOCard datatodate={highestCPO} datatoday={DataArray} cpkolog={cpkolog} cpkorcvLog={cpkorcvLog} rkocs={rkocs}
           cpkocs={cpkocs} cpkoMA={cpkoMA} cpkoInfo={CPKOCardInfo} cpkoshipment={CPOShipmentCompletion}></TopCPKOCard>

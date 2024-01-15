@@ -241,7 +241,6 @@ function getAllUniqueDates(data) {
 }
 
 export const extractData = (inputArray, keyword) => {
-  console.log(inputArray);
   const result = [];
   inputArray.forEach(item => {
     const date = item.date;
@@ -249,15 +248,7 @@ export const extractData = (inputArray, keyword) => {
 
     Object.keys(item).forEach(key => {
       if (key.includes(keyword)) {
-
-        if(key.includes('Remark')){
-          newData[key] = item[key]
-        }
-
-        else{
-            newData[key] = parseFloat(item[key]);
-        }
-
+        newData[key] = parseFloat(item[key]);
       }
     });
 
@@ -265,21 +256,3 @@ export const extractData = (inputArray, keyword) => {
   });
   return result;
 };
-
-
-export function getCurrentMonthDateRange() {
-  const today = new Date();
-  const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth();
-
-  // Set the date to the first day of the month
-  const startDate = new Date(currentYear, currentMonth, 1);
-
-  // Set the date to the last day of the month at 11:59:59
-  const endDate = new Date(currentYear, currentMonth + 1, 0, 23, 59, 59);
-
-  // Function to format a date as ISO string without milliseconds and with 'Z'
-  const isoDateString = (date) => date.toISOString().split('.')[0] + 'Z';
-
-  return [isoDateString(startDate), isoDateString(endDate)];
-}
