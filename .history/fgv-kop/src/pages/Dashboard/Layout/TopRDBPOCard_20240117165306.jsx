@@ -17,9 +17,9 @@ const TopRBDPOCard = (props) => {
         'Today (RBDPO)': 0,
         'Todate (RBDPO)': 0,
         'RBDPO Receive': props.rbdpoInfo['RBDPO RCV'],
-        'RBDPO RCV Date': props.datatoday[1]["date"],
+        'RBDPO RCV Date': props.rbdpoInfo['RBDPO RCV Date'],
         'RBDPO C/S': props.rbdpoInfo['RBDPO C/S'],
-        'RBDPO C/S Date': props.datatoday[1]["date"],
+        'RBDPO C/S Date': props.rbdpoInfo['RBDPO C/S Date'],
     }
      
     console.log(props.rbdpoInfo);

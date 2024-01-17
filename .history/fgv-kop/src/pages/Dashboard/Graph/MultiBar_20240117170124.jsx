@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Column } from '@antv/g2plot';
-import { mockmultibar } from '../../../MockData/LineMock';
+// import { mockmultibar } from '../../../MockData/LineMock';
 
-const data = mockmultibar
+// const data = mockmultibar
 
-const MultiBar = ({ containername }) => {
+const MultiBar = ({ containername, Oridata }) => {
+
+  // console.log(Oridata);
 
   useEffect(() => {
 
+    // console.log('sdsd');
+    console.log(Oridata);
+
     const column = new Column(containername, {
-      data,
+      data : Oridata,
       xField: 'date',
-      yField: 'efficiency',
-      seriesField: 'order',
+      yField: 'Efficiency',
+      seriesField: 'Asset',
       isGroup: 'true',
       columnStyle: {
         radius: [5, 5, 0, 0],
@@ -20,14 +25,15 @@ const MultiBar = ({ containername }) => {
       label: {
         // 可手动配置 label 数据标签位置
         position: 'top',
-        style: {
-          fill: (text, item, index) => {
-            // Customize the color based on the 'order' field
-            return item.data['order'] === 'YourTargetValue' ? '#ff0000' : '#ffffff';
+        style: { fill: '#ffffff' }
+      },
+      legend: {
+        itemName: {
+          style: {
+            fill: '#ffffff', 
           },
         },
       },
-
       xAxis: {
         label: {
           autoHide: true,
@@ -37,18 +43,16 @@ const MultiBar = ({ containername }) => {
       yAxis: {
         label: {
           style: { fill: '#ffffff' }
-        }
+        },
+        max:150
       },
-      
-
     })
     column.render();
-
 
     return () => {
       column.destroy()
     }
-  }, [])
+  }, [Oridata])
 
 
   return (

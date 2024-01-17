@@ -9,43 +9,40 @@ const cardStyle = {
     boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.1)', // Adjust shadow as needed
 };
 
-const TopCPKOCard = (props) => {
-
-    console.log(props.cpkoInfo);
+const TopCPOCard = (props) => {
 
 
     let data = {
-        'Today (CPKO)': 0,
-        'Todate (CPKO)': 0,
-        'CPKO Receive': parseFloat(props.cpkorcvLog[1]).toFixed(2),
-        'CPKO RCV Date': props.datatoday[1]["date"],
-        'CPKO C/S': parseFloat(props.cpkocs[1]).toFixed(2),
-        'CPKO C/S Date': props.datatoday[1]["date"],
+        'Today (CPO)': 0,
+        'Todate (CPO)': 0,
+        'CPO Receive': props.cpoInfo['CPO RCV'],
+        'CPO RCV Date': props.cpoInfo['CPO RCV Date'],
+        'CPO C/S': props.cpoInfo['CPO C/S'],
+        'CPO C/S Date': props.cpoInfo['CPO C/S Date'],
     }
 
-    // console.log(props.datatodate);
+    console.log(props.datatoday);
     // console.log(props.cposhipment);
 
-    // const RBDPL_Total_Produced = parseFloat(props.cpkoshipment['RBDPL Total Produced']) || 0;
-    // const RBDPS_Total_Produced = parseFloat(props.cpkoshipment['RBDPS Total Produced']) || 0;
-    // const PFAD_Total_Produced = parseFloat(props.cpkoshipment['PFAD Total Produced']) || 0;
-
+    // const RBDPL_Total_Produced = parseFloat(props.cposhipment['RBDPL Total Produced']) || 0;
+    // const RBDPS_Total_Produced = parseFloat(props.cposhipment['RBDPS Total Produced']) || 0;
+    // const PFAD_Total_Produced = parseFloat(props.cposhipment['PFAD Total Produced']) || 0;
+    
     // const Cpo_produced = RBDPL_Total_Produced + RBDPS_Total_Produced + PFAD_Total_Produced;
-
-    // const RBDPL_Total_Target = parseFloat(props.cpkoshipment['RBDPL Total Target']) || 0;
-    // const RBDPS_Total_Target = parseFloat(props.cpkoshipment['RBDPS Total Target']) || 0;
-    // const PFAD_Total_Target = parseFloat(props.cpkoshipment['PFAD Total Target']) || 0;
-
+    
+    // const RBDPL_Total_Target = parseFloat(props.cposhipment['RBDPL Total Target']) || 0;
+    // const RBDPS_Total_Target = parseFloat(props.cposhipment['RBDPS Total Target']) || 0;
+    // const PFAD_Total_Target = parseFloat(props.cposhipment['PFAD Total Target']) || 0;
+    
     // const Cpo_Target = RBDPL_Total_Target + RBDPS_Total_Target + PFAD_Total_Target;
-
+    
     // const SC = ((Cpo_produced / Cpo_Target)*100).toFixed(1);
 
-    try { data['Todate (CPKO)'] = props.datatodate[0]["Todate (CPKO)"] !== null ? props.datatodate[0]["Todate (CPKO)"] : 0; } catch (error) { console.log(error); }
-    try { data['date todate (CPKO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (CPKO)'] = props.datatoday[1]["Today (CPKO)"] !== null ? props.datatoday[1]["Today (CPKO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (CPKO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['RKO C/S'] = props.datatoday[1]["RKO C/S"] !== null ? props.datatoday[1]["RKO C/S"] : 0 } catch (error) { console.log(error); }
-    try { data['RKO C/S Date'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['Todate (CPO)'] = props.datatodate[0]["Todate (CPO)"] !== null ? props.datatodate[0]["Todate (CPO)"] : 0; } catch (error) { console.log(error); }
+    try { data['date todate (CPO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['Today (CPO)'] = props.datatoday[1]["Today (CPO)"] !== null ? props.datatoday[1]["Today (CPO)"] : 0 } catch (error) { console.log(error); }
+    try { data['date Today (CPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+
 
     // console.log(props.cpolog);
     // console.log(cpkolog);
@@ -53,27 +50,26 @@ const TopCPKOCard = (props) => {
 
     // console.log(props.datatodate);
     // console.log(SC);
-    console.log(props.cpkorcvLog);
-console.log(props.rkocs);
+
     return (
-        <div style={{ marginTop: '5px', padding: '0 0px' }}>
+        <div style={{ marginTop: '25px', padding: '0 0px' }}>
             <Row gutter={[13, 10]} justify="center">
 
-                <Col span={4} xs={24} sm={12} md={12} lg={8} xl={9}>
+            <Col span={4} xs={24} sm={12} md={12} lg={8} xl={9}>
                     <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
                         <Row>
                             <Col span={6} style={{ borderRight: '1px solid white'}}>
-                                <span style={{ fontSize: '20px', color: 'white' }}> CPKO ToDate</span>
+                                <span style={{ fontSize: '20px', color: 'white' }}> CPO ToDate  </span>
 
                                 <Row gutter={16} align={'middle'}>
                                     <Col span={24}>
                                         <br />
-                                        <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Todate (CPKO)'])}</span>
+                                        <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Todate (CPO)'])}</span>
                                         <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
                                         <br />
                                         <span style={{ fontSize: '13px' }}>
                                             <InfoCircleOutlined />
-                                            <span> {data['date todate (CPKO)']}</span>
+                                            <span> {data['date todate (CPO)']}</span>
                                         </span>
                                     </Col>
                                     {/* <Col span={12}>
@@ -82,22 +78,22 @@ console.log(props.rkocs);
                                 </Row>
                             </Col>
                             <Col span={18} style={{ paddingLeft: '20px' }}>
-                                <span style={{ fontSize: '20px', color: 'white' }}> CPKO Today</span>
+                                <span style={{ fontSize: '20px', color: 'white' }}>CPO Today  </span>
                                 {/* <span style={{ fontSize: '10px', color: 'white' }}>{data['date Today (CPKO)']}</span> */}
                                 <div>
                                     <Row gutter={16} align={'middle'}>
                                         <Col span={12}>
-                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Today (CPKO)'])}</span>
+                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Today (CPO)'])}</span>
                                             <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                             <br />
                                             <span style={{ fontSize: '13px' }}>
                                                 <InfoCircleOutlined />
-                                                <span> {data['date Today (CPKO)']}</span>
+                                                <span> {data['date Today (CPO)']}</span>
                                             </span>
                                         </Col>
                                         <Col span={12}>
-                                            <TinyBar containername={'cpkotinybar'} data={props.cpkolog} />
+                                            <TinyBar containername={'cpotinybar'} data={props.cpolog} />
                                         </Col>
                                     </Row>
                                 </div>
@@ -111,21 +107,21 @@ console.log(props.rkocs);
 
                 <Col span={4} xs={24} sm={12} md={12} lg={8} xl={5}>
                     <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                        <span style={{ fontSize: '20px', color: 'white' }}>CPKO RCV  </span>
+                        <span style={{ fontSize: '20px', color: 'white' }}> CPO RCV </span>
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPKO Receive'])}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cporcvLog[1])}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['CPKO RCV Date']}</span>
+                                        <span> {data['date Today (CPO)']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
-                                    <TinyBar containername={'cpkorcvtinybar'} data={props.cpkorcvLog} />
+                                    <TinyBar containername={'cporcvtinybar'} data={props.cporcvLog} />
                                 </Col>
                             </Row>
                         </div>
@@ -134,21 +130,21 @@ console.log(props.rkocs);
 
                 <Col span={4} xs={24} sm={12} md={12} lg={8} xl={5}>
                     <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                        <span style={{ fontSize: '20px', color: 'white' }}>CPKO Closing Stock  </span>
+                        <span style={{ fontSize: '20px', color: 'white' }}>CPO Closing Stock  </span>
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPKO C/S'])}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cpocs[1])}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['CPKO C/S Date']}</span>
+                                        <span> {data['date Today (CPO)']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
-                                    <TinyBar containername={'cpkocstinybar'} data={props.cpkocs} />
+                                    <TinyBar containername={'cpocstinybar'} data={props.cpocs} />
                                 </Col>
                             </Row>
                         </div>
@@ -157,54 +153,31 @@ console.log(props.rkocs);
 
                 <Col span={4} xs={24} sm={12} md={12} lg={8} xl={5}>
                     <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                        <span style={{ fontSize: '20px', color: 'white' }}>RKO Closing Stock</span>
+                        <span style={{ fontSize: '20px', color: 'white' }}>CPO RCV vs Allocation</span>
                         <div>
                             <Row gutter={16} align={'middle'}>
-                                <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{data['RKO C/S']}</span>
-                                    <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
+                                <Col span={24}>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.rcvall)}</span>
+                                    <span style={{ fontSize: '15px', color: 'white' }}> %</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['CPKO C/S Date']}</span>
+                                        <span> {data['CPO C/S Date']}</span>
                                     </span>
                                 </Col>
-                                <Col span={12}>
-                                    <TinyBar containername={'rkocstinybar'} data={props.rkocs} />
-                                </Col>
+                                {/* <Col span={12}>
+                                    <TinyBar containername={'cpoAllocationtinybar'} data={props.cpolog} />
+                                </Col> */}
                             </Row>
                         </div>
                     </Card>
                 </Col>
 
-                {/* <Col span={4} xs={24} sm={12} md={12} lg={8} xl={4}>
-                    <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                        <span style={{ fontSize: '20px', color: 'white' }}>Monthly Allocation</span>
-                        <div>
-                            <Row gutter={16} align={'middle'}>
-                                <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{data['Today (CPKO)']}</span>
-                                    <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
-
-                                    <br />
-                                    <span style={{ fontSize: '11px' }}>
-                                        <InfoCircleOutlined />
-                                        <span> {data['CPKO C/S Date']}</span>
-                                    </span>
-                                </Col>
-                                <Col span={12}>
-                                    <TinyBar containername={'cpkoAllocationtinybar'} data={props.cpkolog} />
-                                </Col>
-                            </Row>
-                        </div>
-                    </Card>
-                </Col> */}
-
 
                 {/* <Col span={4} xs={24} sm={12} md={12} lg={8} xl={4}>
                     <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
-                        <span style={{ fontSize: '20px', color: 'white' }}>RKO Closing Stock</span>
+                        <span style={{ fontSize: '20px', color: 'white' }}>Shipment Completion</span>
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
@@ -214,11 +187,11 @@ console.log(props.rkocs);
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['CPKO C/S Date']}</span>
+                                        <span> {data['CPO C/S Date']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
-                                    <TinyProgress containername={'cpkoShipmentprogress'} data={SC}/>
+                                    <TinyProgress containername={'cpoShipmentprogress'} data={SC}/>
                                 </Col>
                             </Row>
                         </div>
@@ -229,4 +202,4 @@ console.log(props.rkocs);
     )
 }
 
-export default TopCPKOCard
+export default TopCPOCard

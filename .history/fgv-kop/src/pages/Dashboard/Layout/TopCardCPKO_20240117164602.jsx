@@ -17,9 +17,9 @@ const TopCPKOCard = (props) => {
     let data = {
         'Today (CPKO)': 0,
         'Todate (CPKO)': 0,
-        'CPKO Receive': parseFloat(props.cpkorcvLog[1]).toFixed(2),
+        'CPKO Receive': props.cpkorcvLog[1],
         'CPKO RCV Date': props.datatoday[1]["date"],
-        'CPKO C/S': parseFloat(props.cpkocs[1]).toFixed(2),
+        'CPKO C/S': props.cpkocs[1],
         'CPKO C/S Date': props.datatoday[1]["date"],
     }
 

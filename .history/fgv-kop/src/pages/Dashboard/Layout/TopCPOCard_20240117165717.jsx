@@ -152,9 +152,9 @@ const TopCPOCard = (props) => {
                 </Col>
 
                 <Col span={4} xs={24} sm={12} md={12} lg={8} xl={5}>
-                    <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', }}>
+                    <Card style={{ height: '190px', background: '#292828', color: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', border: '1px solid #e8e8e8', alignContent:'center'}}>
                         <span style={{ fontSize: '20px', color: 'white' }}>CPO RCV vs Allocation</span>
-                        <div>
+                        <div style={{alignItems:'center'}}>
                             <span style={{ fontSize: '55px', color: 'white' }}>{new Intl.NumberFormat().format(props.rcvall)}</span>
                             <span style={{ fontSize: '15px', color: 'white' }}> %</span>
 

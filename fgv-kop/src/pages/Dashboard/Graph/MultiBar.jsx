@@ -11,7 +11,7 @@ const MultiBar = ({ containername, Oridata }) => {
   useEffect(() => {
 
     // console.log('sdsd');
-    // console.log(Oridata);
+    console.log(Oridata);
 
     const column = new Column(containername, {
       data : Oridata,
