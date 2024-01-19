@@ -14,10 +14,9 @@ let FilteredC123, FilteredC456, FilteredC789, FilteredStearine, FilteredChiller
 const K4Card = () => {
 
   const [state, setState] = useState({ count: 0 });
-  const [spinning, setSpinning] = useState(true);
+  const [spinning, setSpinning] = useState(false);
 
   useEffect(() => {
-
 
     const interval = setInterval(() => {
       request_realtime()
@@ -34,15 +33,15 @@ const K4Card = () => {
     }
   }, [])
   
-  // useEffect(() => {
-  //   console.log('offspin');
+  useEffect(() => {
+    console.log('offspin');
   
-  //   // Cleanup function
-  //   return () => {
-  //     // Set spinning to true when the component is unmounted
-  //     setSpinning(false);
-  //   };
-  // }, []); // Empty dependency array to run the effect only once
+    // Cleanup function
+    return () => {
+      // Set spinning to true when the component is unmounted
+      setSpinning(false);
+    };
+  }, []); // Empty dependency array to run the effect only once
   
 
   const request_realtime = async () => {
@@ -67,7 +66,6 @@ const K4Card = () => {
     FilteredChiller = Merge_parameter_name_and_value_line(response_CHIILER,["COOLING TOWER","FT9","FT8"])
 
     console.log('done render');
-    setSpinning(false);
 
     setState(({ count }) => ({ count: count + 1 }));
   }
@@ -77,7 +75,7 @@ const K4Card = () => {
 
   return (
     <div>
-            <Spin spinning={spinning} fullscreen />
+      <Spin tip="Loading..." fullscreen spinning={spinning}>
 
       <HMIWrapper Tab={['Stearine', 'Chilled Water', 'Crystallizer 123', 'Crystallizer 456', 'Crystallizer 789']}>
         <StearineHMI key={'Stearine'} data={FilteredStearine}/>
@@ -88,6 +86,7 @@ const K4Card = () => {
         <Crsyalizer789 key={'Crystallizer 789'} data={FilteredC789}/>
 
       </HMIWrapper>
+      </Spin>
 
     </div>
   )

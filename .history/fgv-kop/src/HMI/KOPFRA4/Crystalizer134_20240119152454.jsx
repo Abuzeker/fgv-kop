@@ -2,68 +2,21 @@ import React from 'react'
 
 
 
-const Crystalizer789 = (props) => {
-  let c7={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  },c8={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  },c9={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  }
+const Crystalizer134 = (props) => {
+
+  let c1={},c2={},c3={}
+
 
   if (!props.data) {
     console.error("Data is undefined or null");
     return null; // or handle accordingly
 }
 else{
-   c7 = props.data['CRYSTALLIZER 7'];
-   c8 = props.data['CRYSTALLIZER 8'];
-   c9 = props.data['CRYSTALLIZER 9'];
+   c1 = props.data['CRYSTALLIZER 1'];
+   c2 = props.data['CRYSTALLIZER 2'];
+   c3 = props.data['CRYSTALLIZER 3'];
 
 }
-
-
-    // Continue with the rest of your code
-
 
     return (
     <svg xmlns="http://www.w3.org/2000/svg" width='100%' height='100%' viewBox="1 1 1919 1079">
@@ -110,7 +63,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['WATER TEMPERATURE']} \xB0C`}
+        {`${c1['WATER TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -163,7 +116,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['WATER INLET TEMPERATURE']} \xB0C`}
+        {`${c1['WATER INLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -191,7 +144,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC21)"}
+        {"TEMPERATURE (STIC3)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M39.252 596.176h463v88h-463v-88z" />
@@ -216,7 +169,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['WATER OUTLET TEMPERATURE']} \xB0C`}
+        {`${c1['WATER OUTLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -244,7 +197,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC19)"}
+        {"TEMPERATURE (STIC1)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M39.252 684.176h463v88h-463v-88z" />
@@ -269,7 +222,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['OIL TEMPERATURE']} \xB0C`}
+        {`${c1['OIL TEMPERATURE']} \xB0C`}
 
       </tspan>
     </text>
@@ -298,7 +251,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(STIC20)"}
+        {"(STIC2)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M39.252 772.177h463v88h-463v-88z" />
@@ -323,7 +276,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['CONTROL VALVE']} \xB0C`}
+        {`${c1['CONTROL VALVE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -351,7 +304,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(V10C7)"}
+        {"(V10C1)"}
       </tspan>
     </text>
     <path
@@ -375,7 +328,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['HR']}`}
+        {`${c1['HR']}`}
       </tspan>
     </text>
     <text
@@ -439,7 +392,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['MIN']}`}
+        {`${c1['MIN']}`}
       </tspan>
     </text>
     <text
@@ -483,7 +436,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['SEC']}`}
+        {`${c1['SEC']}`}
       </tspan>
     </text>
     <text
@@ -515,7 +468,7 @@ else{
       transform="translate(39.252 254.325)"
     />
     <path
-      fill={c7['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c1['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M130.552 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -548,7 +501,7 @@ else{
       transform="translate(219.41 254.325)"
     />
     <path
-      fill={c7['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
+      fill={c1['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
       stroke="#00b050"
       d="M310.71 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -581,7 +534,7 @@ else{
       transform="translate(399.569 254.325)"
     />
     <path
-      fill={c7['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c1['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M490.869 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -614,7 +567,7 @@ else{
       transform="translate(39.252 304.482)"
     />
     <path
-      fill={c7['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c1['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M130.552 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -647,7 +600,7 @@ else{
       transform="translate(219.41 304.482)"
     />
     <path
-      fill={c7['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c1['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M310.71 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -680,7 +633,7 @@ else{
       transform="translate(399.57 304.482)"
     />
     <path
-      fill={c7['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c1['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M490.87 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -725,7 +678,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c7['SEQ STEP']}`}
+        {`${c1['SEQ STEP']}`}
       </tspan>
     </text>
     <text
@@ -765,36 +718,36 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"CRYSTALLIZER 7"}
+        {"CRYTALLIZER 1"}
       </tspan>
     </text>
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h36.6v38.1H0V0z"
       transform="matrix(0 1 1 0 561.926 286.554)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h9.4v38.2H0V0z"
       transform="matrix(0 1 1 0 561.926 277.144)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M7.4 0v38.2s-7.4 0-7.4-19S7.4 0 7.4 0z"
       transform="matrix(0 1 1 0 561.926 269.825)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v38.2H0V0z"
       transform="matrix(0 1 1 0 561.926 277.4)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v37.5H0V0z"
       transform="matrix(0 1 1 0 561.907 321.816)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h15.8v8.3H0V0z"
       transform="matrix(0 1 1 0 576.518 326.161)"
     />
@@ -802,17 +755,17 @@ else{
       <path d="M0 2.692h32.9v1.1H0v-1.1zM0 8.075h32.9v1.1H0v-1.1zM0 10.767h32.9v1.1H0v-1.1zM0 13.459h32.9v1.1H0v-1.1zM0 16.15h32.9v1.1H0v-1.1zM0 19.212h32.9v1.1H0v-1.1zM0 21.682h32.9v1.1H0v-1.1zM0 24.152h32.9v1.1H0v-1.1zM0 26.622h32.9v1.1H0v-1.1zM0 29.61h32.9v1.1H0v-1.1zM0 32.3h32.9v1.1H0v-1.1zM0 34.993h32.9v1.1H0v-1.1zM0 0h32.9v1.1H0V0zM0 5.383h32.9v1.1H0v-1.1z" />
     </g>
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h2.8c.5 0 .9.4.9.9v36.3c0 .5-.4.9-.9.9H0V0z"
       transform="matrix(0 1 1 0 561.926 322.417)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.9v17.5H0V0z"
       transform="matrix(0 1 1 0 571.894 326.161)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 563.069 326.058)"
     />
@@ -832,10 +785,10 @@ else{
       transform="matrix(0 1 1 0 596.611 326.058)"
     />
     <path
-      fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M597.378 287.728v31.5h2.5v-31.5h-2.5zM600.115 287.728v31.5h5.5v-31.5h-5.5z"
     />
-    <path fill={c7['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M604.549 287.728v31.5h2v-31.5h-2z" />
+    <path fill={c1['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M604.549 287.728v31.5h2v-31.5h-2z" />
     <text
       xmlSpace="preserve"
       style={{
@@ -853,7 +806,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"FT2/7 AG"}
+        {"FT2/1 AG"}
       </tspan>
     </text>
     <path
@@ -883,7 +836,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['WATER TEMPERATURE']} \xB0C`}
+        {`${c2['WATER TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -936,7 +889,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['WATER INLET TEMPERATURE']} \xB0C`}
+        {`${c2['WATER INLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -964,7 +917,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC24)"}
+        {"TEMPERATURE (STIC6)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M667.832 596.176h463v88h-463v-88z" />
@@ -989,7 +942,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['WATER OUTLET TEMPERATURE']} \xB0C`}
+        {`${c2['WATER OUTLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1017,7 +970,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC22)"}
+        {"TEMPERATURE (STIC4)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M667.832 684.176h463v88h-463v-88z" />
@@ -1042,7 +995,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['OIL TEMPERATURE']} \xB0C`}
+        {`${c2['OIL TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1070,7 +1023,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(STIC23)"}
+        {"(STIC5)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M667.832 772.177h463v88h-463v-88z" />
@@ -1095,7 +1048,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['CONTROL VALVE']} %`}
+        {`${c2['CONTROL VALVE']} %`}
       </tspan>
     </text>
     <text
@@ -1123,7 +1076,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(V10C8)"}
+        {"(V10C2)"}
       </tspan>
     </text>
     <path
@@ -1147,7 +1100,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['HR']}`}
+        {`${c2['HR']}`}
       </tspan>
     </text>
     <text
@@ -1211,7 +1164,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['MIN']}`}
+        {`${c2['MIN']}`}
       </tspan>
     </text>
     <text
@@ -1255,7 +1208,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['SEC']}`}
+        {`${c2['SEC']}`}
       </tspan>
     </text>
     <text
@@ -1287,7 +1240,7 @@ else{
       transform="translate(667.832 254.325)"
     />
     <path
-      fill={c8['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c2['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M759.132 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1320,7 +1273,7 @@ else{
       transform="translate(847.99 254.325)"
     />
     <path
-      fill={c8['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
+      fill={c2['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
       stroke="#00b050"
       d="M939.29 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1353,7 +1306,7 @@ else{
       transform="translate(1028.149 254.325)"
     />
     <path
-      fill={c8['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c2['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1119.449 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1386,7 +1339,7 @@ else{
       transform="translate(667.832 304.482)"
     />
     <path
-      fill={c8['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c2['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M759.132 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1419,7 +1372,7 @@ else{
       transform="translate(847.99 304.482)"
     />
     <path
-      fill={c8['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c2['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M939.29 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1452,7 +1405,7 @@ else{
       transform="translate(1028.15 304.482)"
     />
     <path
-      fill={c8['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c2['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1119.45 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -1497,7 +1450,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c8['SEQ STEP']}`}
+        {`${c2['SEQ STEP']}`}
       </tspan>
     </text>
     <text
@@ -1537,7 +1490,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"CRYSTALLIZER 8"}
+        {"CRYTALLIZER 2"}
       </tspan>
     </text>
     <path
@@ -1546,68 +1499,68 @@ else{
       transform="matrix(0 1 1 0 1190.506 286.554)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h9.4v38.2H0V0z"
       transform="matrix(0 1 1 0 1190.506 277.144)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M7.4 0v38.2s-7.4 0-7.4-19S7.4 0 7.4 0z"
       transform="matrix(0 1 1 0 1190.506 269.825)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v38.2H0V0z"
       transform="matrix(0 1 1 0 1190.506 277.4)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v37.5H0V0z"
       transform="matrix(0 1 1 0 1190.487 321.816)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h15.8v8.3H0V0z"
       transform="matrix(0 1 1 0 1205.098 326.161)"
     />
-    <g fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} transform="matrix(0 1 1 0 1191.65 286.555)">
+    <g fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} transform="matrix(0 1 1 0 1191.65 286.555)">
       <path d="M0 2.692h32.9v1.1H0v-1.1zM0 8.075h32.9v1.1H0v-1.1zM0 10.767h32.9v1.1H0v-1.1zM0 13.459h32.9v1.1H0v-1.1zM0 16.15h32.9v1.1H0v-1.1zM0 19.212h32.9v1.1H0v-1.1zM0 21.682h32.9v1.1H0v-1.1zM0 24.152h32.9v1.1H0v-1.1zM0 26.622h32.9v1.1H0v-1.1zM0 29.61h32.9v1.1H0v-1.1zM0 32.3h32.9v1.1H0v-1.1zM0 34.993h32.9v1.1H0v-1.1zM0 0h32.9v1.1H0V0zM0 5.383h32.9v1.1H0v-1.1z" />
     </g>
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h2.8c.5 0 .9.4.9.9v36.3c0 .5-.4.9-.9.9H0V0z"
       transform="matrix(0 1 1 0 1190.506 322.417)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.9v17.5H0V0z"
       transform="matrix(0 1 1 0 1200.474 326.161)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1191.649 326.058)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1202.83 326.058)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1214.01 326.058)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1225.191 326.058)"
     />
     <path
-      fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M1225.958 287.728v31.5h2.5v-31.5h-2.5zM1228.695 287.728v31.5h5.5v-31.5h-5.5z"
     />
-    <path fill={c8['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M1233.129 287.728v31.5h2v-31.5h-2z" />
+    <path fill={c2['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M1233.129 287.728v31.5h2v-31.5h-2z" />
     <text
       xmlSpace="preserve"
       style={{
@@ -1625,7 +1578,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"FT2/8 AG"}
+        {"FT2/2 AG"}
       </tspan>
     </text>
     <path
@@ -1655,7 +1608,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['WATER TEMPERATURE']} \xB0C`}
+        {`${c3['WATER TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1708,7 +1661,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['WATER INLET TEMPERATURE']} \xB0C`}
+        {`${c3['WATER INLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1736,7 +1689,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC27)"}
+        {"TEMPERATURE (STIC9)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M1296.412 596.176h463v88h-463v-88z" />
@@ -1761,7 +1714,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['WATER OUTLET TEMPERATURE']} \xB0C`}
+        {`${c3['WATER OUTLET TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1789,7 +1742,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"TEMPERATURE (STIC25)"}
+        {"TEMPERATURE (STIC7)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M1296.412 684.176h463v88h-463v-88z" />
@@ -1814,7 +1767,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['OIL TEMPERATURE']} \xB0C`}
+        {`${c3['OIL TEMPERATURE']} \xB0C`}
       </tspan>
     </text>
     <text
@@ -1842,7 +1795,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(STIC26)"}
+        {"(STIC8)"}
       </tspan>
     </text>
     <path fill="none" stroke="#7e7e7e" d="M1296.412 772.177h463v88h-463v-88z" />
@@ -1867,7 +1820,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['CONTROL VALVE']} %`}
+        {`${c3['CONTROL VALVE']} %`}
       </tspan>
     </text>
     <text
@@ -1895,7 +1848,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"(V10C9)"}
+        {"(V10C3)"}
       </tspan>
     </text>
     <path
@@ -1919,7 +1872,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['HR']}`}
+        {`${c3['HR']}`}
       </tspan>
     </text>
     <text
@@ -1983,7 +1936,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['MIN']}`}
+        {`${c3['MIN']}`}
       </tspan>
     </text>
     <text
@@ -2027,7 +1980,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['SEC']}`}
+        {`${c3['SEC']}`}
       </tspan>
     </text>
     <text
@@ -2059,7 +2012,7 @@ else{
       transform="translate(1296.412 254.325)"
     />
     <path
-      fill={c9['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c3['AUTO'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1387.712 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2092,7 +2045,7 @@ else{
       transform="translate(1476.57 254.325)"
     />
     <path
-      fill={c9['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
+      fill={c3['AUTO'] ==="False" ? "#00B050" : "#87a1ac"}
       stroke="#00b050"
       d="M1567.87 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2125,7 +2078,7 @@ else{
       transform="translate(1656.729 254.325)"
     />
     <path
-      fill={c9['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c3['FEED'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1748.029 288.025c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2158,7 +2111,7 @@ else{
       transform="translate(1296.412 304.482)"
     />
     <path
-      fill={c9['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c3['REHEAT'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1387.712 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2191,7 +2144,7 @@ else{
       transform="translate(1476.57 304.482)"
     />
     <path
-      fill={c9['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c3['JOG'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1567.87 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2224,7 +2177,7 @@ else{
       transform="translate(1656.73 304.482)"
     />
     <path
-      fill={c9['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
+      fill={c3['DRAIN'] ==="True" ? "#00B050" : "#87a1ac"}
       stroke="#87a1ac"
       d="M1748.03 338.182c6.3 0 11.4-5.1 11.4-11.3v-11.1c0-6.2-5.1-11.3-11.4-11.3h-80c-6.2 0-11.3 5.1-11.3 11.3v11.1c0 6.2 5.1 11.3 11.3 11.3h80z"
     />
@@ -2269,7 +2222,7 @@ else{
           fontFamily: "Arial,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {`${c9['SEQ STEP']}`}
+        {`${c3['SEQ STEP']}`}
       </tspan>
     </text>
     <text
@@ -2309,7 +2262,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"CRYSTALLIZER 9"}
+        {"CRYTALLIZER 3"}
       </tspan>
     </text>
     <path
@@ -2318,68 +2271,68 @@ else{
       transform="matrix(0 1 1 0 1819.086 286.554)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h9.4v38.2H0V0z"
       transform="matrix(0 1 1 0 1819.086 277.144)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M7.4 0v38.2s-7.4 0-7.4-19S7.4 0 7.4 0z"
       transform="matrix(0 1 1 0 1819.086 269.825)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v38.2H0V0z"
       transform="matrix(0 1 1 0 1819.086 277.4)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h.8v37.5H0V0z"
       transform="matrix(0 1 1 0 1819.067 321.816)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h15.8v8.3H0V0z"
       transform="matrix(0 1 1 0 1833.678 326.161)"
     />
-    <g fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} transform="matrix(0 1 1 0 1820.23 286.555)">
+    <g fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} transform="matrix(0 1 1 0 1820.23 286.555)">
       <path d="M0 2.692h32.9v1.1H0v-1.1zM0 8.075h32.9v1.1H0v-1.1zM0 10.767h32.9v1.1H0v-1.1zM0 13.459h32.9v1.1H0v-1.1zM0 16.15h32.9v1.1H0v-1.1zM0 19.212h32.9v1.1H0v-1.1zM0 21.682h32.9v1.1H0v-1.1zM0 24.152h32.9v1.1H0v-1.1zM0 26.622h32.9v1.1H0v-1.1zM0 29.61h32.9v1.1H0v-1.1zM0 32.3h32.9v1.1H0v-1.1zM0 34.993h32.9v1.1H0v-1.1zM0 0h32.9v1.1H0V0zM0 5.383h32.9v1.1H0v-1.1z" />
     </g>
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h2.8c.5 0 .9.4.9.9v36.3c0 .5-.4.9-.9.9H0V0z"
       transform="matrix(0 1 1 0 1819.086 322.417)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.9v17.5H0V0z"
       transform="matrix(0 1 1 0 1829.054 326.161)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1820.229 326.058)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1831.41 326.058)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1842.59 326.058)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M0 0h1.5v2.6H0V0z"
       transform="matrix(0 1 1 0 1853.771 326.058)"
     />
     <path
-      fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
+      fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"}
       d="M1854.538 287.728v31.5h2.5v-31.5h-2.5zM1857.275 287.728v31.5h5.5v-31.5h-5.5z"
     />
-    <path fill={c9['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M1861.709 287.728v31.5h2v-31.5h-2z" />
+    <path fill={c3['FT2/1 AG'] ==="True" ? "url(#b)" : "red"} d="M1861.709 287.728v31.5h2v-31.5h-2z" />
     <text
       xmlSpace="preserve"
       style={{
@@ -2397,7 +2350,7 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"FT2/9 AG"}
+        {"FT2/3 AG"}
       </tspan>
     </text>
     <text
@@ -2416,13 +2369,13 @@ else{
           fontFamily: "Arial Black,PingFang SC,Mircrosoft YaHei,Arial",
         }}
       >
-        {"CRYSTALLIZER TABLE (3/3)"}
+        {"CRYTALLIZER TABLE (1/3)"}
       </tspan>
     </text>
   </svg>
 )
 
 }
-export default Crystalizer789
+export default Crystalizer134
 
 

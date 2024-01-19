@@ -2,11 +2,11 @@ import React from 'react'
 
 const StearineHMI = (props) => {
 
-    let FT5A = {"TI4": "0.0"}
-    let FT5B= {"TI5": "0.0"}
-    let FT5C= {"TI6": "0.0"}
-    let FT6= {"TI10": "0.0"}
-    let FT4= {"TI11": "0.0"}
+    let FT5A
+    let FT5B
+    let FT5C
+    let FT6
+    let FT4
 
 
     console.log(props.data);

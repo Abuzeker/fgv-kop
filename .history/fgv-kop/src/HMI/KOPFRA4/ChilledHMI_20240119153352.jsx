@@ -4,15 +4,7 @@ const ChilledHMI = (props) => {
 
     console.log(props.data);
 
-    let CT = {
-            "C.T FAN 3": "True",
-            "C.T FAN 4": "True",
-            "C.T FAN 1": "True",
-            "C.T FAN 2": "True"}
-
-    let FT8 = {"TI14": "-1.754580954436089e+38"}
-    let FT9 = {"TI13": "7.4"}
-
+    let CT,FT8,FT9
 
     if (!props.data) {
         console.error("Data is undefined or null");

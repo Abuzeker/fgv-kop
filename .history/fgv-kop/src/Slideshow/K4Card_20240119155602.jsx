@@ -14,7 +14,7 @@ let FilteredC123, FilteredC456, FilteredC789, FilteredStearine, FilteredChiller
 const K4Card = () => {
 
   const [state, setState] = useState({ count: 0 });
-  const [spinning, setSpinning] = useState(true);
+  const [spinning, setSpinning] = useState(false);
 
   useEffect(() => {
 
@@ -67,7 +67,7 @@ const K4Card = () => {
     FilteredChiller = Merge_parameter_name_and_value_line(response_CHIILER,["COOLING TOWER","FT9","FT8"])
 
     console.log('done render');
-    setSpinning(false);
+    // setSpinning(false);
 
     setState(({ count }) => ({ count: count + 1 }));
   }

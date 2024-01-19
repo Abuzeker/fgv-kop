@@ -3,52 +3,8 @@ import React from 'react'
 
 
 const Crystalizer789 = (props) => {
-  let c7={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  },c8={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  },c9={
-    "WATER OUTLET TEMPERATURE": "28.89",
-    "OIL TEMPERATURE": "28.4",
-    "WATER INLET TEMPERATURE": "27.94",
-    "WATER TEMPERATURE": "25.5",
-    "SEQ STEP": "0",
-    "HR": "0",
-    "MIN": "0",
-    "SEC": "0",
-    "FT2/1 AG": "False",
-    "AUTO": "False",
-    "DRAIN": "False",
-    "FEED": "False",
-    "JOG": "False",
-    "REHEAT": "False"
-  }
+  let c7={},c8={},c9={}
+
 
   if (!props.data) {
     console.error("Data is undefined or null");

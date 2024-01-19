@@ -14,7 +14,7 @@ let FilteredC123, FilteredC456, FilteredC789, FilteredStearine, FilteredChiller
 const K4Card = () => {
 
   const [state, setState] = useState({ count: 0 });
-  const [spinning, setSpinning] = useState(true);
+  const [spinning, setSpinning] = useState(false);
 
   useEffect(() => {
 
@@ -77,7 +77,7 @@ const K4Card = () => {
 
   return (
     <div>
-            <Spin spinning={spinning} fullscreen />
+      <Spin tip="Loading..." fullscreen spinning={spinning}>
 
       <HMIWrapper Tab={['Stearine', 'Chilled Water', 'Crystallizer 123', 'Crystallizer 456', 'Crystallizer 789']}>
         <StearineHMI key={'Stearine'} data={FilteredStearine}/>
@@ -88,6 +88,7 @@ const K4Card = () => {
         <Crsyalizer789 key={'Crystallizer 789'} data={FilteredC789}/>
 
       </HMIWrapper>
+      </Spin>
 
     </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StearineHMI = (props) => {
+const StearineHMI = ({data}) => {
 
     let FT5A = {"TI4": "0.0"}
     let FT5B= {"TI5": "0.0"}
@@ -9,17 +9,17 @@ const StearineHMI = (props) => {
     let FT4= {"TI11": "0.0"}
 
 
-    console.log(props.data);
-    if (!props.data) {
+    console.log(data);
+    if (!data) {
         console.error("Data is undefined or null");
         return null; // or handle accordingly
     }
     else{
-        FT5A = props.data['FT5A'];
-        FT5B = props.data['FT5B'];
-        FT5C = props.data['FT5C'];
-        FT6 = props.data['FT6'];
-        FT4 = props.data['FT4'];
+        FT5A = data['FT5A'];
+        FT5B = data['FT5B'];
+        FT5C = data['FT5C'];
+        FT6 = data['FT6'];
+        FT4 = data['FT4'];
     }
 
 

@@ -2,14 +2,8 @@ import React from 'react'
 
 const StearineHMI = (props) => {
 
-    let FT5A = {"TI4": "0.0"}
-    let FT5B= {"TI5": "0.0"}
-    let FT5C= {"TI6": "0.0"}
-    let FT6= {"TI10": "0.0"}
-    let FT4= {"TI11": "0.0"}
+    let FT5A, FT5B, FT5C, FT6, FT4
 
-
-    console.log(props.data);
     if (!props.data) {
         console.error("Data is undefined or null");
         return null; // or handle accordingly
