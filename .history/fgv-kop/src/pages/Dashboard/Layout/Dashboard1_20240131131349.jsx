@@ -503,13 +503,13 @@ const Dashboard1 = () => {
 
             <Row gutter={[20, 10]}>
 
-              <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>
+              <Col span={14} xs={24} sm={24} md={24} lg={24} xl={24}>
                 <Card className='card-container' style={{ height: '100%', background: '#292828',overflow:'auto' }} bodyStyle={{ padding: 0 }}>
                   <DailyReporttable data={Daily_data} />
                 </Card>
               </Col>
 
-              <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
+              <Col span={10} xs={24} sm={24} md={24} lg={24} xl={24}>
                 <Card
                   style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}
                   title={<span style={{ color: 'white', fontSize: '24px' }}>Today Production</span>}

@@ -85,7 +85,7 @@ const columns = [
 
 
 const DailyReporttable = ({ data }) => {
-    data = data.slice(0, -7);
+    data = data.slice(0, -3);
 
     // console.log(data);
     return (

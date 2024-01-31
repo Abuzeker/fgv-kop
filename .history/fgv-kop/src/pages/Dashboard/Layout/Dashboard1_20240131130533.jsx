@@ -504,7 +504,7 @@ const Dashboard1 = () => {
             <Row gutter={[20, 10]}>
 
               <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>
-                <Card className='card-container' style={{ height: '100%', background: '#292828',overflow:'auto' }} bodyStyle={{ padding: 0 }}>
+                <Card style={{ height: '100%', background: '#292828',overflow:'auto' }} bodyStyle={{ padding: 0 }}>
                   <DailyReporttable data={Daily_data} />
                 </Card>
               </Col>

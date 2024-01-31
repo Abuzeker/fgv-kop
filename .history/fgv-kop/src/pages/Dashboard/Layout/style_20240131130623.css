@@ -38,6 +38,11 @@
     transform: translateX(-100%);
   }
 }
+
 .ant-carousel-dot {
   display: none;
+}
+
+.card-container {
+  overflow: auto; /* or overflow: scroll; */
 }

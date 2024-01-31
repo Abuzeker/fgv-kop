@@ -38,3 +38,15 @@
     transform: translateX(-100%);
   }
 }
+
+.ant-carousel-dot {
+  display: none;
+}
+
+.card-container {
+  overflow: auto; /* or overflow: scroll; */
+}
+
+.card-container {
+  height: 400px; /* Adjust the height as needed */
+}
