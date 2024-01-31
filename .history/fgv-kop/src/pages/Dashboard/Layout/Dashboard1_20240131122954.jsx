@@ -548,11 +548,7 @@ const Dashboard1 = () => {
                 </Col>
 
                 <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
-                  <Card
-                    style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}
-                    title={<span style={{ color: 'white', fontSize: '24px' }}>Today Production</span>}
-                    headStyle={{ color: 'white', fontSize: '24px', borderBottom: '1px solid white' }}
-                  >
+                  <Card style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}>
                     <Barchart data={DataArray} containername={'day quantity rdpo'} por={'Fract'} height={600} />
                   </Card>
                 </Col>

@@ -495,7 +495,6 @@ function mergeParameterAndLine(parameter, line) {
 
 export function aggregateAndSortData(originalData) {
     const aggregatedData = {};
-    console.log(originalData);
 
     // Aggregate data by date
     originalData.data.forEach(item => {
@@ -717,10 +716,7 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
         }
 
         if (element.fields['value'] === '#FFFFCC80') {
-            obj[`day${day}`] = '#bdbdbd' //orange
-        }
-        if (element.fields['value'] === '#FFBDBDBD') {
-            obj[`day${day}`] = '#bdbdbd' //orange
+            obj[`day${day}`] = '#ffcc80' //orange
         }
     });
     obj['Plant'] = Linename

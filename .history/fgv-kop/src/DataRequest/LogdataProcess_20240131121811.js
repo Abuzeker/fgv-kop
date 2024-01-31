@@ -717,10 +717,7 @@ export const Dashboar3_DateMerge = (RawResponse, Line, parameter, Linename) => {
         }
 
         if (element.fields['value'] === '#FFFFCC80') {
-            obj[`day${day}`] = '#bdbdbd' //orange
-        }
-        if (element.fields['value'] === '#FFBDBDBD') {
-            obj[`day${day}`] = '#bdbdbd' //orange
+            obj[`day${day}`] = '#ffcc80' //orange
         }
     });
     obj['Plant'] = Linename

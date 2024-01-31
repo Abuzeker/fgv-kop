@@ -267,7 +267,11 @@ const utility_carosel_Fract = (utilityData) => {
             </Card>
           </Col>
           <Col span={8}>
-            <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+            <Card
+              style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}
+              title={<span style={{ color: 'white', fontSize: '24px' }}>Remark</span>}
+              headStyle={{ color: 'white', fontSize: '24px', borderBottom: '1px solid white' }}
+            >
               <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Electric Usage (RBDPO)'} />
             </Card>
           </Col>

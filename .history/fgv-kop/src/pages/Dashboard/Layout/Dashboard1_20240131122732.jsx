@@ -48,7 +48,7 @@ let cpkoSC = []
 let CPKOCardInfo = []
 let rkocs = []
 
-
+ 
 let rbdpolog = []
 let rbdporcvLog = []
 let rbdpocs = []
@@ -81,7 +81,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Bleaching Earth Usage (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Bleaching Earth Usage (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -93,7 +93,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Electric Usage (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Electric Usage (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -105,7 +105,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Phosphoric Usage (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Phosphoric Usage (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -117,7 +117,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'LNG Usage (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'LNG Usage (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -129,7 +129,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Water Usage (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Water Usage (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -141,7 +141,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Total Cost (CPO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Total Cost (CPO)'}/>
               </Col>
             </Row>
           </div>
@@ -158,7 +158,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Bleaching Earth Usage (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Bleaching Earth Usage (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -170,7 +170,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Electric Usage (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Electric Usage (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -182,7 +182,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Phosphoric Usage (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Phosphoric Usage (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -194,7 +194,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'LNG Usage (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'LNG Usage (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -206,7 +206,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Water Usage (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Water Usage (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -218,7 +218,7 @@ const utility_carosel_refining = (utilityData) => {
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Total Cost (CPKO)'} />
+                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Total Cost (CPKO)'}/>
               </Col>
             </Row>
           </div>
@@ -268,7 +268,7 @@ const utility_carosel_Fract = (utilityData) => {
           </Col>
           <Col span={8}>
             <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Electric Usage (RBDPO)'} />
+              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Electric Usage (RBDPO)'}/>
             </Card>
           </Col>
         </Row>
@@ -295,7 +295,7 @@ const utility_carosel_Fract = (utilityData) => {
           </Col>
           <Col span={8}>
             <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'LNG Usage (RBDPO)'} />
+              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'LNG Usage (RBDPO)'}/>
             </Card>          </Col>
         </Row>
       </div>
@@ -308,7 +308,7 @@ const utility_carosel_Fract = (utilityData) => {
           </Col>
           <Col span={8}>
             <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Water Usage (RBDPO)'} />
+              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Water Usage (RBDPO)'}/>
             </Card>
           </Col>
         </Row>
@@ -322,7 +322,7 @@ const utility_carosel_Fract = (utilityData) => {
           </Col>
           <Col span={8}>
             <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
-              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Total Cost (RBDPO)'} />
+              <RemarkTable height={600} plant={'Fract'} data={extractedDataRBDPO} type={'Total Cost (RBDPO)'}/>
             </Card>
           </Col>
         </Row>
@@ -345,7 +345,7 @@ const Dashboard1 = () => {
     // console.log(request_range_10);
     const response_quantity = await Request_dailydata_log(request_range_10,
       ["CPO", "CPO Total Value", "CPO Percentage", "CCNO BLENDED/ CPKO", "CCNO BLENDED/ CPKO TOTAL PROCESS", "CCNO BLENDED/ CPKO Percentage"])
-    console.log(response_quantity);
+      console.log(response_quantity);
 
     const cpo_product_wuantity = await Request_dailydata_log(request_range_10,
       ['Today (CPO)', 'Todate (CPO)', 'Bleaching Earth Usage (CPO)',
@@ -363,7 +363,7 @@ const Dashboard1 = () => {
         'Bleaching Earth Usage (CPKO)', 'Bleaching Earth Cost (CPKO)', 'Phosphoric Usage (CPKO)', 'Phosphoric Cost (CPKO)',
         'LNG Usage (CPKO)', 'LNG Cost (CPKO)', 'Electric Usage (CPKO)', 'Electric Cost (CPKO)',
         'Water Usage (CPKO)', 'Water Cost (CPKO)', 'Total Cost (CPKO)', 'Activated (PAC) Usage', 'Activated (PAC) Cost',
-        'CPKO RCV', 'CPKO Total', 'CPKO C/S', 'RKO C/S',
+        'CPKO RCV', 'CPKO Total','CPKO C/S','RKO C/S',
 
         'Bleaching Earth Usage (CPKO) Remark',
         'Bleaching Earth Cost (CPKO) Remark', 'Phosphoric Usage (CPKO) Remark', 'Phosphoric Cost (CPKO) Remark',
@@ -384,9 +384,9 @@ const Dashboard1 = () => {
         'LNG Usage (RBDPO) Remark', 'LNG Cost (RBDPO) Remark', 'Electric Usage (RBDPO) Remark', 'Electric Cost (RBDPO) Remark',
         'Water Usage (RBDPO) Remark', 'Water Cost (RBDPO) Remark',
       ])
-    const [startDate, endDate] = getCurrentMonthDateRange();
+      const [startDate, endDate] = getCurrentMonthDateRange();
 
-    const cpo_rcv_all = await Request_dailydata_log([startDate, endDate], ['Todate Vs Allocation (CPO RCV)'])
+    const cpo_rcv_all = await Request_dailydata_log([startDate, endDate],['Todate Vs Allocation (CPO RCV)'])
     cpo_rcv_all_value = cpo_rcv_all.data[0].fields.value
     // console.log(cpo_rcv_all);
 
@@ -428,7 +428,7 @@ const Dashboard1 = () => {
     rbdpoUF = []
     rbdpoSC = []
     rbdpolog = []
-    rkocs = []
+    rkocs=[]
 
     DataArray.forEach(element => {
       cpolog.push(element['Today (CPO)'])
@@ -510,11 +510,8 @@ const Dashboard1 = () => {
               </Col>
 
               <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
-                <Card
-                  style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}
-                  title={<span style={{ color: 'white', fontSize: '24px' }}>Today Production</span>}
-                  headStyle={{ color: 'white', fontSize: '24px', borderBottom: '1px solid white' }}
-                >                  <Barchart data={DataArray} containername={'day quantity'} por={'Refine'} height={400} />
+                <Card style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }} title={'Today Production'}>
+                  <Barchart data={DataArray} containername={'day quantity'} por={'Refine'} height={400} />
                 </Card>
               </Col>
 
@@ -548,11 +545,7 @@ const Dashboard1 = () => {
                 </Col>
 
                 <Col span={10} xs={24} sm={24} md={24} lg={24} xl={10}>
-                  <Card
-                    style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}
-                    title={<span style={{ color: 'white', fontSize: '24px' }}>Today Production</span>}
-                    headStyle={{ color: 'white', fontSize: '24px', borderBottom: '1px solid white' }}
-                  >
+                  <Card style={{ height: '100%', background: '#292828', padding: '0 0 0 0' }}>
                     <Barchart data={DataArray} containername={'day quantity rdpo'} por={'Fract'} height={600} />
                   </Card>
                 </Col>

@@ -4,7 +4,7 @@ import './tablestyle.css'; // Import your custom styles
 
 const FractTable = ({ data }) => {
     // console.log(data);
-    data = data.slice(0, -4);
+    data = data.slice(0, -5);
     const processedData = data.map(entry => {
         const processedEntry = {};
       

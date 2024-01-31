@@ -18,33 +18,33 @@ const columns = [
                 children: [
                     {
                         title: 'L1500',
-                        dataIndex: 'CPOL1500',
-                        key: 'CPOL1500',
+                        dataIndex: 'MSML1500',
+                        key: 'MSML1500',
                     },
                     {
                         title: 'L1000',
-                        dataIndex: 'CPOL1000',
-                        key: 'CPOL1000',
+                        dataIndex: 'MSML1000',
+                        key: 'MSML1000',
                     },
                     {
                         title: 'DT600',
-                        dataIndex: 'CPO600TPD',
-                        key: 'CPO600TPD',
+                        dataIndex: 'MSM600TPD',
+                        key: 'MSM600TPD',
                     },
                     {
                         title: 'L450',
-                        dataIndex: 'CPOL450',
-                        key: 'CPOL450',
+                        dataIndex: 'MSML450',
+                        key: 'MSML450',
                     },
                     {
                         title: 'Total',
-                        dataIndex: 'CPO Total Value',
-                        key: 'CPO Total Value',
+                        dataIndex: 'MSM Total Value',
+                        key: 'MSM Total Value',
                     },
                     {
                         title: '(%)',
-                        dataIndex: 'CPO Percentage',
-                        key: 'CPO Percentage',
+                        dataIndex: 'MSM Percentage',
+                        key: 'MSM Percentage',
 
                     },
                 ]
