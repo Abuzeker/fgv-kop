@@ -221,21 +221,18 @@ export const LineGraphDataProcess = (data) => {
 }
 
 export const BarGraphDataProcess = (data) => {
-    console.log(data);
     let Graph_data = []
     data.map((element) => {
         // console.log(element["Daily Quantity"])
         const dailydata = element["Daily Quantity"]
         dailydata.map((element2) => {
             element2["Asset"] = element["Asset"]
-            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] * 100;
-            element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : Math.round(element2["Efficiency"] * 100) / 100;
-            element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : Math.round(element2["Efficiency"] * 100) / 100;
-            
+            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] * 100
+            element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : parseFloat(element2["Efficiency"]).toFixed(3);
+            element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : parseFloat(element2["Efficiency"]).toFixed(3);
             Graph_data.push(element2)
         })
     })
-    console.log(Graph_data);
     return Graph_data
 }
 

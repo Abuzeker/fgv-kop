@@ -228,9 +228,9 @@ export const BarGraphDataProcess = (data) => {
         const dailydata = element["Daily Quantity"]
         dailydata.map((element2) => {
             element2["Asset"] = element["Asset"]
-            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] * 100;
-            element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : Math.round(element2["Efficiency"] * 100) / 100;
-            element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : Math.round(element2["Efficiency"] * 100) / 100;
+            element2["Efficiency"] = +element2["Efficiency"];
+            element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : +element2["Efficiency"].toFixed(2);
+            element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : +element2["Efficiency"].toFixed(2);
             
             Graph_data.push(element2)
         })
