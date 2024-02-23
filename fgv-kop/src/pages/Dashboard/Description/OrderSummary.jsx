@@ -7,10 +7,14 @@ import { InfoCircleOutlined } from '@ant-design/icons'
 const OrderSummary = (props) => {
     const twoColors = { '0%': '#108ee9', '100%': '#87d068' };
     const orderinfo = props.info
+    const Event = ['1) ','2) ','3) ']
+    // const props.info.Event
 
-   const orderpercent = orderinfo['Attainment Rate']? orderinfo['Attainment Rate'] : '0'
-
-    // console.log(orderpercent);
+    const orderpercent = orderinfo['Attainment Rate'] ? orderinfo['Attainment Rate'] : '0'
+    const Event1 = props.info.Event.length > 0 ? `1) ${props.info.Event[0]['value']}` : '';
+    const Event2 = props.info.Event.length > 1 ? `2) ${props.info.Event[1]['value']}` : '';
+    const Event3 = props.info.Event.length > 2 ? `3) ${props.info.Event[2]['value']}` : '';
+    
 
     return (
         <div>
@@ -26,7 +30,7 @@ const OrderSummary = (props) => {
                             </span>
                             <div style={{ marginBottom: '10px' }} />
                             {orderinfo.Products.map((element, index) => (
-                                <Tag key={index} color='red' style={{fontSize:'15px'}}>
+                                <Tag key={index} color='red' style={{ fontSize: '15px' }}>
                                     {element}
                                 </Tag>
                             ))}
@@ -34,11 +38,27 @@ const OrderSummary = (props) => {
                         <Col span={24} align={'middle'}>
                             {/* <span style={{ fontSize: '15px', color: 'white' }}>Vessel: b2 </span> */}
                             <Progress type="circle" percent={orderpercent} strokeColor={twoColors}
-                                size={[200, 100]} strokeWidth={10}  trailColor="#706f6f"
+                                size={[150, 75]} strokeWidth={10} trailColor="#706f6f"
                                 format={() => (
                                     <span style={{ color: 'white' }}>{orderpercent}%</span>
                                 )} />
                         </Col>
+                        <Col span={24} align={'middle'}>
+                            <Row gutter={[0, 0]} align={'middle'}>
+                                <Col span={24} align={'left'}>
+                                    <span style={{ color: 'white', fontSize: '15px' }}>{Event1}</span>
+                                </Col>
+                                <Col span={24} align={'left'}>
+                                    <span style={{ color: 'white', fontSize: '15px' }}>{Event2}</span>
+                                </Col>
+                                <Col span={24} align={'left'}>
+                                    <span style={{ color: 'white', fontSize: '15px' }}>{Event3}</span>
+                                </Col>
+
+                            </Row>
+
+                        </Col>
+
                     </Row>
                 </Card>
             </Col>

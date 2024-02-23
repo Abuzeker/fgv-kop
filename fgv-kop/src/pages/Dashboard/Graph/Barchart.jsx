@@ -20,13 +20,13 @@ const Barchart = (props) => {
 
         if (props.por === 'Refine') {
           obj['date'] = element.date
-          obj['value'] = parseFloat(element['Today (CPO)'])
+          obj['value'] = parseFloat(element['CPO Total Value'])
           obj['type'] = 'CPO'
           data.push(obj)
 
           obj = {}
           obj['date'] = element.date
-          obj['value'] = parseFloat(element['Today (CPKO)'])
+          obj['value'] = parseFloat(element['CPKO/ CCNO BLENDED TOTAL PROCESS'])
           obj['type'] = 'CPKO'
           data.push(obj)
         }

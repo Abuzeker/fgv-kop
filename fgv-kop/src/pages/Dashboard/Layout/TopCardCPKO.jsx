@@ -15,7 +15,7 @@ const TopCPKOCard = (props) => {
 
 
     let data = {
-        'Today (CPKO)': 0,
+        'CPKO/ CCNO BLENDED TOTAL PROCESS': 0,
         'Todate (CPKO)': 0,
         'CPKO Receive': parseFloat(props.cpkorcvLog[1]).toFixed(2),
         'CPKO RCV Date': '',
@@ -42,8 +42,8 @@ const TopCPKOCard = (props) => {
 
     try { data['Todate (CPKO)'] = props.datatodate[0]["Todate (CPKO)"] !== null ? props.datatodate[0]["Todate (CPKO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (CPKO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (CPKO)'] = props.datatoday[1]["Today (CPKO)"] !== null ? props.datatoday[1]["Today (CPKO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (CPKO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['CPKO/ CCNO BLENDED TOTAL PROCESS'] = props.datatoday[1]["CPKO/ CCNO BLENDED TOTAL PROCESS"] !== null ? props.datatoday[1]["CPKO/ CCNO BLENDED TOTAL PROCESS"] : 0 } catch (error) { console.log(error); }
+    try { data['date CPKO/ CCNO BLENDED TOTAL PROCESS'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
     try { data['RKO C/S'] = props.datatoday[1]["RKO C/S"] !== null ? props.datatoday[1]["RKO C/S"] : 0 } catch (error) { console.log(error); }
     try { data['RKO C/S Date'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
 
@@ -83,17 +83,17 @@ console.log(props.rkocs);
                             </Col>
                             <Col span={18} style={{ paddingLeft: '20px' }}>
                                 <span style={{ fontSize: '20px', color: 'white' }}> CPKO Today</span>
-                                {/* <span style={{ fontSize: '10px', color: 'white' }}>{data['date Today (CPKO)']}</span> */}
+                                {/* <span style={{ fontSize: '10px', color: 'white' }}>{data['date CPKO/ CCNO BLENDED TOTAL PROCESS']}</span> */}
                                 <div>
                                     <Row gutter={16} align={'middle'}>
                                         <Col span={12}>
-                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Today (CPKO)'])}</span>
+                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPKO/ CCNO BLENDED TOTAL PROCESS'])}</span>
                                             <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                             <br />
                                             <span style={{ fontSize: '13px' }}>
                                                 <InfoCircleOutlined />
-                                                <span> {data['date Today (CPKO)']}</span>
+                                                <span> {data['date CPKO/ CCNO BLENDED TOTAL PROCESS']}</span>
                                             </span>
                                         </Col>
                                         <Col span={12}>
@@ -184,7 +184,7 @@ console.log(props.rkocs);
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{data['Today (CPKO)']}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{data['CPKO/ CCNO BLENDED TOTAL PROCESS']}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />

@@ -37,6 +37,45 @@ export function MergeAssetandProductLog(info, ProductsTodayLog) {
 }
 
 
+export function MergeAssetandEventLog(info, EventLog) {
+
+    const log = []
+    const data = EventLog.data
+
+    data.forEach(element => {
+        const obj = {};
+        obj['Asset'] = element.fields.asset
+        obj['date'] = formatDate(element.fields.date_created)
+        obj['parameter'] = element.fields.parameter
+        obj['value'] = element.fields.value
+        log.push(obj)
+    });
+    // console.log(log);
+
+    info.forEach(element => {
+        const Asset = element.Asset
+        const filteredData = log.filter(item => {
+            const asset = item.Asset;
+            return Asset === asset;
+        })
+        // console.log(filteredData);
+        element['Event'] = filteredData
+    });
+    // console.log(info);
+    return info
+
+    function formatDate(dateString) {
+        // Convert date string to MM/DD/YYYY format
+        const date = new Date(dateString);
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const year = date.getFullYear();
+
+        return `${month}/${day}/${year}`;
+    }
+}
+
+
 
 export function MergeOrderandProduct(info, Products) {
 
@@ -228,7 +267,7 @@ export const BarGraphDataProcess = (data) => {
         const dailydata = element["Daily Quantity"]
         dailydata.map((element2) => {
             element2["Asset"] = element["Asset"]
-            element2["Efficiency"] = element2["Today Quantity"] / element2["Today Targeted Quantity"] * 100;
+            element2["Efficiency"] = element2["Current Stock"] / element2["Daily Target Production Quantity"] * 100;
             element2["Efficiency"] = isNaN(element2["Efficiency"]) ? 0 : Math.round(element2["Efficiency"] * 100) / 100;
             element2["Efficiency"] = !isFinite(element2["Efficiency"]) ? 100 : Math.round(element2["Efficiency"] * 100) / 100;
             
@@ -249,9 +288,9 @@ export const merge_log_and_order = (OrderDetails, QuantityLog) => {
 
         enrichedData["Daily Quantity"].forEach(element => {
 
-            element['Today Quantity'] = element['Today Quantity'] ? element['Today Quantity'] : 0
-            element['Todate Quantity'] = element['Todate Quantity'] ? element['Todate Quantity'] : 0
-            element['Today Targeted Quantity'] = element['Today Targeted Quantity'] ? element['Today Targeted Quantity'] : 0
+            element['Current Stock'] = element['Current Stock'] ? element['Current Stock'] : 0
+            element['Daily Production Quantity'] = element['Daily Production Quantity'] ? element['Daily Production Quantity'] : 0
+            element['Daily Target Production Quantity'] = element['Daily Target Production Quantity'] ? element['Daily Target Production Quantity'] : 0
         });
 
         return enrichedData
@@ -323,12 +362,12 @@ export const Merge_quatity = (originalDataArray, responseData) => {
                 if (!latestDates[item.fields.parameter] || itemDate > latestDates[item.fields.parameter]) {
                     latestDates[item.fields.parameter] = itemDate;
 
-                    if (item.fields.parameter === "Today Quantity") {
-                        enrichedData["Today Quantity"] = item.fields.value;
-                    } else if (item.fields.parameter === "Todate Quantity") {
-                        enrichedData["Todate Quantity"] = item.fields.value;
-                    } else if (item.fields.parameter === "Today Targeted Quantity") {
-                        enrichedData["Today Targeted Quantity"] = item.fields.value;
+                    if (item.fields.parameter === "Current Stock") {
+                        enrichedData["Current Stock"] = item.fields.value;
+                    } else if (item.fields.parameter === "Daily Production Quantity") {
+                        enrichedData["Daily Production Quantity"] = item.fields.value;
+                    } else if (item.fields.parameter === "Daily Target Production Quantity") {
+                        enrichedData["Daily Target Production Quantity"] = item.fields.value;
                     }
                 }
             }

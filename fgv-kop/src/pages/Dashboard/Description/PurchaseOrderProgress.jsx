@@ -8,7 +8,7 @@ import OrderProgress from './OrderProgress';
 import MultiBar from '../Graph/MultiBar';
 import { Request_Realtime, Request_data_log, Request_order_log } from '../../../api';
 import {
-    BarGraphDataProcess, Individual_Product, LineGraphDataProcess, MergeAssetandProductLog,
+    BarGraphDataProcess, Individual_Product, LineGraphDataProcess, MergeAssetandEventLog, MergeAssetandProductLog,
     MergeOrderandProduct, MergeProductProgress, MergeProducttoAsset, Merge_attainment_to_details,
     Merge_quatity, OrderInfoRawDataProcess, Sort_log_with_asset, chunkArray, filter_unfinish_order, filter_unfinish_order_name,
     getMonthsRange, getNext10DaysRange, merge_log_and_order
@@ -92,7 +92,7 @@ const PurchaseOrderProgress = () => {
 
         const response_progress_info = await Request_Realtime(["Stock Vs Shipment"], ["Anticipated Fulfillment Date", "Attainment Rate",])
         const response_order_info = await Request_order_log(daterange, [])
-        const response_order_quantity = await Request_data_log(daterange, ["Todate Quantity", "Today Quantity", "Today Targeted Quantity"], [])
+        const response_order_quantity = await Request_data_log(daterange, ["Current Stock", "Daily Production Quantity", "Daily Target Production Quantity"], [])
 
 
         OrderArray = merge_log_and_order(Merge_quatity(Merge_attainment_to_details(OrderInfoRawDataProcess(response_order_info),
@@ -107,8 +107,8 @@ const PurchaseOrderProgress = () => {
 
         const AssetName = filter_unfinish_order_name(OrderArray)
 
-        const response_product_todate_log = await Request_data_log(daterange, ["Todate Quantity (RBDPO)", "Todate Quantity (RBDPL)",
-            "Todate Quantity (RBDPS)", "Todate Quantity (PFAD)"], AssetName)
+        const response_product_todate_log = await Request_data_log(daterange, ["Current Stock (RBDPO)", "Current Stock (RBDPL)",
+            "Current Stock (RBDPS)", "Current Stock (PFAD)"], AssetName)
         const asset_product = MergeProducttoAsset(response_product_todate_log)
 
 
@@ -121,8 +121,8 @@ const PurchaseOrderProgress = () => {
         const range10 = getNext10DaysRange()
         // console.log(range10);
 
-        const response_product_today_log = await Request_data_log(range10, ["Today Quantity (RBDPO)", "Today Quantity (RBDPL)",
-            "Today Quantity (RBDPS)", "Today Quantity (PFAD)"], AssetName)
+        const response_product_today_log = await Request_data_log(range10, ["Daily Production Quantity (RBDPO)", "Daily Production Quantity (RBDPL)",
+            "Daily Production Quantity (RBDPS)", "Daily Production Quantity (PFAD)"], AssetName)
 
         // console.log(response_product_today_log);
 
@@ -132,10 +132,17 @@ const PurchaseOrderProgress = () => {
         CPOShipmentCompletion = Caculate_ShipmentCompletion(OrderArray)
         ShipmentCompletionRatio = parseFloat(CPOShipmentCompletion['Ratio'] * 100).toFixed(2)
 
+        const response_product_Event_log = await Request_data_log(daterange, ["Event"], AssetName)
+        MergeAssetandEventLog(OrderArray, response_product_Event_log)
+        
+
+        // const asset_product = MergeProducttoAsset(response_product_todate_log)
+
         // console.log(ShipmentCompletionRatio);
 
 
         chunkedTestSet = chunkArray(OrderArray, 3)
+        console.log(OrderArray);
 
         setState(({ count }) => ({ count: count + 1 }));
     }

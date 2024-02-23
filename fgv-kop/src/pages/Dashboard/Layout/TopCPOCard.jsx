@@ -13,7 +13,7 @@ const TopCPOCard = (props) => {
 
 
     let data = {
-        'Today (CPO)': 0,
+        'CPO Total Value': 0,
         'Todate (CPO)': 0,
         'CPO Receive': props.cpoInfo['CPO RCV'],
         'CPO RCV Date': props.cpoInfo['CPO RCV Date'],
@@ -40,8 +40,8 @@ const TopCPOCard = (props) => {
 
     try { data['Todate (CPO)'] = props.datatodate[0]["Todate (CPO)"] !== null ? props.datatodate[0]["Todate (CPO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (CPO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (CPO)'] = props.datatoday[1]["Today (CPO)"] !== null ? props.datatoday[1]["Today (CPO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (CPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+    try { data['CPO Total Value'] = props.datatoday[1]["CPO Total Value"] !== null ? props.datatoday[1]["CPO Total Value"] : 0 } catch (error) { console.log(error); }
+    try { data['date CPO Total Value'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
 
 
     // console.log(props.cpolog);
@@ -83,13 +83,13 @@ const TopCPOCard = (props) => {
                                 <div>
                                     <Row gutter={16} align={'middle'}>
                                         <Col span={12}>
-                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['Today (CPO)'])}</span>
+                                            <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPO Total Value'])}</span>
                                             <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                             <br />
                                             <span style={{ fontSize: '13px' }}>
                                                 <InfoCircleOutlined />
-                                                <span> {data['date Today (CPO)']}</span>
+                                                <span> {data['date CPO Total Value']}</span>
                                             </span>
                                         </Col>
                                         <Col span={12}>
@@ -117,7 +117,7 @@ const TopCPOCard = (props) => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (CPO)']}</span>
+                                        <span> {data['date CPO Total Value']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -140,7 +140,7 @@ const TopCPOCard = (props) => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (CPO)']}</span>
+                                        <span> {data['date CPO Total Value']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>

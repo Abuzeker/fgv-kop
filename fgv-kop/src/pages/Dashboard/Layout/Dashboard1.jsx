@@ -77,11 +77,15 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti'} type={'Bleaching Earth Usage (CPO)'} range={[6.01, 7.01]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti'} type={'Bleaching Earth Usage (CPO)'} range={[6.01, 7.01]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Bleaching Earth Usage (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'Bleaching Earth Usage (CPO)'} />
+                </Card>
+
               </Col>
             </Row>
           </div>
@@ -89,11 +93,15 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti2'} type={'Electric Usage (CPO)'} range={[14.01, 15.01]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti2'} type={'Electric Usage (CPO)'} range={[14.01, 15.01]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Electric Usage (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'Electric Usage (CPO)'} />
+                </Card>
+
               </Col>
             </Row>
           </div>
@@ -101,11 +109,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti3'} type={'Phosphoric Usage (CPO)'} range={[0.55, 0.65]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti3'} type={'Phosphoric Usage (CPO)'} range={[0.55, 0.65]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Phosphoric Usage (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'Phosphoric Usage (CPO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -113,11 +124,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti4'} type={'LNG Usage (CPO)'} range={[12.01, 12.99]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti4'} type={'LNG Usage (CPO)'} range={[12.01, 12.99]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'LNG Usage (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'LNG Usage (CPO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -125,11 +139,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti5'} type={'Water Usage (CPO)'} range={[0.2, 0.3]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti5'} type={'Water Usage (CPO)'} range={[0.2, 0.3]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Water Usage (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'Water Usage (CPO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -137,11 +154,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti6'} type={'Total Cost (CPO)'} range={[27.0, 28.0]} height={300} />
+                  <BarchartWithColor data={extractedDataCPO} containername={'cpouti6'} type={'Total Cost (CPO)'} range={[27.0, 28.0]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPO} type={'Total Cost (CPO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPO} type={'Total Cost (CPO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -154,11 +174,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti'} type={'Bleaching Earth Usage (CPKO)'} range={[6, 7]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti'} type={'Bleaching Earth Usage (CPKO)'} range={[6, 7]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Bleaching Earth Usage (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'Bleaching Earth Usage (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -166,11 +189,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti2'} type={'Electric Usage (CPKO)'} range={[14, 15]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti2'} type={'Electric Usage (CPKO)'} range={[14, 15]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Electric Usage (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'Electric Usage (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -178,11 +204,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti3'} type={'Phosphoric Usage (CPKO)'} range={[0.55, 0.65]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti3'} type={'Phosphoric Usage (CPKO)'} range={[0.55, 0.65]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Phosphoric Usage (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'Phosphoric Usage (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -190,11 +219,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti4'} type={'LNG Usage (CPKO)'} range={[12.01, 12.99]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti4'} type={'LNG Usage (CPKO)'} range={[12.01, 12.99]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'LNG Usage (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'LNG Usage (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -202,11 +234,14 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti5'} type={'Water Usage (CPKO)'} range={[0.2, 0.3]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti5'} type={'Water Usage (CPKO)'} range={[0.2, 0.3]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Water Usage (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'Water Usage (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -214,11 +249,13 @@ const utility_carosel_refining = (utilityData) => {
             <Row gutter={[10, 10]}>
               <Col span={16}>
                 <Card style={{ height: '100%', background: '#292828' }}>
-                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti6'} type={'Total Cost (CPKO)'} range={[27.0, 28.0]} height={300} />
+                  <BarchartWithColor data={extractedDataCPKO} containername={'cpkouti6'} type={'Total Cost (CPKO)'} range={[27.0, 28.0]} height={350} />
                 </Card>
               </Col>
               <Col span={8}>
-                <RemarkTable height={390} plant={'Refining'} data={extractedDataCPKO} type={'Total Cost (CPKO)'} />
+                <Card style={{ height: '100%', background: '#292828' }} bodyStyle={{ padding: 0 }}>
+                  <RemarkTable height={350} plant={'Refining'} data={extractedDataCPKO} type={'Total Cost (CPKO)'} />
+                </Card>
               </Col>
             </Row>
           </div>
@@ -348,7 +385,7 @@ const Dashboard1 = () => {
     console.log(response_quantity);
 
     const cpo_product_wuantity = await Request_dailydata_log(request_range_10,
-      ['Today (CPO)', 'Todate (CPO)', 'Bleaching Earth Usage (CPO)',
+      ['CPO Total Value', 'Todate (CPO)', 'Bleaching Earth Usage (CPO)',
         'Bleaching Earth Cost (CPO)', 'Phosphoric Usage (CPO)', 'Phosphoric Cost (CPO)',
         'LNG Usage (CPO)', 'LNG Cost (CPO)', 'Electric Usage (CPO)', 'Electric Cost (CPO)',
         'Water Usage (CPO)', 'Water Cost (CPO)', 'Total Cost (CPO)', 'CPO RCV', 'CPO PROCESS',
@@ -359,7 +396,7 @@ const Dashboard1 = () => {
         'LNG Usage (CPO) Remark', 'LNG Cost (CPO) Remark', 'Electric Usage (CPO) Remark', 'Electric Cost (CPO) Remark',
         'Water Usage (CPO) Remark', 'Water Cost (CPO) Remark',
 
-        'Today (CPKO)', 'Todate (CPKO)',
+        'CPKO/ CCNO BLENDED TOTAL PROCESS', 'Todate (CPKO)',
         'Bleaching Earth Usage (CPKO)', 'Bleaching Earth Cost (CPKO)', 'Phosphoric Usage (CPKO)', 'Phosphoric Cost (CPKO)',
         'LNG Usage (CPKO)', 'LNG Cost (CPKO)', 'Electric Usage (CPKO)', 'Electric Cost (CPKO)',
         'Water Usage (CPKO)', 'Water Cost (CPKO)', 'Total Cost (CPKO)', 'Activated (PAC) Usage', 'Activated (PAC) Cost',
@@ -431,18 +468,18 @@ const Dashboard1 = () => {
     rkocs = []
 
     DataArray.forEach(element => {
-      cpolog.push(element['Today (CPO)'])
+      cpolog.push(element['CPO Total Value'])
       cporcvLog.push(element['CPO RCV'])
       cpocs.push(element['CPO C/S'])
-      cpoMA.push(element['Today (CPO)'])
-      cpoSC.push(element['Today (CPO)'])
+      cpoMA.push(element['CPO Total Value'])
+      cpoSC.push(element['CPO Total Value'])
 
-      cpkolog.push(element['Today (CPKO)'])
+      cpkolog.push(element['CPKO/ CCNO BLENDED TOTAL PROCESS'])
       cpkorcvLog.push(element['CPKO RCV'])
       cpkocs.push(element['CPKO C/S'])
       rkocs.push(element['RKO C/S'])
-      cpkoMA.push(element['Today (CPKO)'])
-      cpkoSC.push(element['Today (CPKO)'])
+      cpkoMA.push(element['CPKO/ CCNO BLENDED TOTAL PROCESS'])
+      cpkoSC.push(element['CPKO/ CCNO BLENDED TOTAL PROCESS'])
 
       rbdpolog.push(element['Today (RBDPO)'])
       rbdporcvLog.push(element['RBDPO RCV'])
@@ -504,7 +541,7 @@ const Dashboard1 = () => {
             <Row gutter={[20, 10]}>
 
               <Col span={14} xs={24} sm={24} md={24} lg={24} xl={14}>
-                <Card className='card-container' style={{ height: '100%', background: '#292828',overflow:'auto' }} bodyStyle={{ padding: 0 }}>
+                <Card className='card-container' style={{ height: '100%', background: '#292828', overflow: 'auto' }} bodyStyle={{ padding: 0 }}>
                   <DailyReporttable data={Daily_data} />
                 </Card>
               </Col>
@@ -515,7 +552,7 @@ const Dashboard1 = () => {
                   title={<span style={{ color: 'white', fontSize: '24px' }}>Today Production</span>}
                   headStyle={{ color: 'white', fontSize: '24px', borderBottom: '1px solid white' }}
                 >
-                  <Barchart data={DataArray} containername={'day quantity'} por={'Refine'} height={400} />
+                  <Barchart data={DataArray} containername={'day quantity'} por={'Refine'} height={350} />
                 </Card>
               </Col>
 
