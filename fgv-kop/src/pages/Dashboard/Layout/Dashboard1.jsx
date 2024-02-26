@@ -381,7 +381,7 @@ const Dashboard1 = () => {
     const request_range_10 = TenDaysbeforesRange()
     // console.log(request_range_10);
     const response_quantity = await Request_dailydata_log(request_range_10,
-      ["CPO", "CPO Total Value", "CPO Percentage", "CCNO BLENDED/ CPKO", "CCNO BLENDED/ CPKO TOTAL PROCESS", "CCNO BLENDED/ CPKO Percentage"])
+      ["CPO", "CPO Total Value", "CPO Percentage", "CPKO/ CCNO BLENDED", "CPKO/ CCNO BLENDED TOTAL PROCESS", "CPKO/ CCNO BLENDED Percentage"])
     console.log(response_quantity);
 
     const cpo_product_wuantity = await Request_dailydata_log(request_range_10,

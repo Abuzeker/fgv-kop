@@ -572,6 +572,7 @@ export function aggregateAndSortData(originalData) {
 
         return dataObject;
     });
+    console.log(result);
 
     return result;
 }
