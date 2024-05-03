@@ -424,7 +424,13 @@ const Dashboard1 = () => {
     const [startDate, endDate] = getCurrentMonthDateRange();
 
     const cpo_rcv_all = await Request_dailydata_log([startDate, endDate], ['Todate Vs Allocation (CPO RCV)'])
-    cpo_rcv_all_value = cpo_rcv_all.data[0].fields.value
+    console.log(cpo_rcv_all);
+    try {
+      cpo_rcv_all_value = cpo_rcv_all.data[0].fields.value
+    } catch (error) {
+      cpo_rcv_all_value = 0
+
+    }
     // console.log(cpo_rcv_all);
 
     // console.log(cpo_rcv_all_value);
