@@ -2,14 +2,37 @@ import { getFromLocalStorage } from '../Memorystorage/localstorage';
 import ajax from './ajax'
 
 ////////KOP//////////
-export const Subscrition_request = () => ajax('https://kopiot.fmas-fgvhq.com/auth/signin/',
+export const Subscrition_request_new = () => ajax('https://kopiot.fmas-fgvr.dev/auth/signin/',
     {
         "username": "node",
         "password": "node-123"
     },
     'POST')
-    
 
+export const Request_Realtime_HMI = (asset, line, parameters) => {
+      const token = getFromLocalStorage("KOP-Token-New"); // Retrieve the token using your authentication utility
+    
+      const headers = {
+        'Authorization': `Token ${token}`,
+        'Content-Type': 'application/json',
+      };
+    
+      const requestData = {
+        "projectID": "KOPIOT",
+        "assets" : asset,
+        "lines": line
+      };
+    
+      return ajax('https://kopiot.fmas-fgvr.dev/api/read_realtime/', requestData, 'POST', headers);
+    };
+
+
+export const Subscrition_request = () => ajax('https://kopiot.fmas-fgvhq.com/auth/signin/',
+      {
+          "username": "node",
+          "password": "node-123"
+      },
+      'POST')
 
     // import { getToken } from 'path-to-your-authentication-utils'; // Import a function to retrieve the token
 
@@ -78,22 +101,6 @@ export const Subscrition_request = () => ajax('https://kopiot.fmas-fgvhq.com/aut
     };
     // import { getToken } from 'path-to-your-authentication-utils'; // Import a function to retrieve the token
 
-    export const Request_Realtime_HMI = (asset, line, parameters) => {
-      const token = getFromLocalStorage("KOP-Token"); // Retrieve the token using your authentication utility
-    
-      const headers = {
-        'Authorization': `Token ${token}`,
-        'Content-Type': 'application/json',
-      };
-    
-      const requestData = {
-        "projectID": "KOPIOT",
-        "assets" : asset,
-        "lines": line
-      };
-    
-      return ajax('https://kopiot.fmas-fgvhq.com/api/read_realtime/', requestData, 'POST', headers);
-    };
 
     export const Request_dailydata_log = (datetime, parameters) => {
       const token = getFromLocalStorage("KOP-Token"); // Retrieve the token using your authentication utility

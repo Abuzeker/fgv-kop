@@ -13,7 +13,7 @@ import Dashboard2 from './pages/Dashboard/Layout/Dasbosrd2';
 import TVDisplay from './pages/Dashboard/Layout/TVDisplay';
 import Apitestpage from './pages/Dashboard/Layout/Apitestpage';
 import { useEffect } from 'react';
-import { Subscrition_request } from './api';
+import { Subscrition_request, Subscrition_request_new } from './api';
 import { getFromLocalStorage, saveToLocalStorage } from './Memorystorage/localstorage';
 import PlantProcessingStatus from './pages/Dashboard/Layout/PlantProcessingStatus';
 import Dashboard3 from './pages/Dashboard/Layout/Dashboard3';
@@ -24,6 +24,7 @@ import Dashboard1_Layout from './pages/Dashboard/Layout/Dashboard1_Layout';
 // const { Header, Content, Footer } = Layout;
 
 const App = () => {
+
   const request_event = async () => {
     // console.log('login request');
     const response = await Subscrition_request()
@@ -33,15 +34,30 @@ const App = () => {
     }
 
     const token = getFromLocalStorage("KOP-Token")
-    // console.log(`Token ${token}`);
+    console.log(`Token New ${token}`);
+    // console.log(response);         
+  }
+
+  const request_event_new = async () => {
+    // console.log('login request');
+    const response = await Subscrition_request_new()
+
+    if (response.success) {
+      saveToLocalStorage("KOP-Token-New", response.data.authentication.token)
+    }
+
+    const token = getFromLocalStorage("KOP-Token-New")
+    console.log(`Token ${token}`);
     // console.log(response);         
   }
 
   useEffect(() => {
     request_event()
-
+    request_event_new()
+    
     const interval = setInterval(() => {
       request_event()
+      request_event_new()
     }, 300000)
 
     // console.log('render2');
