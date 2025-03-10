@@ -89,14 +89,19 @@ const PurchaseOrderProgress = () => {
     const request_orderinfo_event = async () => {
 
         const daterange = getMonthsRange(6)
+        // console.log(daterange);
+        
 
         const response_progress_info = await Request_Realtime(["Stock Vs Shipment"], ["Anticipated Fulfillment Date", "Attainment Rate",])
         const response_order_info = await Request_order_log(daterange, [])
-        const response_order_quantity = await Request_data_log(daterange, ["Current Stock", "Daily Production Quantity", "Daily Target Production Quantity"], [])
+        const response_order_quantity = await Request_data_log(daterange, ["Current Stock", "Daily Production Quantity", "Daily Target Production Quantity",
+            "Daily Production Quantity (RBDPO)", "Daily Production Quantity (RBDPL)",
+            "Daily Production Quantity (RBDPS)", "Daily Production Quantity (PFAD)"
+        ], [])
 
 
-        OrderArray = merge_log_and_order(Merge_quatity(Merge_attainment_to_details(OrderInfoRawDataProcess(response_order_info),
-            response_progress_info), response_order_quantity), response_order_quantity)
+        OrderArray = merge_log_and_order(Merge_quatity(Merge_attainment_to_details(OrderInfoRawDataProcess(response_order_info),response_progress_info), 
+        response_order_quantity), response_order_quantity)
         // console.log(OrderArray);
 
         OrderArray = filter_unfinish_order(OrderArray)
@@ -110,6 +115,9 @@ const PurchaseOrderProgress = () => {
         const response_product_todate_log = await Request_data_log(daterange, ["Current Stock (RBDPO)", "Current Stock (RBDPL)",
             "Current Stock (RBDPS)", "Current Stock (PFAD)"], AssetName)
         const asset_product = MergeProducttoAsset(response_product_todate_log)
+        
+        // console.log(asset_product);
+        
 
 
         // console.log(OrderArray);
@@ -142,7 +150,7 @@ const PurchaseOrderProgress = () => {
 
 
         chunkedTestSet = chunkArray(OrderArray, 3)
-        console.log(OrderArray);
+        // console.log(OrderArray);
 
         setState(({ count }) => ({ count: count + 1 }));
     }

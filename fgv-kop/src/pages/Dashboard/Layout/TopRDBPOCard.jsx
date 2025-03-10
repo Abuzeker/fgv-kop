@@ -43,12 +43,102 @@ const TopRBDPOCard = (props) => {
 
     try { data['Todate (RBDPO)'] = props.datatodate[2]["Todate (RBDPO)"] !== null ? props.datatodate[2]["Todate (RBDPO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Today (RBDPO)'] = props.datatoday[1]["Today (RBDPO)"] !== null ? props.datatoday[1]["Today (RBDPO)"] : 0 } catch (error) { console.log(error); }
-    try { data['date Today (RBDPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['UF (ANALISIS HARIAN FRACTIONATION)'] = props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] !== null ? props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] : 0; } catch (error) { console.log(error); }
-    try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['Total Cost (RBDPO)'] = props.datatodate[2]["Total Cost (RBDPO)"] !== null ? props.datatodate[2]["Total Cost (RBDPO)"] : 0; } catch (error) { console.log(error); }
-    try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
+
+    // try { data['Today (RBDPO)'] = props.datatoday[1]["Today (RBDPO)"] !== null ? props.datatoday[1]["Today (RBDPO)"] : 0 } catch (error) { console.log(error); }
+    // try { data['date Today (RBDPO)'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+
+
+//RBDPO Today
+        try {
+            let found = false; // Flag to indicate if a non-zero value has been found
+            // Initialize the default values
+            data['Today (RBDPO)'] = 0;
+            data['date Today (RBDPO)'] = '';
+        
+            // Check if props.datatoday is defined and not empty
+            if (props.datatoday && props.datatoday.length > 0) {
+                for (let item of props.datatoday) {
+                    if (item["Today (RBDPO)"] !== "0" && item["Today (RBDPO)"] !== null) {
+                        data['Today (RBDPO)'] = item["Today (RBDPO)"];
+                        data['date Today (RBDPO)'] = item["date"]; // Save the date when the value is found
+                        found = true;
+                        break; // Break as soon as a non-zero value is found
+                    }
+                }
+            }
+        
+            // If no non-zero value is found, you might want to set a default or specific value for the date
+            if (!found) {
+                data['date Today (RBDPO)'] = 'No valid date'; // Example fallback
+            }
+        } catch (error) {
+            console.log(error); // Log any errors that occur
+        }
+
+    // try { data['UF (ANALISIS HARIAN FRACTIONATION)'] = props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] !== null ? props.datatodate[2]["UF (ANALISIS HARIAN FRACTIONATION)"] : 0; } catch (error) { console.log(error); }
+    // try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
+
+
+    //Total Cost
+    try {
+        let found = false; // Flag to indicate if a non-zero value has been found
+        // Initialize the default values
+        data['UF (ANALISIS HARIAN FRACTIONATION)'] = 0;
+        data['date UF (ANALISIS HARIAN FRACTIONATION)'] = '';
+    
+        // Check if props.datatoday is defined and not empty
+        if (props.datatoday && props.datatoday.length > 0) {
+            for (let item of props.datatoday) {
+                if (item["UF (ANALISIS HARIAN FRACTIONATION)"] !== "0" && item["UF (ANALISIS HARIAN FRACTIONATION)"] !== null && item["UF (ANALISIS HARIAN FRACTIONATION)"] !== "0.0000") {
+                    data['UF (ANALISIS HARIAN FRACTIONATION)'] = item["UF (ANALISIS HARIAN FRACTIONATION)"];
+                    data['date UF (ANALISIS HARIAN FRACTIONATION)'] = item["date"]; // Save the date when the value is found
+                    found = true;
+                    break; // Break as soon as a non-zero value is found
+                }
+            }
+        }
+    
+        // If no non-zero value is found, you might want to set a default or specific value for the date
+        if (!found) {
+            data['date UF (ANALISIS HARIAN FRACTIONATION)'] = 'No valid date'; // Example fallback
+        }
+    } catch (error) {
+        console.log(error); // Log any errors that occur
+    }
+
+
+
+    // try { data['Total Cost (RBDPO)'] = props.datatodate[2]["Total Cost (RBDPO)"] !== null ? props.datatodate[2]["Total Cost (RBDPO)"] : 0; } catch (error) { console.log(error); }
+    // try { data['date todate (RBDPO)'] = props.datatodate[2]["date"] !== null ? props.datatodate[2]["date"] : 0 } catch (error) { console.log(error); }
+
+    //Total Cost
+    try {
+        let found = false; // Flag to indicate if a non-zero value has been found
+        // Initialize the default values
+        data['Total Cost (RBDPO)'] = 0;
+        data['date Total Cost (RBDPO)'] = '';
+    
+        // Check if props.datatoday is defined and not empty
+        if (props.datatodate && props.datatodate.length > 0) {
+            for (let item of props.datatodate) {
+                if (item["Total Cost (RBDPO)"] !== "0" && item["Total Cost (RBDPO)"] !== null && item["Total Cost (RBDPO)"] !== "0.0000" ) {
+                    data['Total Cost (RBDPO)'] = item["Total Cost (RBDPO)"];
+                    data['date Total Cost (RBDPO)'] = item["date"]; // Save the date when the value is found
+                    found = true;
+                    break; // Break as soon as a non-zero value is found
+                }
+            }
+        }
+    
+        // If no non-zero value is found, you might want to set a default or specific value for the date
+        if (!found) {
+            data['date Total Cost (RBDPO)'] = 'No valid date'; // Example fallback
+        }
+    } catch (error) {
+        console.log(error); // Log any errors that occur
+    }
+
+
     // console.log(props.rbdpolog);
     // console.log(cpkolog);
     // console.log(rbdpolog);
@@ -123,7 +213,7 @@ const TopRBDPOCard = (props) => {
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (RBDPO)']}</span>
+                                        <span> {data['date Total Cost (RBDPO)']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>
@@ -140,13 +230,13 @@ const TopRBDPOCard = (props) => {
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(parseFloat(props.rbdpoUF[1]).toFixed(2))}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(parseFloat(data['UF (ANALISIS HARIAN FRACTIONATION)']))}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> %</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date Today (RBDPO)']}</span>
+                                        <span> {data['date UF (ANALISIS HARIAN FRACTIONATION)']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>

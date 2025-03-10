@@ -21,27 +21,70 @@ const TopCPOCard = (props) => {
         'CPO C/S Date': props.cpoInfo['CPO C/S Date'],
     }
 
+    console.log(props.datatodate);
     console.log(props.datatoday);
-    // console.log(props.cposhipment);
-
-    // const RBDPL_Total_Produced = parseFloat(props.cposhipment['RBDPL Total Produced']) || 0;
-    // const RBDPS_Total_Produced = parseFloat(props.cposhipment['RBDPS Total Produced']) || 0;
-    // const PFAD_Total_Produced = parseFloat(props.cposhipment['PFAD Total Produced']) || 0;
-
-    // const Cpo_produced = RBDPL_Total_Produced + RBDPS_Total_Produced + PFAD_Total_Produced;
-
-    // const RBDPL_Total_Target = parseFloat(props.cposhipment['RBDPL Total Target']) || 0;
-    // const RBDPS_Total_Target = parseFloat(props.cposhipment['RBDPS Total Target']) || 0;
-    // const PFAD_Total_Target = parseFloat(props.cposhipment['PFAD Total Target']) || 0;
-
-    // const Cpo_Target = RBDPL_Total_Target + RBDPS_Total_Target + PFAD_Total_Target;
-
-    // const SC = ((Cpo_produced / Cpo_Target)*100).toFixed(1);
 
     try { data['Todate (CPO)'] = props.datatodate[0]["Todate (CPO)"] !== null ? props.datatodate[0]["Todate (CPO)"] : 0; } catch (error) { console.log(error); }
     try { data['date todate (CPO)'] = props.datatodate[0]["date"] !== null ? props.datatodate[0]["date"] : 0 } catch (error) { console.log(error); }
-    try { data['CPO Total Value'] = props.datatoday[1]["CPO Total Value"] !== null ? props.datatoday[1]["CPO Total Value"] : 0 } catch (error) { console.log(error); }
-    try { data['date CPO Total Value'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
+
+
+//Today CPO
+    try {
+        let found = false; // Flag to indicate if a non-zero value has been found
+        // Initialize the default values
+        data['CPO Total Value'] = 0;
+        data['date CPO Total Value'] = '';
+    
+        // Check if props.datatoday is defined and not empty
+        if (props.datatoday && props.datatoday.length > 0) {
+            for (let item of props.datatoday) {
+                if (item["CPO Total Value"] !== "0" && item["CPO Total Value"] !== null) {
+                    data['CPO Total Value'] = item["CPO Total Value"];
+                    data['date CPO Total Value'] = item["date"]; // Save the date when the value is found
+                    found = true;
+                    break; // Break as soon as a non-zero value is found
+                }
+            }
+        }
+    
+        // If no non-zero value is found, you might want to set a default or specific value for the date
+        if (!found) {
+            data['date CPO Total Value'] = 'No valid date'; // Example fallback
+        }
+    } catch (error) {
+        console.log(error); // Log any errors that occur
+    }
+
+    //CPORCV
+    try {
+        let found = false; // Flag to indicate if a non-zero value has been found
+        // Initialize the default values
+        data['CPO RCV'] = 0;
+        data['date CPO RCV'] = '';
+    
+        // Check if props.datatoday is defined and not empty
+        if (props.datatoday && props.datatoday.length > 0) {
+            for (let item of props.datatoday) {
+                if (item["CPO RCV"] !== "0" && item["CPO RCV"] !== null) {
+                    data['CPO RCV'] = item["CPO RCV"];
+                    data['date CPO RCV'] = item["date"]; // Save the date when the value is found
+                    found = true;
+                    break; // Break as soon as a non-zero value is found
+                }
+            }
+        }
+    
+        // If no non-zero value is found, you might want to set a default or specific value for the date
+        if (!found) {
+            data['date CPO RCV'] = 'No valid date'; // Example fallback
+        }
+    } catch (error) {
+        console.log(error); // Log any errors that occur
+    }
+    
+
+
+    // try { data['date CPO Total Value'] = props.datatoday[1]["date"] !== null ? props.datatoday[1]["date"] : 0 } catch (error) { console.log(error); }
 
 
     // console.log(props.cpolog);
@@ -111,13 +154,13 @@ const TopCPOCard = (props) => {
                         <div>
                             <Row gutter={16} align={'middle'}>
                                 <Col span={12}>
-                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(props.cporcvLog[1])}</span>
+                                    <span style={{ fontSize: '25px', color: 'white' }}>{new Intl.NumberFormat().format(data['CPO RCV'])}</span>
                                     <span style={{ fontSize: '15px', color: 'white' }}> MT</span>
 
                                     <br />
                                     <span style={{ fontSize: '11px' }}>
                                         <InfoCircleOutlined />
-                                        <span> {data['date CPO Total Value']}</span>
+                                        <span> {data['date CPO RCV']}</span>
                                     </span>
                                 </Col>
                                 <Col span={12}>

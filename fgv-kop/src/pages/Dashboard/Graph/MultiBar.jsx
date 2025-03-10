@@ -11,10 +11,17 @@ const MultiBar = ({ containername, Oridata }) => {
   useEffect(() => {
 
     // console.log('sdsd');
-    console.log(Oridata);
+    // console.log(Oridata);
+
+    function filterByEfficiency(data) {
+      return data.filter(item => item.Efficiency !== 0);
+  }
+
+  const filteredData = filterByEfficiency(Oridata);
+  // console.log(filteredData);
 
     const column = new Column(containername, {
-      data : Oridata,
+      data : filteredData,
       xField: 'date',
       yField: 'Efficiency',
       seriesField: 'Asset',

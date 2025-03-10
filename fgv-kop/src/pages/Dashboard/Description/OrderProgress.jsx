@@ -12,18 +12,31 @@ const OrderProgress = (props) => {
     const Orderdetails = props.info
 
     // console.log(Orderdetails);
+    // console.log(Orderdetails['Todate Produced']);
+    // console.log(Orderdetails['Todate Produced'][0]['produced']);
+    
+    
 
     let today_eff = parseFloat(Orderdetails['Today Quantity'] / Orderdetails['Today Targeted Quantity'] * 100).toFixed(2)
     if (isNaN(today_eff)) {
         today_eff = 0;
     }
 
-    // console.log(today_eff);
+    let todate = 0; // Variable to store the total produced amount
 
-    let todate = Orderdetails['Todate Quantity']
-    if (todate == undefined) {
-        todate = 0
-    }
+    // Check if 'Todate Produced' exists and has elements
+if (Orderdetails['Todate Produced'] && Orderdetails['Todate Produced'].length > 0) {
+    Orderdetails['Todate Produced'].forEach(item => {
+        let producedAmount = parseInt(item.produced, 10); // Convert the produced string to an integer
+        if (!isNaN(producedAmount)) {
+            todate += producedAmount; // Sum up the produced amounts
+        }
+    });
+} else {
+    console.log("No production details available.");
+}
+
+// console.log("Total Produced:", todate); // Output the total
 
     let Remaing = Orderdetails.Quantity - todate
 
@@ -50,9 +63,24 @@ const OrderProgress = (props) => {
         // Create Date objects
         const startDate = new Date(formattedStartDate);
         const endDate = new Date(formattedEndDate);
+        const currentDate = new Date()
+
+        // console.log(currentDate);
+        // console.log(endDate);
+
+        const OverDate = endDate - currentDate
+        // console.log(OverDate);
+
+        var timeDifference = 0
+
+        if (OverDate>0) {
+            timeDifference = endDate - startDate;
+        }
+        
 
         // Calculate the difference in milliseconds
-        const timeDifference = endDate - startDate;
+
+        
 
         // Calculate the number of days
         const daysDifference = timeDifference / (1000 * 60 * 60 * 24);
@@ -89,7 +117,7 @@ const OrderProgress = (props) => {
                                     <Statistic
                                         valueStyle={{ fontSize: '25px', color: 'white' }}
                                         title={<span style={{ color: 'white', fontSize: '22px' }}>To Date </span>}
-                                        value={Orderdetails['Todate Quantity']}
+                                        value={todate}
                                         suffix={<span style={{ fontSize: '15px', color: 'white' }}>MT</span>}
                                     />
                                 </Col>

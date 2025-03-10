@@ -1,140 +1,83 @@
-// TVDisplay.js
-
-import React, { Component } from "react";
-import Dashboard2 from './Dasbosrd2';
+import React, { Component, createRef } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import { Navigation, Autoplay } from 'swiper/modules';
 import Dashboard1 from './Dashboard1';
+import Dashboard2 from './Dasbosrd2';
 import Dashboard3 from './Dashboard3';
-import L1000Slide from '../../../Slideshow/L1000Slide';
-import Slider from 'react-slick';
-import './tvcss.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import PlayPauseButtons from './PlayPauseButtons';
 import { Button, Layout } from "antd";
-import { getFromLocalStorage } from "../../../Memorystorage/localstorage";
 import { PauseCircleOutlined, PlayCircleOutlined } from "@ant-design/icons";
+import L1000Slide from "../../../Slideshow/L1000Slide";
 import K4Slide from "../../../Slideshow/K4Slide";
 import L1500Slide from "../../../Slideshow/L1500Slide";
 
 const { Header, Content, Footer } = Layout;
 
-
-function SampleNextArrow(props) {
-    return (
-        <div
-            className={`arrow next-arrow ${props.className}`}
-            onClick={props.onClick}
-        ></div>
-    );
-};
-
-function SamplePrevArrow(props) {
-    return (
-        <div
-            className={`arrow prev-arrow ${props.className}`}
-            onClick={props.onClick}
-        ></div>
-    );
-};
-
 export default class TVDisplay extends Component {
-
-
     constructor(props) {
         super(props);
-        this.play = this.play.bind(this);
-        this.pause = this.pause.bind(this);
+        this.swiperRef = createRef(); // Create a ref for managing Swiper instance
     }
-    play() {
-        this.slider.slickPlay();
+
+    play = () => {
+        // Access swiper instance from ref and start autoplay
+        this.swiperRef.current.swiper.autoplay.start();
     }
-    pause() {
-        this.slider.slickPause();
+
+    pause = () => {
+        // Access swiper instance from ref and stop autoplay
+        this.swiperRef.current.swiper.autoplay.stop();
     }
 
     render() {
-
-        const settings = {
-            dots: true,
-            speed: 500,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 30000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />,
-        };
         return (
             <div>
                 <Layout className="layout">
-                    <Header
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',  // Align items to the right
-                        }}
-                    >
+                    <Header style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                    }}>
                         <span style={{ color: 'yellow', fontSize: '30px', fontWeight: 'bold' }}>Kuantan Oil Product (KOP)</span>
-
                         <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <Button onClick={this.play} style={{ marginRight: '5px', fontSize: '15px' }} size='large' type='primary'  icon={<PlayCircleOutlined />}>
-                                {/* <PlayCircleOutlined/> */}
+                            <Button onClick={this.play} style={{ marginRight: '5px', fontSize: '15px' }} size='large' type='primary' icon={<PlayCircleOutlined />}>
                                 Play
                             </Button>
-
-                            <Button onClick={this.pause} style={{ marginRight: '10px', fontSize: '15px' }} size='large' type='primary' danger  icon={<PauseCircleOutlined />}>
-                                {/* <PauseCircleOutlined /> */}
+                            <Button onClick={this.pause} style={{ marginRight: '10px', fontSize: '15px' }} size='large' type='primary' danger icon={<PauseCircleOutlined />}>
                                 Pause
                             </Button>
                         </div>
                     </Header>
-                    <Content
-                        style={{
-                            padding: '0px 50px 0px 50px',
-                            backgroundColor: '#141414',
-                            // opacity:0.6
-                        }}
-                    >
-                        <Slider ref={slider => (this.slider = slider)} {...settings}>
-                            <div>
-                                <Dashboard1 />
-                            </div>
-                            <div>
-                                <Dashboard3 />
-                            </div>
-                            <div>
-                                <Dashboard2 />
-                            </div>
-                            <div>
-                                <L1000Slide />
-                            </div>
-                            <div>
-                                <K4Slide />
-                            </div>
-                            <div>
-                                <L1500Slide/>
-                            </div>
-                        </Slider>
+                    <Content style={{
+                        padding: '0px 50px 0px 50px',
+                        backgroundColor: '#141414',
+                    }}>
+                        <Swiper
+                            ref={this.swiperRef}
+                            modules={[Navigation, Autoplay]} // Register Navigation and Autoplay modules
+                            navigation
+                            autoplay={{
+                                delay: 10000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            loop={true}>
+                            <SwiperSlide><Dashboard1 /></SwiperSlide>
+                            <SwiperSlide><Dashboard3 /></SwiperSlide>
+                            <SwiperSlide><Dashboard2 /></SwiperSlide>
+                            <SwiperSlide><L1000Slide /></SwiperSlide>
+                            <SwiperSlide><K4Slide /></SwiperSlide>
+                            <SwiperSlide><L1500Slide /></SwiperSlide>
+                        </Swiper>
                     </Content>
-                    <Footer
-                        style={{
-                            textAlign: 'center',
-                            backgroundColor: '#141414'
-                        }}
-                    >
-                        <span style={{ color: 'white' }}>
-                            FGVR KOP ©2023 Created by IOTCS
-                        </span>
+                    <Footer style={{
+                        textAlign: 'center',
+                        backgroundColor: '#141414'
+                    }}>
+                        <span style={{ color: 'white' }}>FGVR KOP ©2023 Created by IOTCS</span>
                     </Footer>
                 </Layout>
-
-                {/* Add play/pause buttons */}
-                {/* <PlayPauseButtons onPlay={handlePlay} onPause={handlePause} /> */}
-            </div >
+            </div>
         );
-    };
+    }
 }
-
-// export default TVDisplay;

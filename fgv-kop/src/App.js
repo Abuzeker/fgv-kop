@@ -21,6 +21,7 @@ import { Button, Layout } from 'antd';
 import Dashboard2_Layout from './pages/Dashboard/Layout/Dashboard2_Layout';
 import Dashboard3_Layout from './pages/Dashboard/Layout/Dashboard3_Layout';
 import Dashboard1_Layout from './pages/Dashboard/Layout/Dashboard1_Layout';
+import Dashboard4_Layout from './pages/Dashboard/Layout/Dashboard4_Layout';
 // const { Header, Content, Footer } = Layout;
 
 const App = () => {
@@ -34,7 +35,7 @@ const App = () => {
     }
 
     const token = getFromLocalStorage("KOP-Token")
-    console.log(`Token New ${token}`);
+    // console.log(`Token New ${token}`);
     // console.log(response);         
   }
 
@@ -47,7 +48,7 @@ const App = () => {
     }
 
     const token = getFromLocalStorage("KOP-Token-New")
-    console.log(`Token ${token}`);
+    // console.log(`Token ${token}`);
     // console.log(response);         
   }
 
@@ -86,7 +87,7 @@ const App = () => {
             <Route path="/pages/Dashboard2" element={<Dashboard2_Layout />} />
             <Route path="/pages/testapi" element={<Apitestpage />} />
             <Route path="/pages/Dashboard3" element={<Dashboard3_Layout />} />
-
+            <Route path="/pages/Dashboard4" element={<Dashboard4_Layout />} />
 
 
             <Route path="/pages/TV" element={<TVDisplay />} />

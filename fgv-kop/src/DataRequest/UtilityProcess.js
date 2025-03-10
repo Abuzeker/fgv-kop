@@ -79,6 +79,8 @@ export const Find_Latest_data_RBDPO = (data) => {
 }
 
 export const Caculate_ShipmentCompletion = (data) => {
+  // console.log(data);
+  
   // Initialize objects to store total target and total produced for each product
   const shipmentinfo = {
     'Todate Quantity': 0,
@@ -86,15 +88,43 @@ export const Caculate_ShipmentCompletion = (data) => {
     'Ratio': 0
   };
 
-  data.forEach(entry => {
-    const todateQuantity = parseFloat(entry['Todate Quantity']);
-    const targetQuantity = parseFloat(entry['Quantity']);
-    shipmentinfo['Todate Quantity'] += isNaN(todateQuantity) ? 0 : todateQuantity;
-    shipmentinfo['Total Quantity'] += isNaN(targetQuantity) ? 0 : targetQuantity;
-  });
+  // data.forEach(entry => {
+  //   const todateQuantity = parseFloat(entry['Todate Quantity']);
+  //   const targetQuantity = parseFloat(entry['Quantity']);
+  //   shipmentinfo['Todate Quantity'] += isNaN(todateQuantity) ? 0 : todateQuantity;
+  //   shipmentinfo['Total Quantity'] += isNaN(targetQuantity) ? 0 : targetQuantity;
+  // });
 
-  const ratio = parseFloat(shipmentinfo['Todate Quantity'] / shipmentinfo['Total Quantity']);
-  shipmentinfo['Ratio'] = isFinite(ratio) ? ratio : 0;
+  // const ratio = parseFloat(shipmentinfo['Todate Quantity'] / shipmentinfo['Total Quantity']);
+  // shipmentinfo['Ratio'] = isFinite(ratio) ? ratio : 0;
+
+  function calculateCompletionRatio(data) {
+    let completedCount = 0;
+
+    // Check each entry's Attainment Rate
+    data.forEach(item => {
+        // Convert the Attainment Rate to a number and check if it is >= 100
+        if (parseFloat(item["Attainment Rate"]) >= 100) {
+            completedCount++;
+        }
+    });
+// console.log(completedCount);
+
+    // Calculate the ratio of completed assets to total assets
+    const totalAssets = data.length;
+    const ratio = totalAssets > 0 ? completedCount / totalAssets : 0;
+
+    // Optionally, format the ratio as a percentage or return it as a fraction
+    return { ratio, percentage: (ratio ).toFixed(2) };
+}
+
+  const completionRatio = calculateCompletionRatio(data);
+  // console.log(completionRatio);
+
+
+  shipmentinfo['Ratio'] = completionRatio.ratio
+  // console.log(shipmentinfo);
+  
 
   // console.log(shipmentinfo['Ratio']);
   return shipmentinfo;
@@ -280,6 +310,36 @@ export function getCurrentMonthDateRange() {
 
   // Function to format a date as ISO string without milliseconds and with 'Z'
   const isoDateString = (date) => date.toISOString().split('.')[0] + 'Z';
+
+  // console.log(isoDateString(startDate), isoDateString(endDate));
+  
+
+  return [isoDateString(startDate), isoDateString(endDate)];
+}
+
+export function getPreviousMonthDateRangePrevious() {
+  const today = new Date();
+  const currentYear = today.getFullYear(); // Gets the current year
+  let currentMonth = today.getMonth(); // Gets the current month, zero-indexed
+
+  // Check if current month is January, to adjust the year and month correctly
+  if (currentMonth === 0) {
+    currentYear -= 1; // Decrement the year if the current month is January
+    currentMonth = 11; // Set to December (11, because months are zero-indexed)
+  } else {
+    currentMonth -= 1; // Otherwise, just decrement the month
+  }
+
+  // Set the date to the first day of the previous month
+  const startDate = new Date(currentYear, currentMonth, 1);
+
+  // Set the date to the last day of the previous month at 23:59:59
+  const endDate = new Date(currentYear, currentMonth + 1, 0, 23, 59, 59);
+
+  // Function to format a date as ISO string without milliseconds and with 'Z'
+  const isoDateString = (date) => date.toISOString().split('.')[0] + 'Z';
+
+  // console.log(isoDateString(startDate), isoDateString(endDate));
 
   return [isoDateString(startDate), isoDateString(endDate)];
 }
