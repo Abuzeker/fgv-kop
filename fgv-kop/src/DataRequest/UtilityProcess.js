@@ -343,3 +343,53 @@ export function getPreviousMonthDateRangePrevious() {
 
   return [isoDateString(startDate), isoDateString(endDate)];
 }
+
+
+export function sortRealtimeData(data) {
+  // Validate the input
+  if (!Array.isArray(data)) {
+    console.warn("Invalid input: expected an array.");
+    return {};
+  }
+
+  const result = {};
+
+  try {
+    data.forEach(entry => {
+      if (
+        !entry ||
+        !entry.fields ||
+        !entry.fields.line ||
+        !entry.fields.asset ||
+        !entry.fields.parameter ||
+        typeof entry.fields.value === 'undefined' ||
+        !entry.fields.last_updated
+      ) {
+        return; // Skip incomplete/invalid records
+      }
+
+      const { line, asset, parameter, value, last_updated } = entry.fields;
+
+      const numericValue = parseFloat(value);
+      if (isNaN(numericValue)) return; // Skip if value is not a number
+
+      const adjustedValue = (numericValue * 100).toFixed(2); // Multiply and round
+
+      if (!result[line]) {
+        result[line] = {};
+      }
+
+      if (!result[line][asset]) {
+        result[line][asset] = {};
+      }
+
+      result[line][asset][parameter] = adjustedValue;
+      result[line][asset]["Lastupdate"] = last_updated;
+    });
+  } catch (e) {
+    console.error("Error while processing data:", e);
+    return {};
+  }
+
+  return result;
+}

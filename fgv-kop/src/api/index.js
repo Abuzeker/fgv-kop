@@ -136,3 +136,40 @@ export const Subscrition_request = () => ajax('https://kopiot.fmas-fgvhq.com/aut
     
       return ajax('https://kopiot.fmas-fgvhq.com/api/read_logdata/', requestData, 'POST', headers);
     };
+
+    export const Request_PDM_log = (datetime, parameters) => {
+      const token = getFromLocalStorage("KOP-Token-New"); // Retrieve the token using your authentication utility
+    
+      const headers = {
+        'Authorization': `Token ${token}`,
+        'Content-Type': 'application/json',
+      };
+    
+      const requestData = {
+        "projectID": "PDM",
+        "parameters": parameters,
+        "datetime": datetime,
+      };
+
+      // console.log("Request body:", JSON.stringify(requestData, null, 2));
+
+      return ajax('https://pdm.fmas-fgvr.dev/api/read_logdata/', requestData, 'POST', headers);
+    };
+
+    export const Request_Realtime_PDM = (parameters) => {
+      const token = getFromLocalStorage("KOP-Token-New"); // Retrieve the token using your authentication utility
+    
+      const headers = {
+        'Authorization': `Token ${token}`,
+        'Content-Type': 'application/json',
+      };
+    
+      const requestData = {
+        "projectID": "PDM",
+        "parameters": parameters
+      };
+
+      // console.log("Request body:", JSON.stringify(requestData, null, 2));
+    
+      return ajax('https://pdm.fmas-fgvr.dev/api/read_realtime/', requestData, 'POST', headers);
+    };

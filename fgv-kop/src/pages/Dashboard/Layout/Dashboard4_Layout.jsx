@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout } from 'antd';
-import Dashboard3 from './Dashboard3';
+import Dashboard4 from './Dashboard4';
 
 const { Header, Content, Footer } = Layout;
 
@@ -27,7 +27,7 @@ const Dashboard4_Layout = () => {
                         // opacity:0.6
                     }}
                 >
-                <Dashboard3 />
+                <Dashboard4 />
             </Content>
             <Footer
                 style={{
