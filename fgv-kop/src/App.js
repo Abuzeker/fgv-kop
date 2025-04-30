@@ -22,6 +22,8 @@ import Dashboard2_Layout from './pages/Dashboard/Layout/Dashboard2_Layout';
 import Dashboard3_Layout from './pages/Dashboard/Layout/Dashboard3_Layout';
 import Dashboard1_Layout from './pages/Dashboard/Layout/Dashboard1_Layout';
 import Dashboard4_Layout from './pages/Dashboard/Layout/Dashboard4_Layout';
+import K5Card from './Slideshow/K5Card';
+import K5Slide from './Slideshow/K5Slide';
 // const { Header, Content, Footer } = Layout;
 
 const App = () => {
@@ -74,11 +76,13 @@ const App = () => {
             <Route path="/pages/L1500/Slide" element={<L1500Slide />} />
             <Route path="/pages/L1000/Slide" element={<L1000Slide />} />
             <Route path="/pages/KOPFRA4/Slide" element={<K4Slide />} />
+            <Route path="/pages/KOPFRA5/Slide" element={<K5Slide />} />
 
 
             <Route path="/pages/L1500/Card" element={<L1500Card />} />
             <Route path="/pages/L1000/Card" element={<L1000Card />} />
             <Route path="/pages/KOPFRA4/Card" element={<K4Card />} />
+            <Route path="/pages/K5/Card" element={<K5Card />} />
 
 
 

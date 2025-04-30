@@ -10,6 +10,7 @@ import { PauseCircleOutlined, PlayCircleOutlined } from "@ant-design/icons";
 import L1000Slide from "../../../Slideshow/L1000Slide";
 import K4Slide from "../../../Slideshow/K4Slide";
 import L1500Slide from "../../../Slideshow/L1500Slide";
+import K5Slide from "../../../Slideshow/K5Slide";
 
 const { Header, Content, Footer } = Layout;
 
@@ -68,6 +69,8 @@ export default class TVDisplay extends Component {
                             <SwiperSlide><L1000Slide /></SwiperSlide>
                             <SwiperSlide><K4Slide /></SwiperSlide>
                             <SwiperSlide><L1500Slide /></SwiperSlide>
+                            <SwiperSlide><K5Slide /></SwiperSlide>
+
                         </Swiper>
                     </Content>
                     <Footer style={{
