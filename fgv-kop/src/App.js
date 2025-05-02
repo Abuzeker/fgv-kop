@@ -55,7 +55,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    request_event()
+    // request_event()
     request_event_new()
     
     const interval = setInterval(() => {

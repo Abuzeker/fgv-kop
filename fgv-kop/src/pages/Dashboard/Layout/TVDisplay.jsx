@@ -11,6 +11,7 @@ import L1000Slide from "../../../Slideshow/L1000Slide";
 import K4Slide from "../../../Slideshow/K4Slide";
 import L1500Slide from "../../../Slideshow/L1500Slide";
 import K5Slide from "../../../Slideshow/K5Slide";
+import Dashboard4 from "./Dashboard4";
 
 const { Header, Content, Footer } = Layout;
 
@@ -66,6 +67,7 @@ export default class TVDisplay extends Component {
                             <SwiperSlide><Dashboard1 /></SwiperSlide>
                             <SwiperSlide><Dashboard3 /></SwiperSlide>
                             <SwiperSlide><Dashboard2 /></SwiperSlide>
+                            <SwiperSlide><Dashboard4 /></SwiperSlide>
                             <SwiperSlide><L1000Slide /></SwiperSlide>
                             <SwiperSlide><K4Slide /></SwiperSlide>
                             <SwiperSlide><L1500Slide /></SwiperSlide>
