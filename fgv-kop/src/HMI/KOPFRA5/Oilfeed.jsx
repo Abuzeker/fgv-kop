@@ -1,3 +1,4 @@
+import { VideoCameraOutlined } from '@ant-design/icons'
 import React from 'react'
 
 const Oilfeed = ({ para }) => {
@@ -17,6 +18,14 @@ const Oilfeed = ({ para }) => {
                     colorScheme: "light",
                 }}
                 viewBox="-0.5 -0.5 7560 4252"
+
+                onClick={(e) => {
+                    const pt = e.currentTarget.createSVGPoint();
+                    pt.x = e.clientX;
+                    pt.y = e.clientY;
+                    const svgP = pt.matrixTransform(e.currentTarget.getScreenCTM().inverse());
+                    console.log('Clicked at:', svgP.x, svgP.y);
+                }}
             >
                 <rect width="100%" height="100%" fill="#fff" style={{ fill: "#fff" }} />
                 <g data-cell-id={0}>
@@ -147,7 +156,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['TT-F81B-2']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['TT-F81B-2'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -279,7 +288,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['TT-F81C-1']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['TT-F81C-1'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -411,7 +420,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['LT-F01A1-1']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['LT-F01A1-1'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -543,7 +552,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['LT-F02A2-1']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['LT-F02A2-1'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -675,7 +684,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['TT-F01A1-1']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['TT-F01A1-1'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -807,7 +816,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                    <b>{para?.['PRODUCTION']?.['TT-F01A2-1']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['TT-F01A2-1'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -939,7 +948,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-PV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-PV'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -1187,7 +1196,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-SV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-SV'] ?? 0}</b>
 
                                                 </font>
                                             </div>
@@ -1246,7 +1255,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-MV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A1-2-MV'] ?? 0}</b>
 
                                                 </font>
                                             </div>
@@ -1379,7 +1388,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-PV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-PV'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -1627,7 +1636,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-SV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-SV'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -1685,7 +1694,7 @@ const Oilfeed = ({ para }) => {
                                                 }}
                                             >
                                                 <font style={{ fontSize: 51 }}>
-                                                <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-MV']??0}</b>
+                                                    <b>{para?.['PRODUCTION']?.['SC-MPF1001A2-2-MV'] ?? 0}</b>
                                                 </font>
                                             </div>
                                         </div>
@@ -1702,6 +1711,44 @@ const Oilfeed = ({ para }) => {
                         </g>
                     </g>
                 </g>
+
+                <foreignObject x={2576} y={3129} width={100} height={80}>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'black',
+                            borderRadius: '15%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            cursor: 'pointer',
+                            boxShadow: '0 0 5px rgba(0,0,0,0.3)',
+                        }}
+                        onClick={() => window.open('https://example.com', '_blank')}
+                    >
+                        <VideoCameraOutlined style={{ fontSize: 70, color: 'white' }} />
+                    </div>
+                </foreignObject>
+
+                <foreignObject x={6200} y={3129} width={100} height={80}>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'black',
+                            borderRadius: '15%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            cursor: 'pointer',
+                            boxShadow: '0 0 5px rgba(0,0,0,0.3)',
+                        }}
+                        onClick={() => window.open('https://example.com', '_blank')}
+                    >
+                        <VideoCameraOutlined style={{ fontSize: 70, color: 'white' }} />
+                    </div>
+                </foreignObject>
             </svg>
 
 

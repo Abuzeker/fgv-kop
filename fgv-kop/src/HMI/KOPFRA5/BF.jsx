@@ -1,8 +1,9 @@
 import React from 'react'
+import { VideoCameraOutlined } from '@ant-design/icons'
 
-const BF = ({para}) => {
+const BF = ({ para }) => {
 
-    
+
 
     return (
         <div>
@@ -16,8 +17,19 @@ const BF = ({para}) => {
                     colorScheme: "light",
                 }}
                 viewBox="-0.5 -0.5 7560 4252"
+
+
+                onClick={(e) => {
+                    const pt = e.currentTarget.createSVGPoint();
+                    pt.x = e.clientX;
+                    pt.y = e.clientY;
+                    const svgP = pt.matrixTransform(e.currentTarget.getScreenCTM().inverse());
+                    console.log('Clicked at:', svgP.x, svgP.y);
+                }}
             >
                 <rect width="100%" height="100%" fill="#fff" style={{ fill: "#fff" }} />
+
+
                 <g data-cell-id={0}>
                     <g data-cell-id={1}>
                         <g data-cell-id="lVK1okNaiNWrf6zA1lub-14">
@@ -30,6 +42,7 @@ const BF = ({para}) => {
                                 data-cell-id="lVK1okNaiNWrf6zA1lub-1"
                                 preserveAspectRatio="none"
                             />
+
                             <path
                                 fill="#ffd966"
                                 stroke="#000"
@@ -151,7 +164,7 @@ const BF = ({para}) => {
                                                     }}
                                                 >
                                                     <font style={{ fontSize: 42 }}>
-                                                        <b>{para?.['PRODUCTION']?.['TT-PF50-82A-1']??0}</b>
+                                                        <b>{para?.['PRODUCTION']?.['TT-PF50-82A-1'] ?? 0}</b>
                                                     </font>
                                                 </div>
                                             </div>
@@ -287,7 +300,7 @@ const BF = ({para}) => {
                                                     }}
                                                 >
                                                     <font style={{ fontSize: 42 }}>
-                                                        <b>{para?.['PRODUCTION']?.['TT-F82A-1']??0}</b>
+                                                        <b>{para?.['PRODUCTION']?.['TT-F82A-1'] ?? 0}</b>
                                                     </font>
                                                 </div>
                                             </div>
@@ -423,7 +436,7 @@ const BF = ({para}) => {
                                                     }}
                                                 >
                                                     <font style={{ fontSize: 42 }}>
-                                                        <b>{para?.['PRODUCTION']?.['LT-F82A-1']??0}</b>
+                                                        <b>{para?.['PRODUCTION']?.['LT-F82A-1'] ?? 0}</b>
                                                     </font>
                                                 </div>
                                             </div>
@@ -441,6 +454,26 @@ const BF = ({para}) => {
                         </g>
                     </g>
                 </g>
+                {/* 3671.075439453125 1656.642333984375 */}
+
+                <foreignObject x={3739} y={970} width={100} height={80}>
+                    <div
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            backgroundColor: 'black',
+                            borderRadius: '15%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            cursor: 'pointer',
+                            boxShadow: '0 0 5px rgba(0,0,0,0.3)',
+                        }}
+                        onClick={() => window.open('https://example.com', '_blank')}
+                    >
+                        <VideoCameraOutlined style={{ fontSize: 70, color: 'white' }} />
+                    </div>
+                </foreignObject>
             </svg>
         </div>
     )
