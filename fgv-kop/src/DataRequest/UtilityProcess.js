@@ -319,28 +319,14 @@ export function getCurrentMonthDateRange() {
 
 export function getPreviousMonthDateRangePrevious() {
   const today = new Date();
-  const currentYear = today.getFullYear(); // Gets the current year
-  let currentMonth = today.getMonth(); // Gets the current month, zero-indexed
+  
+  // Passing (Year, Month - 1, 1) automatically handles January -> December transition
+  const startDate = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+  
+  // Passing '0' as the day gives you the last day of the PREVIOUS month
+  const endDate = new Date(today.getFullYear(), today.getMonth(), 0, 23, 59, 59);
 
-  // Check if current month is January, to adjust the year and month correctly
-  if (currentMonth === 0) {
-    currentYear -= 1; // Decrement the year if the current month is January
-    currentMonth = 11; // Set to December (11, because months are zero-indexed)
-  } else {
-    currentMonth -= 1; // Otherwise, just decrement the month
-  }
-
-  // Set the date to the first day of the previous month
-  const startDate = new Date(currentYear, currentMonth, 1);
-
-  // Set the date to the last day of the previous month at 23:59:59
-  const endDate = new Date(currentYear, currentMonth + 1, 0, 23, 59, 59);
-
-  // Function to format a date as ISO string without milliseconds and with 'Z'
   const isoDateString = (date) => date.toISOString().split('.')[0] + 'Z';
-
-  // console.log(isoDateString(startDate), isoDateString(endDate));
-
   return [isoDateString(startDate), isoDateString(endDate)];
 }
 
